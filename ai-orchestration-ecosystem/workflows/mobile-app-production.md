@@ -16,6 +16,17 @@ Use this named workflow when the task matches Mobile App Production delivery.
 8. GitHub Ops: commit, push, PR, checks, release when approved.
 9. Delivery: final handoff with evidence and residual risks.
 
+## Advanced Protocols To Consider
+
+- SRE readiness for backends and critical services.
+- Secure SDLC.
+- Dependency governance.
+- Data privacy lifecycle.
+- Performance budgets for cold start, memory, and battery/network impact.
+- Accessibility compliance.
+- Release strategy for phased rollout.
+- AI application quality when AI features exist.
+
 ## Gates
 
 - Use only necessary phases.

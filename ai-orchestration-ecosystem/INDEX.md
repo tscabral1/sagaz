@@ -44,6 +44,21 @@ See `agents/` for Orchestrator, Product Strategist, Technology Strategist, Softw
 
 See `protocols/` for quality gates, testing matrix, stack selection, design quality, guided proactivity, squad handoffs, production readiness, GitHub operations, CI/CD readiness, post-delivery monitoring, delegation, communication, memory, and model routing.
 
+## Advanced Engineering Protocols
+
+- `protocols/sre-readiness.md`
+- `protocols/dora-metrics.md`
+- `protocols/secure-sdlc.md`
+- `protocols/dependency-governance.md`
+- `protocols/data-privacy-lifecycle.md`
+- `protocols/architecture-fitness-functions.md`
+- `protocols/api-contracts.md`
+- `protocols/performance-budgets.md`
+- `protocols/accessibility-compliance.md`
+- `protocols/database-migrations.md`
+- `protocols/release-strategy.md`
+- `protocols/ai-application-quality.md`
+
 ## Templates
 
 See `templates/` for task briefs, product specs, technical specs, design systems, stack recommendations, run state, squad handoffs, QA reports, release checklists, and final handoffs.

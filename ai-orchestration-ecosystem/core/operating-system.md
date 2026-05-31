@@ -22,4 +22,8 @@ Create autonomous, auditable, outcome-oriented AI teams inside Codex with low to
 14. Medium/large work must use named workflows, formal tasks, and persistent run state.
 15. Mobile projects require dedicated mobile gates and release checklists.
 16. Production projects must consider CI/CD and post-delivery monitoring.
+17. Production systems should consider SRE readiness, incident response, and operational recovery.
+18. Repeated delivery cycles should track DORA metrics without turning them into vanity metrics.
+19. Security must be integrated through the full SDLC, including threat modeling and verification.
+20. Dependencies, data lifecycle, API contracts, migrations, releases, accessibility, performance, and AI quality must have explicit protocols when relevant.
 

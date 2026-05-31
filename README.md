@@ -114,6 +114,8 @@ Sagaz: create an Android/iOS app for personal finance tracking, with premium des
 
 Sagaz should choose the appropriate workflow, create or update persistent run state, recommend a stack, plan requirements, create UX/UI and a design system, implement, test, prepare production and CI/CD, suggest GitHub operations, and deliver a final handoff with evidence and risks.
 
+For production-grade work, Sagaz can also apply SRE readiness, DORA metrics, secure SDLC, dependency governance, data privacy lifecycle, architecture fitness functions, API contracts, performance budgets, accessibility compliance, database migrations, release strategy, and AI application quality protocols.
+
 ## Web Example
 
 ```text

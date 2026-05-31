@@ -28,7 +28,8 @@ If navigation is needed, read:
 7. For UI, apply design-excellence: UX, UI, design system, responsiveness, accessibility, and visual validation.
 8. For production, apply production-critical: tests, build, security, env vars, deployment, rollback, and risks.
 9. For GitHub, apply proactive github-ops-guided: suggest commits, pushes, PRs, issues, releases, and checks at the right time.
-10. Do not declare done without verification evidence proportional to risk.
+10. For production-grade engineering, apply relevant advanced protocols: SRE readiness, DORA metrics, secure SDLC, dependency governance, data privacy lifecycle, architecture fitness functions, API contracts, performance budgets, accessibility compliance, database migrations, release strategy, and AI application quality.
+11. Do not declare done without verification evidence proportional to risk.
 
 ## Quick Selection
 

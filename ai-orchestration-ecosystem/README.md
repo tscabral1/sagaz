@@ -25,3 +25,7 @@ A local AI orchestration ecosystem for Codex, focused on autonomous teams, consi
 
 No delivery is complete without verification evidence proportional to the risk.
 
+## Advanced Engineering Coverage
+
+Sagaz includes protocols for SRE readiness, DORA metrics, secure SDLC, dependency governance, data privacy lifecycle, architecture fitness functions, API contracts, performance budgets, accessibility compliance, database migrations, release strategy, and AI application quality.
+
