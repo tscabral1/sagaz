@@ -3,11 +3,38 @@
 ## Requirements
 
 - Codex Desktop.
+- Node.js 18+ if installing with `npx`.
 - Git installed.
 - GitHub CLI (`gh`) installed and authenticated if you want GitHub Ops.
 - Access to the local Codex skills folder.
 
-## Install The Local Skill
+## Recommended: Install With npx
+
+```powershell
+npx sagaz-ai install
+```
+
+Then open a new Codex Desktop thread and test:
+
+```text
+Sagaz: explain the available workflows.
+```
+
+## Optional Commands
+
+```powershell
+npx sagaz-ai status
+npx sagaz-ai doctor
+npx sagaz-ai install --force
+```
+
+To also copy the ecosystem to a chosen folder:
+
+```powershell
+npx sagaz-ai install --ecosystem C:\Users\YOUR_USER\Documents\Sagaz\ai-orchestration-ecosystem
+```
+
+## Manual Install
 
 Copy:
 
@@ -21,7 +48,7 @@ into:
 C:\Users\YOUR_USER\.codex\skills\sagaz
 ```
 
-Then open a new Codex thread and test:
+Then open a new Codex Desktop thread and test:
 
 ```text
 Sagaz: explain the available workflows.

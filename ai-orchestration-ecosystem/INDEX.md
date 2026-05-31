@@ -63,3 +63,11 @@ See `protocols/` for quality gates, testing matrix, stack selection, design qual
 
 See `templates/` for task briefs, product specs, technical specs, design systems, stack recommendations, run state, squad handoffs, QA reports, release checklists, and final handoffs.
 
+## Governance
+
+- `governance/quality-policy.md`
+- `governance/security-policy.md`
+- `governance/versioning.md`
+- `governance/ecosystem-maintenance.md`
+- `governance/package-release-policy.md`
+

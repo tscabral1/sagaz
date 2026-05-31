@@ -1,0 +1,42 @@
+{
+  "name": "sagaz-ai",
+  "version": "0.1.0",
+  "description": "Sagaz AI orchestration ecosystem installer for Codex Desktop.",
+  "type": "module",
+  "bin": {
+    "sagaz": "./bin/sagaz.js"
+  },
+  "scripts": {
+    "doctor": "node ./bin/sagaz.js doctor",
+    "test": "node ./scripts/verify-package.js"
+  },
+  "files": [
+    "bin",
+    "scripts",
+    "codex-skill",
+    "ai-orchestration-ecosystem",
+    "README.md",
+    "INSTALL.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "codex",
+    "ai-agents",
+    "orchestration",
+    "skills",
+    "sagaz"
+  ],
+  "author": "Thiago Cabral",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tscabral1/sagaz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tscabral1/sagaz/issues"
+  },
+  "homepage": "https://github.com/tscabral1/sagaz#readme"
+}

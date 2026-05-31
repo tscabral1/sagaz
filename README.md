@@ -1,8 +1,12 @@
 ﻿# Sagaz
 
-Sagaz is a local AI orchestration ecosystem for Codex. It turns a product request into a structured delivery process with specialized AI teams, explicit handoffs, detailed specifications, implementation, testing, high-standard UX/UI, guided GitHub operations, CI/CD readiness, and production-quality gates.
+Sagaz is a local AI orchestration ecosystem designed for Codex Desktop. It turns a product request into a structured delivery process with specialized AI teams, explicit handoffs, detailed specifications, implementation, testing, high-standard UX/UI, guided GitHub operations, CI/CD readiness, and production-quality gates.
 
-It is inspired by ideas from AIOX, CrewAI, AutoGen, LangChain, and enterprise governance platforms, but it is designed for one practical goal: make Codex easy to use for serious web and mobile software projects while keeping token usage low and technical quality high.
+It is inspired by ideas from AIOX, CrewAI, AutoGen, LangChain, and enterprise governance platforms, but it is designed for one practical goal: make Codex Desktop easy to use for serious web and mobile software projects while keeping token usage low and technical quality high.
+
+## Designed For Codex Desktop
+
+Sagaz is intended to be used inside Codex Desktop the way this repository was created: as a local Codex skill plus a Markdown orchestration ecosystem. The npm package only installs the skill and ecosystem files. It is not a standalone terminal agent runtime and it is not a replacement for Codex CLI.
 
 ## What Sagaz Does
 
@@ -60,9 +64,36 @@ Key areas:
 - `brownfield-refactor-safe`: refactor an existing project safely.
 - `bugfix-to-release`: fix a bug through verification and release.
 
-## Installation In Codex
+## Installation In Codex Desktop
 
-### 1. Clone Or Download The Repository
+### Recommended: Install With npx
+
+```powershell
+npx sagaz-ai install
+```
+
+Then open a new Codex Desktop thread and run:
+
+```text
+Sagaz: explain the available workflows.
+```
+
+Optional: also copy the ecosystem to a known local folder:
+
+```powershell
+npx sagaz-ai install --ecosystem C:\Users\YOUR_USER\Documents\Sagaz\ai-orchestration-ecosystem
+```
+
+Check installation:
+
+```powershell
+npx sagaz-ai status
+npx sagaz-ai doctor
+```
+
+### Manual Installation
+
+#### 1. Clone Or Download The Repository
 
 ```powershell
 git clone https://github.com/tscabral1/sagaz.git
@@ -70,7 +101,7 @@ git clone https://github.com/tscabral1/sagaz.git
 
 Or download the ZIP from GitHub.
 
-### 2. Copy The Skill Into Codex
+#### 2. Copy The Skill Into Codex
 
 On Windows, the local Codex skills folder is usually:
 
@@ -90,13 +121,13 @@ into:
 C:\Users\YOUR_USER\.codex\skills\sagaz
 ```
 
-### 3. Keep The Ecosystem Available
+#### 3. Keep The Ecosystem Available
 
 Keep `ai-orchestration-ecosystem/` accessible in the Codex workspace or in a known local folder.
 
-### 4. Open A New Codex Thread
+#### 4. open a new Codex Desktop thread
 
-After copying the skill, open a new Codex thread so Codex can discover the updated skill.
+After copying the skill, open a new Codex Desktop thread so Codex can discover the updated skill.
 
 ## How To Use
 
@@ -151,3 +182,4 @@ Sagaz is for users who want to build serious software with Codex without needing
 ## Status
 
 Sagaz is an evolving local orchestration ecosystem. The source of truth is the Markdown in this repository.
+

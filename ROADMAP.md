@@ -3,6 +3,7 @@
 ## Next Steps
 
 - Add an automatic local skill installer.
+- Publish and maintain the npm package for `npx sagaz-ai install`.
 - Add complete web and mobile example projects.
 - Add GitHub Actions templates by stack.
 - Add deployment checklists for Vercel, Netlify, Firebase, Expo/EAS, and mobile app stores.
