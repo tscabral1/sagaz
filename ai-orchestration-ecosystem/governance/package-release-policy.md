@@ -16,6 +16,7 @@ When Sagaz changes, update every relevant location:
 - `package.json` version when publishing a package update
 - GitHub repository
 - npm package when the installer or distributed files change
+- GitHub Actions workflows when package checks or publishing rules change
 
 ## Release Checklist
 
@@ -32,6 +33,15 @@ Git push:
 npm publish:
 Post-publish install test:
 ```
+
+## GitHub Actions
+
+The repository should include:
+
+- package checks on push and pull request
+- manual npm publishing workflow
+
+The npm publishing workflow requires an `NPM_TOKEN` repository secret. Do not assume it exists. If it is missing, guide the user through creating it and explain why it is needed.
 
 ## npm Publishing
 

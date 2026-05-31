@@ -36,6 +36,11 @@ Sagaz also guides the user through the process. At the end of each phase, it exp
 - **GitHub without guesswork:** Sagaz recommends commits, pushes, pull requests, issues, and releases at the right time.
 - **Web and mobile:** workflows for browser apps, websites, dashboards, Android, and iOS.
 - **Persistent state:** Markdown run state records decisions, approvals, handoffs, risks, and test evidence.
+- **Agent observability:** compact traces record decisions, tools, evidence, failures, and recoveries.
+- **Durable checkpoints:** long projects can resume across threads and refactors without losing context.
+- **Tool registry:** Sagaz verifies and recommends tools such as GitHub CLI, Playwright, Vercel, Expo/EAS, Supabase, Firebase, Stripe, CI/CD, and observability services.
+- **Stack presets:** common web, mobile, backend, database, and dashboard stacks are documented as starting points.
+- **Sagaz evaluations:** scenario-based checks help prevent regressions in the orchestration system itself.
 
 ## How It Works
 
@@ -52,6 +57,10 @@ Key areas:
 - `agents/`: individual roles.
 - `tasks/`: formal tasks with inputs, outputs, acceptance criteria, verification, and stop conditions.
 - `protocols/`: rules for quality, handoffs, GitHub, production, design, CI/CD, and monitoring.
+- `tools/`: tool and connector selection rules.
+- `stack-presets/`: default stack recommendations and tradeoffs.
+- `evals/`: checks for Sagaz's own reliability.
+- `examples/`: reusable examples of common project flows.
 - `templates/`: reusable artifacts for specs, QA, handoffs, run state, and releases.
 - `engineering/`: deep software engineering standards.
 - `governance/`: security, quality, versioning, and ecosystem maintenance.
@@ -147,6 +156,10 @@ Sagaz should choose the appropriate workflow, create or update persistent run st
 
 For production-grade work, Sagaz can also apply SRE readiness, DORA metrics, secure SDLC, dependency governance, data privacy lifecycle, architecture fitness functions, API contracts, performance budgets, accessibility compliance, database migrations, release strategy, and AI application quality protocols.
 
+For tool-heavy work, Sagaz uses a tool registry to verify local availability and recommend the right connector or platform before asking permission to install, authenticate, deploy, publish, or modify external resources.
+
+For common project types, Sagaz can start from documented stack presets such as Next.js on Vercel, React with Vite, Expo mobile, React Native, Supabase, Firebase, Node APIs, static sites, and admin dashboards.
+
 ## Web Example
 
 ```text
@@ -174,6 +187,8 @@ Recommend the stack, explain costs, create mobile UX, implement it, test it, and
 Sagaz must ask permission before moving between major teams/phases, installing dependencies, creating or editing files when implementation has not been clearly authorized, deploying, creating a repository, committing, pushing, opening a PR, creating an issue/tag/release, accepting high risk, or running destructive actions.
 
 Sagaz may directly run low-risk diagnostics such as reading files, inspecting structure, searching text, checking status, and proposing plans.
+
+Sagaz should proactively suggest useful actions across the whole ecosystem, including tests, visual QA, accessibility checks, security checks, commits, releases, deployment previews, monitoring, and documentation updates.
 
 ## Who It Is For
 

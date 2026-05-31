@@ -42,7 +42,7 @@ See `agents/` for Orchestrator, Product Strategist, Technology Strategist, Softw
 
 ## Protocols
 
-See `protocols/` for quality gates, testing matrix, stack selection, design quality, guided proactivity, squad handoffs, production readiness, GitHub operations, CI/CD readiness, post-delivery monitoring, delegation, communication, memory, and model routing.
+See `protocols/` for quality gates, testing matrix, stack selection, design quality, guided proactivity, squad handoffs, production readiness, GitHub operations, CI/CD readiness, post-delivery monitoring, durable run state, agent observability, delegation, communication, memory, and model routing.
 
 ## Advanced Engineering Protocols
 
@@ -58,10 +58,36 @@ See `protocols/` for quality gates, testing matrix, stack selection, design qual
 - `protocols/database-migrations.md`
 - `protocols/release-strategy.md`
 - `protocols/ai-application-quality.md`
+- `protocols/agent-observability.md`
+- `protocols/durable-run-state.md`
+
+## Tools
+
+- `tools/tool-registry.md`
+
+## Stack Presets
+
+- `stack-presets/nextjs-vercel.md`
+- `stack-presets/react-vite.md`
+- `stack-presets/expo-mobile.md`
+- `stack-presets/react-native.md`
+- `stack-presets/supabase.md`
+- `stack-presets/firebase.md`
+- `stack-presets/node-api.md`
+- `stack-presets/static-site.md`
+- `stack-presets/admin-dashboard.md`
+
+## Evaluations
+
+- `evals/sagaz-evaluation-suite.md`
+
+## Examples
+
+- `examples/README.md`
 
 ## Templates
 
-See `templates/` for task briefs, product specs, technical specs, design systems, stack recommendations, run state, squad handoffs, QA reports, release checklists, and final handoffs.
+See `templates/` for task briefs, product specs, technical specs, design systems, stack recommendations, run state, squad handoffs, QA reports, release checklists, changelogs, release notes, and final handoffs.
 
 ## Governance
 

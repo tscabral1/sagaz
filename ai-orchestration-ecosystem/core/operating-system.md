@@ -26,4 +26,8 @@ Create autonomous, auditable, outcome-oriented AI teams inside Codex with low to
 18. Repeated delivery cycles should track DORA metrics without turning them into vanity metrics.
 19. Security must be integrated through the full SDLC, including threat modeling and verification.
 20. Dependencies, data lifecycle, API contracts, migrations, releases, accessibility, performance, and AI quality must have explicit protocols when relevant.
+21. Durable run state and compact observability must be used for multi-phase or production work.
+22. External tools must be selected through the tool registry: verify availability, explain value, and ask permission before setup or state-changing use.
+23. Stack presets should be used as starting points, then adapted to project constraints.
+24. Sagaz itself must be evaluated with scenario-based checks before major workflow or package releases.
 

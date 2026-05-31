@@ -29,7 +29,10 @@ If navigation is needed, read:
 8. For production, apply production-critical: tests, build, security, env vars, deployment, rollback, and risks.
 9. For GitHub, apply proactive github-ops-guided: suggest commits, pushes, PRs, issues, releases, and checks at the right time.
 10. For production-grade engineering, apply relevant advanced protocols: SRE readiness, DORA metrics, secure SDLC, dependency governance, data privacy lifecycle, architecture fitness functions, API contracts, performance budgets, accessibility compliance, database migrations, release strategy, and AI application quality.
-11. Do not declare done without verification evidence proportional to risk.
+11. For multi-phase or production work, apply durable run state and compact agent observability.
+12. Use the tool registry before recommending or using external tools, connectors, deployments, publishing, or account-linked actions.
+13. Use stack presets as starting points when recommending technologies, then adapt to user constraints.
+14. Do not declare done without verification evidence proportional to risk.
 
 ## Quick Selection
 
@@ -40,6 +43,9 @@ If navigation is needed, read:
 - Bugfix to release: `workflows/bugfix-to-release.md`
 - Design/UI: `squads/design-studio.md` and `protocols/design-quality.md`
 - GitHub: `squads/github-ops.md` and `protocols/github-operations.md`
+- Tools/connectors: `tools/tool-registry.md`
+- Stack presets: `stack-presets/`
+- Sagaz quality checks: `evals/sagaz-evaluation-suite.md`
 
 ## Required Handoff
 
@@ -61,6 +67,14 @@ May I perform the handoff?
 For long-running work, create or update a file based on:
 
 `ai-orchestration-ecosystem/templates/run-state.md`
+
+Then apply:
+
+`ai-orchestration-ecosystem/protocols/durable-run-state.md`
+
+For auditability, use:
+
+`ai-orchestration-ecosystem/protocols/agent-observability.md`
 
 ## Source Of Truth
 
