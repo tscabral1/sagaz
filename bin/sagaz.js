@@ -23,9 +23,16 @@ Usage:
   npx sagaz-ai doctor
 
 Options:
-  --codex-home <path>     Override Codex home. Default: ~/.codex
+  --codex-home <path>     Override Codex home. Default: ~/.codex on Windows, macOS, and Linux
   --ecosystem <path>      Also copy ai-orchestration-ecosystem to a target folder
   --force                 Overwrite existing installed skill
+
+Examples:
+  Windows:
+    npx sagaz-ai install --ecosystem C:\\Users\\YOUR_USER\\Documents\\Sagaz\\ai-orchestration-ecosystem
+
+  macOS:
+    npx sagaz-ai install --ecosystem ~/Documents/Sagaz/ai-orchestration-ecosystem
 `);
 }
 

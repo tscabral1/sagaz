@@ -77,14 +77,17 @@ Key areas:
 
 ### Recommended: Install With npx
 
+Sagaz supports Windows and macOS through Codex Desktop. The npm installer installs the skill into the current user's Codex skills folder:
+
+- Windows: `C:\Users\YOUR_USER\.codex\skills\sagaz`
+- macOS: `~/.codex/skills/sagaz`
+
+If your Codex Desktop installation uses a custom home folder, pass `--codex-home <path>`.
+
+#### Windows PowerShell
+
 ```powershell
 npx sagaz-ai install
-```
-
-Then open a new Codex Desktop thread and run:
-
-```text
-Sagaz: explain the available workflows.
 ```
 
 Optional: also copy the ecosystem to a known local folder:
@@ -100,11 +103,44 @@ npx sagaz-ai status
 npx sagaz-ai doctor
 ```
 
+#### macOS Terminal
+
+```bash
+npx sagaz-ai install
+```
+
+Optional: also copy the ecosystem to a known local folder:
+
+```bash
+npx sagaz-ai install --ecosystem ~/Documents/Sagaz/ai-orchestration-ecosystem
+```
+
+Check installation:
+
+```bash
+npx sagaz-ai status
+npx sagaz-ai doctor
+```
+
+Then open a new Codex Desktop thread and run:
+
+```text
+Sagaz: explain the available workflows.
+```
+
 ### Manual Installation
 
 #### 1. Clone Or Download The Repository
 
+Windows PowerShell:
+
 ```powershell
+git clone https://github.com/tscabral1/sagaz.git
+```
+
+macOS Terminal:
+
+```bash
 git clone https://github.com/tscabral1/sagaz.git
 ```
 
@@ -112,22 +148,32 @@ Or download the ZIP from GitHub.
 
 #### 2. Copy The Skill Into Codex
 
-On Windows, the local Codex skills folder is usually:
+Copy the Sagaz skill folder from the repository.
 
-```text
-C:\Users\YOUR_USER\.codex\skills
-```
-
-Copy this folder:
+Windows source folder:
 
 ```text
 codex-skill\sagaz
 ```
 
-into:
+macOS source folder:
+
+```text
+codex-skill/sagaz
+```
+
+into the platform-specific Codex skills folder.
+
+Windows:
 
 ```text
 C:\Users\YOUR_USER\.codex\skills\sagaz
+```
+
+macOS:
+
+```text
+~/.codex/skills/sagaz
 ```
 
 #### 3. Keep The Ecosystem Available
