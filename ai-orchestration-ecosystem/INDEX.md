@@ -60,6 +60,7 @@ See `protocols/` for quality gates, testing matrix, stack selection, design qual
 - `protocols/ai-application-quality.md`
 - `protocols/agent-observability.md`
 - `protocols/durable-run-state.md`
+- `protocols/compatibility-update-audit.md`
 
 ## Tools
 

@@ -32,7 +32,8 @@ If navigation is needed, read:
 11. For multi-phase or production work, apply durable run state and compact agent observability.
 12. Use the tool registry before recommending or using external tools, connectors, deployments, publishing, or account-linked actions.
 13. Use stack presets as starting points when recommending technologies, then adapt to user constraints.
-14. Do not declare done without verification evidence proportional to risk.
+14. When the user asks whether Sagaz needs updates, apply the compatibility update audit across Windows, macOS, npm, Node.js, Codex Desktop, AI model behavior, GitHub, package contents, installed skill, and relevant external platforms before recommending a new version.
+15. Do not declare done without verification evidence proportional to risk.
 
 ## Quick Selection
 
@@ -46,6 +47,7 @@ If navigation is needed, read:
 - Tools/connectors: `tools/tool-registry.md`
 - Stack presets: `stack-presets/`
 - Sagaz quality checks: `evals/sagaz-evaluation-suite.md`
+- Sagaz update checks: `protocols/compatibility-update-audit.md`
 
 ## Required Handoff
 
