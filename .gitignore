@@ -1,0 +1,29 @@
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs/temp
+*.log
+tmp/
+temp/
+
+# Environment/secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Node/Python caches
+node_modules/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+
+# Build outputs
+dist/
+build/
+coverage/
