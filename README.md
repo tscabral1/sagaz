@@ -85,6 +85,8 @@ Sagaz supports Windows and macOS through Codex Desktop. The npm installer instal
 
 If your Codex Desktop installation uses a custom home folder, pass `--codex-home <path>`.
 
+Use Node.js 22.14+ with npm for installation. Node.js 24 LTS is preferred for new installations because it aligns with current npm publishing and GitHub Actions compatibility. Avoid Node.js 18 and Node.js 20 for new Sagaz installations.
+
 #### Windows PowerShell
 
 ```powershell

@@ -40,8 +40,11 @@ The repository should include:
 
 - package checks on push and pull request
 - manual npm publishing workflow
+- GitHub Actions configured with Node.js 24 unless a newer supported LTS baseline is intentionally adopted
 
-The npm publishing workflow requires an `NPM_TOKEN` repository secret. Do not assume it exists. If it is missing, guide the user through creating it and explain why it is needed.
+The npm publishing workflow requires either trusted publishing or an `NPM_TOKEN` repository secret. Do not assume either is configured. If missing, guide the user through the safest available option and explain why it is needed.
+
+Use Node.js 22.14+ as the minimum package baseline and Node.js 24 LTS for GitHub Actions unless a compatibility audit recommends a newer baseline.
 
 ## npm Publishing
 

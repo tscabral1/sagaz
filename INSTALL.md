@@ -3,7 +3,8 @@
 ## Requirements
 
 - Codex Desktop.
-- Node.js 18+ if installing with `npx`.
+- Node.js 22.14+ if installing with `npx`.
+- Node.js 24 LTS is preferred for new installations.
 - Git installed.
 - GitHub CLI (`gh`) installed and authenticated if you want GitHub Ops.
 - Access to the local Codex skills folder.
@@ -16,6 +17,21 @@ Sagaz can be used on Windows and macOS through Codex Desktop. The npm installer 
 - macOS: `~/.codex/skills/sagaz`
 
 If your Codex Desktop installation uses a custom home folder, pass `--codex-home <path>`.
+
+## Node.js And npm
+
+Use a currently supported Node.js release:
+
+- Recommended minimum: Node.js 22.14+.
+- Preferred for new installations: Node.js 24 LTS.
+- Avoid Node.js 18 and Node.js 20 for new Sagaz installations because they are no longer the best compatibility baseline for current npm publishing and GitHub Actions behavior.
+
+Verify:
+
+```bash
+node --version
+npm --version
+```
 
 ## Recommended: Install With npx
 
