@@ -1,59 +1,32 @@
-# Protocol: Guided Proactivity
+﻿# Protocol: Guided Proactivity
 
-## Objetivo
+## Objective
 
-Fazer o Sagaz agir como parceiro senior proativo em todo o ecossistema, sem exigir que o usuario lembre cada proximo passo.
+Define how Sagaz should handle Guided Proactivity while keeping the process clear, low-token, safe, and verifiable.
 
-## Regra Central
+## Required Practice
 
-Detectar, recomendar, explicar e pedir permissao quando uma acao tiver impacto relevante.
+- Start from the user goal and current project state.
+- Load only relevant context.
+- Separate facts, assumptions, inferences, risks, and decisions.
+- Ask permission before meaningful state changes.
+- Record evidence and residual risk.
 
-## Formato
+## Standard Recommendation Format
 
 ```md
-Recomendacao:
-Por que agora:
-O que muda:
-Beneficio:
-Risco:
-Permissao necessaria:
-```
+Recommendation:
+Why now:
+What changes:
+Benefit:
+Risk:
+Permission required:
+```n
+## Blocking Conditions
 
-## Avaliar Sempre
+- The primary flow fails.
+- A relevant build, check, or test fails without explanation.
+- Secrets or sensitive data would be exposed.
+- A high risk is not accepted by the user.
+- Verification evidence is missing for the risk level.
 
-- Precisa de especificacao?
-- Precisa de arquitetura antes de codigo?
-- Precisa de teste?
-- Precisa de validacao visual?
-- Precisa de revisao de seguranca?
-- Precisa de documentacao?
-- Precisa de commit/PR?
-- Precisa de deploy/rollback?
-- Precisa de issue/release?
-- Precisa de aceite de risco?
-
-## Pode Fazer Sem Pedir
-
-- Ler contexto.
-- Rodar buscas.
-- Inspecionar estrutura.
-- Checar status.
-- Rodar diagnostico de baixo risco.
-- Sugerir plano.
-
-## Deve Pedir Antes
-
-- Editar arquivos quando a tarefa ainda nao autorizou implementacao.
-- Instalar dependencias.
-- Alterar configuracao global.
-- Executar deploy.
-- Criar recursos externos.
-- Publicar ou enviar dados.
-- Apagar/mover/sobrescrever.
-- Alterar dados reais.
-- Committar, pushar, abrir PR, issue, release ou tag.
-- Aceitar risco alto.
-
-## Se O Usuario Recusar
-
-Respeitar, registrar consequencia quando relevante e continuar pelo melhor caminho seguro.

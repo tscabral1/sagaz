@@ -1,32 +1,25 @@
-# Decision Records
+﻿# Decision Records
 
-Use este padrao para registrar decisoes tecnicas e operacionais que afetam manutencao.
+Use ADRs for decisions that affect architecture, stack, public contracts, deployment, cost, or maintainability.
 
-## ADR Template
+## Template
 
 ```md
-# ADR-[numero] - [titulo]
+# ADR-[number] - [title]
 
-Data:
-Status: proposto | aceito | substituido | revogado
+Date:
+Status: proposed | accepted | superseded | revoked
 
-## Contexto
+## Context
 
-## Decisao
+## Decision
 
-## Alternativas Consideradas
+## Alternatives Considered
 
-## Consequencias
+## Consequences
 
-## Evidencias
+## Evidence
 
-## Revisao Futura
+## Future Review
 ```
 
-## Quando Criar ADR
-
-- Escolha de arquitetura.
-- Mudanca de stack.
-- Contrato publico ou API.
-- Decisao dificil de reverter.
-- Excecao deliberada a padrao do ecossistema.

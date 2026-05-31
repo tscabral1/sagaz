@@ -1,30 +1,34 @@
-# Task: Production Readiness
+﻿# Task: Production Readiness
 
-Owner: Security Governance / QA Verifier
+## Owner
+
+Assigned by the active workflow or squad.
 
 ## Inputs
 
-- Projeto verificado.
-- Configuracao.
-- Deploy target.
+- User goal.
+- Current run state.
+- Relevant specifications, files, and constraints.
 
 ## Outputs
 
-- Production readiness report.
-- Deploy plan.
-- Rollback/mitigation.
+- Completed task artifact.
+- Evidence.
+- Risks and pending items.
+- Handoff recommendation.
 
 ## Acceptance Criteria
 
-- Build reproduzivel.
-- Env vars documentadas.
-- Segurança e dados revisados.
-- Rollback ou mitigacao definidos.
+- Output is specific and testable.
+- Assumptions are recorded.
+- Verification method is stated.
+- Next step is clear.
 
 ## Verification
 
-- Conferir contra `protocols/production-readiness.md`.
+Check against the active protocol and quality gates.
 
 ## Stop Condition
 
-Bloquear se houver risco alto nao aceito.
+Stop and ask the user when scope, cost, architecture, production risk, or external state would change.
+

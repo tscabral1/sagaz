@@ -1,29 +1,20 @@
-# Squad Handoff
+﻿# Squad Handoff
 
-## Equipe Atual
+## Objective
 
-## Fase
+## Context
 
-## Status
+## Inputs
 
-approved | approved with risks | blocked
+## Decisions
 
-## O Que Foi Feito
+## Outputs
 
-## Artefatos Gerados
+## Evidence
 
-## Evidencias
+## Risks
 
-## Decisoes Tomadas
+## Next Step
 
-## Riscos Ou Pendencias
+## User Permission
 
-## Proxima Equipe
-
-## O Que A Proxima Equipe Fara
-
-## Por Que O Handoff E Necessario
-
-## Permissao Do Usuario
-
-## Data/Hora

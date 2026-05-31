@@ -1,29 +1,34 @@
-# Task: Stack Recommendation
+﻿# Task: Stack Recommendation
 
-Owner: Technology Strategist
+## Owner
+
+Assigned by the active workflow or squad.
 
 ## Inputs
 
-- Requisitos.
-- Restricoes de custo, deploy e manutencao.
-- Perfil tecnico do usuario.
+- User goal.
+- Current run state.
+- Relevant specifications, files, and constraints.
 
 ## Outputs
 
-- Stack recomendada.
-- Alternativas.
-- Tradeoffs.
-- Confirmacao necessaria.
+- Completed task artifact.
+- Evidence.
+- Risks and pending items.
+- Handoff recommendation.
 
 ## Acceptance Criteria
 
-- Custo, velocidade, escala, manutencao, deploy e futuras alteracoes explicados.
-- Recomendacao em linguagem simples.
+- Output is specific and testable.
+- Assumptions are recorded.
+- Verification method is stated.
+- Next step is clear.
 
 ## Verification
 
-- Comparar contra `protocols/stack-selection.md`.
+Check against the active protocol and quality gates.
 
 ## Stop Condition
 
-Parar se a decisao envolver custo, lock-in ou mudanca arquitetural sem aceite.
+Stop and ask the user when scope, cost, architecture, production risk, or external state would change.
+

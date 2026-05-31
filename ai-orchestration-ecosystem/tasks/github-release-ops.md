@@ -1,29 +1,34 @@
-# Task: GitHub Release Ops
+﻿# Task: Github Release Ops
 
-Owner: GitHub Ops
+## Owner
+
+Assigned by the active workflow or squad.
 
 ## Inputs
 
-- Mudancas verificadas.
-- Relatorio de QA.
-- Riscos.
+- User goal.
+- Current run state.
+- Relevant specifications, files, and constraints.
 
 ## Outputs
 
-- Commit/branch/PR/release quando autorizado.
-- Checks consultados.
-- Relatorio GitHub Ops.
+- Completed task artifact.
+- Evidence.
+- Risks and pending items.
+- Handoff recommendation.
 
 ## Acceptance Criteria
 
-- Usuario confirmou acoes que alteram estado.
-- Apenas arquivos relacionados incluidos.
-- Riscos e checks documentados.
+- Output is specific and testable.
+- Assumptions are recorded.
+- Verification method is stated.
+- Next step is clear.
 
 ## Verification
 
-- `git status`, diff, checks e auth quando aplicavel.
+Check against the active protocol and quality gates.
 
 ## Stop Condition
 
-Parar se houver segredo, mudanca nao relacionada ou token/auth invalido.
+Stop and ask the user when scope, cost, architecture, production risk, or external state would change.
+

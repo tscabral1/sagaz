@@ -1,177 +1,151 @@
-# Sagaz
+﻿# Sagaz
 
-Sagaz e um ecossistema local de orquestracao de IA para o Codex, criado para transformar pedidos em produtos digitais completos com planejamento, equipes especializadas, handoffs, especificacoes, implementacao, testes, design de alto padrao, GitHub guiado e criterios de producao.
+Sagaz is a local AI orchestration ecosystem for Codex. It turns a product request into a structured delivery process with specialized AI teams, explicit handoffs, detailed specifications, implementation, testing, high-standard UX/UI, guided GitHub operations, CI/CD readiness, and production-quality gates.
 
-Ele foi inspirado por ideias de AIOX, CrewAI, AutoGen, LangChain e plataformas corporativas de governanca, mas foi adaptado para um objetivo especifico: ser simples de usar dentro do Codex, consumir poucos tokens e ainda manter rigor tecnico.
+It is inspired by ideas from AIOX, CrewAI, AutoGen, LangChain, and enterprise governance platforms, but it is designed for one practical goal: make Codex easy to use for serious web and mobile software projects while keeping token usage low and technical quality high.
 
-## O Que O Sagaz Faz
+## What Sagaz Does
 
-O Sagaz organiza o trabalho em equipes de IA, cada uma com uma responsabilidade clara:
+Sagaz organizes work into focused teams:
 
-- Produto e requisitos.
-- Recomendacao de stack.
-- Arquitetura de software.
-- UX, UI e design system.
-- Implementacao.
-- QA e testes.
-- Seguranca e producao.
-- GitHub, commits, PRs e releases.
-- Mobile Android/iOS.
-- CI/CD e monitoramento pos-entrega.
+- Product strategy and requirements.
+- Stack recommendation.
+- Software architecture.
+- UX, UI, and design systems.
+- Implementation.
+- QA and testing.
+- Security and production readiness.
+- GitHub commits, pull requests, issues, releases, and checks.
+- Android/iOS mobile delivery.
+- CI/CD and post-delivery monitoring.
 
-Ele tambem guia o usuario durante o processo. Ao final de cada fase, o Sagaz explica o que foi feito, qual equipe entra em seguida, por que isso e necessario e pede permissao antes de continuar.
+Sagaz also guides the user through the process. At the end of each phase, it explains what was completed, which team should work next, why the next step matters, and asks permission before moving forward.
 
-## Por Que Usar
+## Why Use Sagaz
 
-- **Facilidade de uso:** invoque com `Sagaz:` e descreva o objetivo.
-- **Poucos tokens:** carrega apenas os arquivos necessarios para a fase atual.
-- **Processo guiado:** handoffs entre equipes, com aprovacao do usuario.
-- **Qualidade de producao:** gates para testes, seguranca, build, deploy e rollback.
-- **Design premium:** UX/UI, design system, responsividade, acessibilidade e validacao visual.
-- **Stack recomendada:** explica tecnologia por custo, velocidade, escala, manutencao e deploy.
-- **GitHub sem complicacao:** sugere commit, push, PR, issue e release no momento certo.
-- **Web e mobile:** workflows para apps de navegador, websites, dashboards e Android/iOS.
-- **Estado persistente:** usa Markdown para registrar decisoes, aprovacoes, handoffs, riscos e testes.
+- **Simple invocation:** start with `Sagaz:` and describe the goal.
+- **Low token usage:** load only the workflow, squad, task, or protocol needed for the current phase.
+- **Guided process:** team handoffs require user approval.
+- **Production quality:** gates for tests, security, builds, deployment, rollback, and residual risk.
+- **Premium design:** UX/UI, design systems, responsiveness, accessibility, and visual QA.
+- **Stack advisory:** technology choices explained by cost, speed, scale, maintainability, deployment, and future changes.
+- **GitHub without guesswork:** Sagaz recommends commits, pushes, pull requests, issues, and releases at the right time.
+- **Web and mobile:** workflows for browser apps, websites, dashboards, Android, and iOS.
+- **Persistent state:** Markdown run state records decisions, approvals, handoffs, risks, and test evidence.
 
-## Como Funciona
+## How It Works
 
-O Sagaz usa arquivos Markdown como fonte da verdade. A estrutura principal fica em:
+Sagaz uses Markdown files as the source of truth. The main structure is:
 
 ```text
 ai-orchestration-ecosystem/
 ```
 
-Os principais blocos sao:
+Key areas:
 
-- `workflows/`: sequencias prontas para web, mobile, producao, bugfix e refatoracao.
-- `squads/`: equipes especializadas.
-- `agents/`: papeis individuais.
-- `tasks/`: tarefas formais com inputs, outputs e criterios de aceite.
-- `protocols/`: regras de qualidade, handoff, GitHub, producao, design, CI/CD e monitoramento.
-- `templates/`: modelos para especificacoes, QA, handoff, run state e releases.
-- `engineering/`: boas praticas profundas de engenharia de software.
-- `governance/`: seguranca, qualidade, versionamento e manutencao.
+- `workflows/`: ready-made workflows for web, mobile, production, bug fixes, and refactoring.
+- `squads/`: specialized teams.
+- `agents/`: individual roles.
+- `tasks/`: formal tasks with inputs, outputs, acceptance criteria, verification, and stop conditions.
+- `protocols/`: rules for quality, handoffs, GitHub, production, design, CI/CD, and monitoring.
+- `templates/`: reusable artifacts for specs, QA, handoffs, run state, and releases.
+- `engineering/`: deep software engineering standards.
+- `governance/`: security, quality, versioning, and ecosystem maintenance.
 
-## Workflows Incluidos
+## Included Workflows
 
-- `greenfield-web-app`: criar website/app web do zero.
-- `web-production-release`: preparar app web para producao.
-- `mobile-app-production`: criar/preparar app Android/iOS.
-- `brownfield-refactor-safe`: refatorar projeto existente com seguranca.
-- `bugfix-to-release`: corrigir bug ate release.
+- `greenfield-web-app`: create a website or web app from scratch.
+- `web-production-release`: prepare a web app for production.
+- `mobile-app-production`: create or prepare an Android/iOS app.
+- `brownfield-refactor-safe`: refactor an existing project safely.
+- `bugfix-to-release`: fix a bug through verification and release.
 
-## Instalacao No Codex
+## Installation In Codex
 
-### 1. Clone Ou Baixe O Repositorio
+### 1. Clone Or Download The Repository
 
 ```powershell
 git clone https://github.com/tscabral1/sagaz.git
 ```
 
-Ou baixe o ZIP pelo GitHub.
+Or download the ZIP from GitHub.
 
-### 2. Copie A Skill Para O Codex
+### 2. Copy The Skill Into Codex
 
-No Windows, a pasta local de skills costuma ser:
+On Windows, the local Codex skills folder is usually:
 
 ```text
-C:\Users\SEU_USUARIO\.codex\skills
+C:\Users\YOUR_USER\.codex\skills
 ```
 
-Copie a pasta:
+Copy this folder:
 
 ```text
 codex-skill\sagaz
 ```
 
-para:
-
-```text
-C:\Users\SEU_USUARIO\.codex\skills\sagaz
-```
-
-Nesta instalacao local de desenvolvimento, a skill do Sagaz tambem existe em:
+into:
 
 ```text
 C:\Users\YOUR_USER\.codex\skills\sagaz
 ```
 
-### 3. Mantenha O Ecossistema No Workspace
+### 3. Keep The Ecosystem Available
 
-O diretorio `ai-orchestration-ecosystem/` deve ficar acessivel ao Codex no workspace do projeto ou em uma pasta conhecida.
+Keep `ai-orchestration-ecosystem/` accessible in the Codex workspace or in a known local folder.
 
-### 4. Abra Uma Nova Thread Do Codex
+### 4. Open A New Codex Thread
 
-Depois de copiar a skill, abra uma nova conversa/thread para garantir que o Codex carregue a skill atualizada.
+After copying the skill, open a new Codex thread so Codex can discover the updated skill.
 
-## Como Usar
+## How To Use
 
-Use uma chamada simples:
-
-```text
-Sagaz: crie um website completo para minha empresa, do planejamento ao deploy.
-```
-
-Ou:
+Use a simple prompt:
 
 ```text
-Sagaz: crie um app Android/iOS para controle financeiro pessoal, com design premium, testes e preparo para producao.
+Sagaz: create a complete website for my company, from planning to deployment.
 ```
 
-O Sagaz deve:
-
-1. Escolher o workflow adequado.
-2. Criar ou atualizar o estado persistente da execucao.
-3. Recomendar stack e explicar tradeoffs.
-4. Planejar produto e requisitos.
-5. Criar UX/UI e design system.
-6. Implementar.
-7. Testar e validar.
-8. Preparar producao, CI/CD e deploy.
-9. Sugerir GitHub Ops quando fizer sentido.
-10. Fazer handoff final com evidencias e riscos.
-
-## Exemplo De Uso Para Web
+Or:
 
 ```text
-Sagaz: quero criar um SaaS web para gerenciar agendamentos.
-
-Requisitos:
-- login de usuarios
-- calendario
-- painel administrativo
-- design premium
-- pronto para producao
-- deploy na Vercel
+Sagaz: create an Android/iOS app for personal finance tracking, with premium design, tests, and production readiness.
 ```
 
-## Exemplo De Uso Para Mobile
+Sagaz should choose the appropriate workflow, create or update persistent run state, recommend a stack, plan requirements, create UX/UI and a design system, implement, test, prepare production and CI/CD, suggest GitHub operations, and deliver a final handoff with evidence and risks.
+
+## Web Example
 
 ```text
-Sagaz: quero criar um app Android/iOS para acompanhar habitos diarios.
+Sagaz: I want to create a web SaaS for appointment scheduling.
 
-Preciso que voce recomende a stack, explique custos, crie UX mobile, implemente, teste e prepare o checklist de publicacao.
+Requirements:
+- user login
+- calendar
+- admin dashboard
+- premium design
+- production-ready
+- deployment on Vercel
 ```
 
-## Regras Importantes
+## Mobile Example
 
-O Sagaz deve pedir permissao antes de:
+```text
+Sagaz: I want to create an Android/iOS app for daily habit tracking.
 
-- mudar de fase/equipe em trabalhos grandes;
-- instalar dependencias;
-- criar ou editar arquivos quando ainda nao houver autorizacao clara;
-- fazer deploy;
-- criar repositorio;
-- fazer commit, push, PR, issue, tag ou release;
-- aceitar risco alto;
-- executar acoes destrutivas.
+Recommend the stack, explain costs, create mobile UX, implement it, test it, and prepare the release checklist.
+```
 
-Ele pode executar diretamente diagnosticos de baixo risco, como ler arquivos, inspecionar estrutura, buscar texto, verificar status e propor planos.
+## Important Rules
 
-## Para Quem E
+Sagaz must ask permission before moving between major teams/phases, installing dependencies, creating or editing files when implementation has not been clearly authorized, deploying, creating a repository, committing, pushing, opening a PR, creating an issue/tag/release, accepting high risk, or running destructive actions.
 
-Sagaz foi desenhado para usuarios que querem criar software serio com ajuda do Codex, mesmo sem dominar todos os detalhes tecnicos de engenharia, design, GitHub, deploy e producao.
+Sagaz may directly run low-risk diagnostics such as reading files, inspecting structure, searching text, checking status, and proposing plans.
+
+## Who It Is For
+
+Sagaz is for users who want to build serious software with Codex without needing to personally manage every detail of engineering, design, GitHub, deployment, and production operations.
 
 ## Status
 
-Projeto em evolucao local. A fonte da verdade sao os arquivos Markdown deste repositorio.
+Sagaz is an evolving local orchestration ecosystem. The source of truth is the Markdown in this repository.

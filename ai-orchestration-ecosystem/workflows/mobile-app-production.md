@@ -1,24 +1,25 @@
-# Workflow: Mobile App Production
+﻿# Workflow: Mobile App Production
 
-## Uso
+## Use
 
-Criar ou preparar app Android/iOS para build, teste e publicacao.
+Use this named workflow when the task matches Mobile App Production delivery.
 
-## Sequencia
+## Sequence
 
-1. Intake Team: objetivo, plataformas, usuarios, recursos nativos.
-2. Product Team: jornadas mobile e criterios de aceite.
-3. Technology Team: Expo/React Native, Flutter, nativo ou PWA.
-4. Design Team: UX mobile, design system, acessibilidade e responsividade.
-5. Implementation Team: app, navegacao, estado, APIs e permissões.
-6. Mobile QA Team: emulador/dispositivo, offline, permissões, performance.
-7. Release Team: builds, signing, store metadata, release notes.
-8. GitHub Ops Team: commit, push, PR, release tag.
+1. Intake: objective, constraints, definition of done, risks.
+2. Product: requirements, journeys, acceptance criteria.
+3. Technology: stack recommendation, architecture, deployment tradeoffs.
+4. Design: UX, UI, design system, accessibility, visual quality.
+5. Implementation: build in small verifiable increments.
+6. Verification: tests, QA, visual validation, security review.
+7. Production: readiness, environment variables, deployment, rollback.
+8. GitHub Ops: commit, push, PR, checks, release when approved.
+9. Delivery: final handoff with evidence and residual risks.
 
 ## Gates
 
-- Stack mobile explicada.
-- UX mobile validada.
-- Permissões justificadas.
-- Build testado quando ambiente permitir.
-- Plano de publicacao documentado.
+- Use only necessary phases.
+- Ask permission before each major handoff.
+- Maintain run state for medium/large work.
+- Do not declare done without verification evidence.
+

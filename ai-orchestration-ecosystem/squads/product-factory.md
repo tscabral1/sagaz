@@ -1,39 +1,45 @@
-# Squad: Product Factory
+﻿# Squad: Product Factory
 
-## Uso
+## Use
 
-Criacao de produto, app, ferramenta ou site do zero.
+Use this squad when the task matches Product Factory.
 
-## Agentes
+## Agents
 
 - Orchestrator
-- Product Strategist
-- Specification Writer
-- Technology Strategist
-- Software Architect
-- Implementation Engineer
-- QA Verifier
-- Security Governance quando houver dados, auth, pagamentos ou integracoes externas
+- Product Strategist when product decisions are needed
+- Technology Strategist when stack or deployment decisions are needed
+- Software Architect when architecture matters
+- Design Studio roles when UI exists
+- Implementation Engineer when code changes are needed
+- QA Verifier for verification
+- Security Governance when data, auth, secrets, payments, or production are involved
+- GitHub Ops when versioning, PRs, releases, or checks are useful
 
-## Fluxo
+## Flow
 
-1. Brief e definicao de pronto.
-2. PRD completo.
-3. Recomendacao de stack com tradeoffs.
-4. Especificacao tecnica.
-5. Plano de implementacao.
-6. Implementacao incremental.
-7. Testes e validacao.
-8. Handoff final.
+1. Confirm objective, constraints, definition of done, and risks.
+2. Select relevant tasks and protocols.
+3. Execute the phase in small verifiable steps.
+4. Produce evidence and residual risks.
+5. Ask permission before handing off to the next team.
 
-Cada etapa deve terminar com handoff curto para a proxima equipe, explicando o que foi feito, o que vem depois e pedindo permissao para avancar.
+## Required Gates
 
-## Gates Obrigatorios
+- Clear objective and definition of done.
+- Relevant specification or task contract.
+- Handoff approval between major phases.
+- Verification evidence proportional to risk.
+- Residual risks documented.
 
-- Requisitos funcionais e nao funcionais.
-- Recomendacao de stack explicada e confirmada quando impactar custo, deploy ou arquitetura.
-- Criterios de aceite.
-- Teste de fluxo principal.
-- Teste de erro ou borda principal.
-- Evidencia de execucao.
-- Handoffs aprovados entre fases principais.
+## Standard Output
+
+```md
+Scope:
+Current phase:
+Evidence:
+Risks:
+Next team:
+Permission request:
+```
+

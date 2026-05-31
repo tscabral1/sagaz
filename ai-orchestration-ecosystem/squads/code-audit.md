@@ -1,34 +1,45 @@
-# Squad: Code Audit
+﻿# Squad: Code Audit
 
-## Uso
+## Use
 
-Revisao de codigo, projeto existente, PR, regressao ou bug hunt.
+Use this squad when the task matches Code Audit.
 
-## Agentes
+## Agents
 
 - Orchestrator
-- Software Architect
-- QA Verifier
-- Security Governance se houver risco de dados ou rede
+- Product Strategist when product decisions are needed
+- Technology Strategist when stack or deployment decisions are needed
+- Software Architect when architecture matters
+- Design Studio roles when UI exists
+- Implementation Engineer when code changes are needed
+- QA Verifier for verification
+- Security Governance when data, auth, secrets, payments, or production are involved
+- GitHub Ops when versioning, PRs, releases, or checks are useful
 
-## Fluxo
+## Flow
 
-1. Inventariar estrutura.
-2. Identificar pontos criticos.
-3. Ler codigo antes de opinar.
-4. Executar testes existentes.
-5. Procurar falhas por severidade.
-6. Relatar achados com arquivo e linha.
+1. Confirm objective, constraints, definition of done, and risks.
+2. Select relevant tasks and protocols.
+3. Execute the phase in small verifiable steps.
+4. Produce evidence and residual risks.
+5. Ask permission before handing off to the next team.
 
-## Saida
+## Required Gates
 
-Findings primeiro, ordenados por severidade.
+- Clear objective and definition of done.
+- Relevant specification or task contract.
+- Handoff approval between major phases.
+- Verification evidence proportional to risk.
+- Residual risks documented.
 
-Cada finding deve conter:
+## Standard Output
 
-- Severidade.
-- Arquivo e linha.
-- Problema.
-- Impacto.
-- Correcao recomendada.
-- Teste sugerido.
+```md
+Scope:
+Current phase:
+Evidence:
+Risks:
+Next team:
+Permission request:
+```
+

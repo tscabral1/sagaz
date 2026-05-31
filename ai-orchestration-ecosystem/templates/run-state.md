@@ -1,36 +1,20 @@
-# Run State
-
-## Project
-
-## Workflow
-
-## Current Phase
-
-## Current Team
+﻿# Run State
 
 ## Objective
 
-## Definition Of Done
+## Context
+
+## Inputs
 
 ## Decisions
 
-| Date | Decision | Reason | Approved By User |
-| --- | --- | --- | --- |
+## Outputs
 
-## User Approvals
-
-| Date | Request | Response | Scope |
-| --- | --- | --- | --- |
-
-## Handoffs
-
-| From | To | Status | Evidence | Approved |
-| --- | --- | --- | --- | --- |
-
-## Files
-
-## Tests And Evidence
+## Evidence
 
 ## Risks
 
-## Next Recommended Action
+## Next Step
+
+## User Permission
+

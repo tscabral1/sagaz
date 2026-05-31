@@ -1,49 +1,49 @@
-# Instalacao Do Sagaz
+﻿# Sagaz Installation
 
-## Requisitos
+## Requirements
 
 - Codex Desktop.
-- Git instalado.
-- GitHub CLI (`gh`) instalado e autenticado, se quiser usar GitHub Ops.
-- Acesso a pasta local de skills do Codex.
+- Git installed.
+- GitHub CLI (`gh`) installed and authenticated if you want GitHub Ops.
+- Access to the local Codex skills folder.
 
-## Instalar Skill Local
+## Install The Local Skill
 
-Copie a pasta:
+Copy:
 
 ```text
 codex-skill\sagaz
 ```
 
-para:
+into:
 
 ```text
-C:\Users\SEU_USUARIO\.codex\skills\sagaz
+C:\Users\YOUR_USER\.codex\skills\sagaz
 ```
 
-Depois abra uma nova thread do Codex e teste:
+Then open a new Codex thread and test:
 
 ```text
-Sagaz: explique quais workflows estao disponiveis.
+Sagaz: explain the available workflows.
 ```
 
-## Usar Em Um Projeto
+## Use In A Project
 
-Coloque ou clone este repositorio em uma pasta acessivel pelo Codex. Em seguida, no projeto em que voce quer trabalhar:
+Keep this repository available to Codex. Then, inside the project you want to work on, ask:
 
 ```text
-Sagaz: use o workflow adequado para este projeto. Mantenha run-state, handoffs e validacoes.
+Sagaz: use the appropriate workflow for this project. Maintain run state, handoffs, and verification evidence.
 ```
 
 ## GitHub Ops
 
-Autentique o GitHub CLI:
+Authenticate GitHub CLI:
 
 ```powershell
 gh auth login -h github.com
 ```
 
-Verifique:
+Verify:
 
 ```powershell
 gh auth status

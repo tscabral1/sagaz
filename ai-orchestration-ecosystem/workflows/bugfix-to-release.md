@@ -1,20 +1,25 @@
-# Workflow: Bugfix To Release
+﻿# Workflow: Bugfix To Release
 
-## Uso
+## Use
 
-Corrigir bug ate verificacao, commit, PR e release quando aplicavel.
+Use this named workflow when the task matches Bugfix To Release delivery.
 
-## Sequencia
+## Sequence
 
-1. Triage Team: reproduzir bug e impacto.
-2. Engineering Team: causa raiz e correcao.
-3. QA Team: teste de regressao.
-4. Production Team: risco de release.
-5. GitHub Ops Team: commit, PR, checks, release notes.
+1. Intake: objective, constraints, definition of done, risks.
+2. Product: requirements, journeys, acceptance criteria.
+3. Technology: stack recommendation, architecture, deployment tradeoffs.
+4. Design: UX, UI, design system, accessibility, visual quality.
+5. Implementation: build in small verifiable increments.
+6. Verification: tests, QA, visual validation, security review.
+7. Production: readiness, environment variables, deployment, rollback.
+8. GitHub Ops: commit, push, PR, checks, release when approved.
+9. Delivery: final handoff with evidence and residual risks.
 
 ## Gates
 
-- Bug reproduzido ou evidencia equivalente.
-- Causa raiz documentada.
-- Teste de regressao ou justificativa.
-- Risco residual documentado.
+- Use only necessary phases.
+- Ask permission before each major handoff.
+- Maintain run state for medium/large work.
+- Do not declare done without verification evidence.
+

@@ -1,38 +1,20 @@
-# Squad Runbook
-
-## Run Name
-
-## Mode
-
-solo | squad | factory | audit | refactor
-
-## Squad
+﻿# Squad Runbook
 
 ## Objective
 
-## Definition Of Done
+## Context
 
-## Loaded Files
-
-## Delegations
-
-| Agent | Objective | Output | Status |
-| --- | --- | --- | --- |
-
-## Quality Gates
-
-| Gate | Evidence | Status |
-| --- | --- | --- |
-| Context | | |
-| Specification | | |
-| Implementation | | |
-| Verification | | |
-| Delivery | | |
+## Inputs
 
 ## Decisions
 
-## Test Evidence
+## Outputs
 
-## Residual Risks
+## Evidence
 
-## Final Verdict
+## Risks
+
+## Next Step
+
+## User Permission
+

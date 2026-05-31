@@ -1,24 +1,13 @@
-# Ecosystem Maintenance
+﻿# Ecosystem Maintenance
 
-## Cadencia Recomendada
+## Purpose
 
-- Apos cada projeto grande: registrar aprendizados.
-- Mensalmente: revisar squads e protocolos.
-- Apos falha relevante: criar melhoria de gate.
-- Apos nova preferencia do usuario: atualizar memoria operacional.
+Maintain Sagaz as a reliable, safe, versionable, low-token orchestration ecosystem.
 
-## Revisao Mensal
+## Checklist
 
-- Quais arquivos foram realmente usados?
-- Quais instrucoes geraram ruido?
-- Onde faltou teste?
-- Onde houve ambiguidade?
-- Qual template deve ser simplificado?
+- Is this reusable?
+- Does it reduce future risk?
+- Does it preserve low token usage?
+- Is the user impact clear?
 
-## Anti-Patterns
-
-- Agentes demais para tarefa pequena.
-- Especificacao longa sem criterio de aceite.
-- Teste manual nao reproduzivel.
-- Handoff sem risco residual.
-- Memoria com informacao que nunca sera reutilizada.

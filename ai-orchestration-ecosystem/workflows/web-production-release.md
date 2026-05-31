@@ -1,23 +1,25 @@
-# Workflow: Web Production Release
+﻿# Workflow: Web Production Release
 
-## Uso
+## Use
 
-Preparar projeto web existente para producao, deploy, PR ou release.
+Use this named workflow when the task matches Web Production Release delivery.
 
-## Sequencia
+## Sequence
 
-1. Audit Team: estado atual, riscos, dependencias.
-2. QA Team: testes existentes e lacunas.
-3. Security Team: dados, segredos, auth, dependencias.
-4. DevOps Team: CI/CD, env vars, deploy e rollback.
-5. GitHub Ops Team: commit, push, PR, checks, release.
-6. Delivery Team: production readiness report.
+1. Intake: objective, constraints, definition of done, risks.
+2. Product: requirements, journeys, acceptance criteria.
+3. Technology: stack recommendation, architecture, deployment tradeoffs.
+4. Design: UX, UI, design system, accessibility, visual quality.
+5. Implementation: build in small verifiable increments.
+6. Verification: tests, QA, visual validation, security review.
+7. Production: readiness, environment variables, deployment, rollback.
+8. GitHub Ops: commit, push, PR, checks, release when approved.
+9. Delivery: final handoff with evidence and residual risks.
 
 ## Gates
 
-- Build reproduzivel.
-- Testes relevantes.
-- Smoke test.
-- Configuracao documentada.
-- Rollback/mitigacao.
-- Checks GitHub quando houver CI.
+- Use only necessary phases.
+- Ask permission before each major handoff.
+- Maintain run state for medium/large work.
+- Do not declare done without verification evidence.
+

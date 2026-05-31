@@ -1,23 +1,14 @@
-# Skill: Spec-First Development
+﻿# Skill: Spec First Development
 
-## Quando Usar
+## When To Use
 
-Use quando a tarefa envolver produto novo, feature complexa, multiplos arquivos, comportamento critico ou necessidade alta de padronizacao.
+Use this when the task benefits from Spec First Development.
 
-## Procedimento
+## Procedure
 
-1. Criar brief.
-2. Escrever especificacao de produto.
-3. Escrever especificacao tecnica.
-4. Confirmar criterios de aceite.
-5. Implementar.
-6. Validar contra a especificacao.
-7. Atualizar especificacao se houver decisao nova.
+1. Define expected behavior.
+2. Identify risks and invariants.
+3. Execute in small steps.
+4. Verify results.
+5. Document evidence and residual risks.
 
-## Checklist
-
-- Requisitos testaveis.
-- Estados vazios e erros.
-- Restricoes tecnicas.
-- Segurança e privacidade quando aplicavel.
-- Plano de teste antes da conclusao.

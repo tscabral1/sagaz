@@ -1,28 +1,13 @@
-# Versioning
+﻿# Versioning
 
-## Objetivo
+## Purpose
 
-Manter o ecossistema evolutivo e auditavel.
+Maintain Sagaz as a reliable, safe, versionable, low-token orchestration ecosystem.
 
-## SemVer Operacional
+## Checklist
 
-- MAJOR: muda protocolo, papel ou contrato de uso.
-- MINOR: adiciona squad, agente, skill ou template.
-- PATCH: corrige texto, clareza ou checklist sem mudar comportamento.
+- Is this reusable?
+- Does it reduce future risk?
+- Does it preserve low token usage?
+- Is the user impact clear?
 
-## Changelog Template
-
-```md
-# Changelog
-
-## [versao] - data
-
-### Added
-### Changed
-### Fixed
-### Removed
-```
-
-## Regra
-
-Atualize a versao quando a mudanca alterar como o usuario opera o ecossistema.

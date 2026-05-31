@@ -1,30 +1,34 @@
-# Task: Product Requirements
+﻿# Task: Product Requirements
 
-Owner: Product Strategist
+## Owner
+
+Assigned by the active workflow or squad.
 
 ## Inputs
 
-- Brief.
-- Usuarios.
-- Objetivo de negocio/produto.
+- User goal.
+- Current run state.
+- Relevant specifications, files, and constraints.
 
 ## Outputs
 
-- Requisitos funcionais.
-- Requisitos nao funcionais.
-- Jornadas.
-- Criterios de aceite.
+- Completed task artifact.
+- Evidence.
+- Risks and pending items.
+- Handoff recommendation.
 
 ## Acceptance Criteria
 
-- Requisitos testaveis.
-- Fora de escopo definido.
-- Estados de erro/vazio considerados.
+- Output is specific and testable.
+- Assumptions are recorded.
+- Verification method is stated.
+- Next step is clear.
 
 ## Verification
 
-- Conferir alinhamento com objetivo e definicao de pronto.
+Check against the active protocol and quality gates.
 
 ## Stop Condition
 
-Parar se escopo estiver aberto demais para implementar com seguranca.
+Stop and ask the user when scope, cost, architecture, production risk, or external state would change.
+

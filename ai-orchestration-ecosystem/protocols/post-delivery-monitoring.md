@@ -1,33 +1,32 @@
-# Protocol: Post Delivery Monitoring
+﻿# Protocol: Post Delivery Monitoring
 
-## Objetivo
+## Objective
 
-Manter confiabilidade apos entrega, especialmente em projetos de producao.
+Define how Sagaz should handle Post Delivery Monitoring while keeping the process clear, low-token, safe, and verifiable.
 
-## Avaliar
+## Required Practice
 
-- Error reporting.
-- Crash reporting para mobile.
-- Logs.
-- Analytics.
-- Health checks.
-- Uptime monitoring.
-- Performance monitoring.
-- Issue tracker.
-- Plano de manutencao.
-- Testes de regressao para proximas mudancas.
+- Start from the user goal and current project state.
+- Load only relevant context.
+- Separate facts, assumptions, inferences, risks, and decisions.
+- Ask permission before meaningful state changes.
+- Record evidence and residual risk.
 
-## Recomendacao Padrao
+## Standard Recommendation Format
 
 ```md
-Monitoramento recomendado:
-Por que:
-Custo:
-Complexidade:
-Risco se nao fizer:
-Permissao necessaria:
-```
+Recommendation:
+Why now:
+What changes:
+Benefit:
+Risk:
+Permission required:
+```n
+## Blocking Conditions
 
-## Bloqueadores
+- The primary flow fails.
+- A relevant build, check, or test fails without explanation.
+- Secrets or sensitive data would be exposed.
+- A high risk is not accepted by the user.
+- Verification evidence is missing for the risk level.
 
-Para producao critica, bloquear se nao houver forma minima de detectar falhas relevantes apos deploy.

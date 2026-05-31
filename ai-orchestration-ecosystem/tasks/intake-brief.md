@@ -1,30 +1,34 @@
-# Task: Intake Brief
+﻿# Task: Intake Brief
 
-Owner: Orchestrator
+## Owner
+
+Assigned by the active workflow or squad.
 
 ## Inputs
 
-- Pedido do usuario.
-- Contexto local.
-- Restricoes conhecidas.
+- User goal.
+- Current run state.
+- Relevant specifications, files, and constraints.
 
 ## Outputs
 
-- Objetivo.
-- Escopo.
-- Definicao de pronto.
-- Riscos iniciais.
+- Completed task artifact.
+- Evidence.
+- Risks and pending items.
+- Handoff recommendation.
 
 ## Acceptance Criteria
 
-- Objetivo verificavel.
-- Proxima fase clara.
-- Perguntas bloqueadoras resolvidas ou registradas.
+- Output is specific and testable.
+- Assumptions are recorded.
+- Verification method is stated.
+- Next step is clear.
 
 ## Verification
 
-- Brief revisado contra pedido do usuario.
+Check against the active protocol and quality gates.
 
 ## Stop Condition
 
-Parar se falta informacao que muda arquitetura, custo, escopo ou risco.
+Stop and ask the user when scope, cost, architecture, production risk, or external state would change.
+

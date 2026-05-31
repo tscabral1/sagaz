@@ -1,30 +1,34 @@
-# Task: Verification QA
+﻿# Task: Verification Qa
 
-Owner: QA Verifier
+## Owner
+
+Assigned by the active workflow or squad.
 
 ## Inputs
 
-- Codigo implementado.
-- Criterios de aceite.
-- Riscos.
+- User goal.
+- Current run state.
+- Relevant specifications, files, and constraints.
 
 ## Outputs
 
-- Relatorio de QA.
-- Falhas.
-- Correcoes recomendadas.
-- Veredito.
+- Completed task artifact.
+- Evidence.
+- Risks and pending items.
+- Handoff recommendation.
 
 ## Acceptance Criteria
 
-- Fluxo principal verificado.
-- Bordas relevantes testadas.
-- Riscos residuais documentados.
+- Output is specific and testable.
+- Assumptions are recorded.
+- Verification method is stated.
+- Next step is clear.
 
 ## Verification
 
-- Rodar comandos e checks apropriados.
+Check against the active protocol and quality gates.
 
 ## Stop Condition
 
-Bloquear se fluxo principal, build ou seguranca falhar.
+Stop and ask the user when scope, cost, architecture, production risk, or external state would change.
+

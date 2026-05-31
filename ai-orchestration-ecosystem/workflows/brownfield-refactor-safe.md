@@ -1,21 +1,25 @@
-# Workflow: Brownfield Refactor Safe
+﻿# Workflow: Brownfield Refactor Safe
 
-## Uso
+## Use
 
-Refatorar projeto existente preservando comportamento.
+Use this named workflow when the task matches Brownfield Refactor Safe delivery.
 
-## Sequencia
+## Sequence
 
-1. Audit Team: mapear estado atual.
-2. Refactor Steward: invariantes e contratos.
-3. QA Team: testes antes da mudanca.
-4. Implementation Team: refatoracao incremental.
-5. Verification Team: testes depois da mudanca.
-6. GitHub Ops Team: commit/PR quando aprovado.
+1. Intake: objective, constraints, definition of done, risks.
+2. Product: requirements, journeys, acceptance criteria.
+3. Technology: stack recommendation, architecture, deployment tradeoffs.
+4. Design: UX, UI, design system, accessibility, visual quality.
+5. Implementation: build in small verifiable increments.
+6. Verification: tests, QA, visual validation, security review.
+7. Production: readiness, environment variables, deployment, rollback.
+8. GitHub Ops: commit, push, PR, checks, release when approved.
+9. Delivery: final handoff with evidence and residual risks.
 
 ## Gates
 
-- Comportamento atual entendido.
-- Invariantes registrados.
-- Testes ou smoke test antes/depois.
-- Handoff antes de cada fase critica.
+- Use only necessary phases.
+- Ask permission before each major handoff.
+- Maintain run state for medium/large work.
+- Do not declare done without verification evidence.
+

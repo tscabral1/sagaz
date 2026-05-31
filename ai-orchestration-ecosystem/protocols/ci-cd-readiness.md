@@ -1,36 +1,32 @@
-# Protocol: CI/CD Readiness
+﻿# Protocol: Ci Cd Readiness
 
-## Objetivo
+## Objective
 
-Garantir que projetos web/mobile tenham automacoes minimas para reduzir regressao e facilitar deploy.
+Define how Sagaz should handle Ci Cd Readiness while keeping the process clear, low-token, safe, and verifiable.
 
-## Avaliar
+## Required Practice
 
-- Build automatizado.
-- Testes automatizados.
-- Lint/typecheck.
-- Preview deploy.
-- Secrets e environments.
-- Checks obrigatorios antes de merge.
-- Release workflow.
-- Mobile build workflow quando aplicavel.
+- Start from the user goal and current project state.
+- Load only relevant context.
+- Separate facts, assumptions, inferences, risks, and decisions.
+- Ask permission before meaningful state changes.
+- Record evidence and residual risk.
 
-## GitHub Actions Minimo
+## Standard Recommendation Format
 
 ```md
-Trigger:
-Install:
-Lint:
-Typecheck:
-Test:
-Build:
-Artifacts:
-Deploy/Preview:
-```
+Recommendation:
+Why now:
+What changes:
+Benefit:
+Risk:
+Permission required:
+```n
+## Blocking Conditions
 
-## Bloqueadores
+- The primary flow fails.
+- A relevant build, check, or test fails without explanation.
+- Secrets or sensitive data would be exposed.
+- A high risk is not accepted by the user.
+- Verification evidence is missing for the risk level.
 
-- Segredo hardcoded.
-- Deploy sem build reproduzivel.
-- CI quebrado sem justificativa.
-- Workflow com permissao excessiva.

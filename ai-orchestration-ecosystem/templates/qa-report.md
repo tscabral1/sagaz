@@ -1,21 +1,20 @@
-# QA Report
+﻿# Qa Report
 
-## Escopo Verificado
+## Objective
 
-## Nivel De Teste
+## Context
 
-## Comandos Executados
+## Inputs
 
-## Checks Manuais
+## Decisions
 
-## Resultados
+## Outputs
 
-## Falhas Encontradas
+## Evidence
 
-## Correcoes Aplicadas
+## Risks
 
-## Riscos Residuais
+## Next Step
 
-## Veredito
+## User Permission
 
-aprovado | aprovado com ressalvas | bloqueado

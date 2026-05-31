@@ -1,37 +1,20 @@
-# Product Specification
+﻿# Product Spec
 
-## Visao
+## Objective
 
-## Problema
+## Context
 
-## Objetivos
+## Inputs
 
-## Nao Objetivos
+## Decisions
 
-## Usuarios
+## Outputs
 
-## Jornadas Principais
+## Evidence
 
-## Requisitos Funcionais
+## Risks
 
-## Requisitos Nao Funcionais
+## Next Step
 
-## Estados E Erros
+## User Permission
 
-## Dados E Privacidade
-
-## Experiencia E Interface
-
-## Design System Requirements
-
-## UX Requirements
-
-## Visual Quality Bar
-
-## Criterios De Aceite
-
-## Metricas De Sucesso
-
-## Riscos
-
-## Plano De Validacao

@@ -1,35 +1,20 @@
-# Mobile Release Checklist
+﻿# Mobile Release Checklist
 
-## App
+## Objective
 
-## Platforms
+## Context
 
-Android | iOS | Both
+## Inputs
 
-## Stack
+## Decisions
 
-## Version
+## Outputs
 
-## Build Number
+## Evidence
 
-## Permissions
+## Risks
 
-## Signing
+## Next Step
 
-## Environment
+## User Permission
 
-## Device/Emulator Tests
-
-## Offline Behavior
-
-## Crash Reporting
-
-## Store Metadata
-
-## Screenshots
-
-## Privacy Policy
-
-## Release Notes
-
-## Rollback/Mitigation

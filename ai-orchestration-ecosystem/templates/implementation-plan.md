@@ -1,19 +1,20 @@
-# Implementation Plan
+﻿# Implementation Plan
 
-## Objetivo
+## Objective
 
-## Premissas
+## Context
 
-## Passos
+## Inputs
 
-1. 
-2. 
-3. 
+## Decisions
 
-## Arquivos Provaveis
+## Outputs
 
-## Testes Por Etapa
+## Evidence
 
-## Criterios De Conclusao
+## Risks
 
-## Riscos
+## Next Step
+
+## User Permission
+

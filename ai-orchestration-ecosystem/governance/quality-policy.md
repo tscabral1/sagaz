@@ -1,22 +1,13 @@
-# Quality Policy
+﻿# Quality Policy
 
-## Padrao
+## Purpose
 
-Qualidade e evidencia, nao intencao.
+Maintain Sagaz as a reliable, safe, versionable, low-token orchestration ecosystem.
 
-## Exigencias
+## Checklist
 
-- Toda entrega deve declarar verificacao.
-- Bugs encontrados devem gerar teste ou nota de risco.
-- Refatoracao deve preservar comportamento.
-- Especificacoes devem ter criterios de aceite.
-- Alteracoes grandes devem ter plano e handoff.
+- Is this reusable?
+- Does it reduce future risk?
+- Does it preserve low token usage?
+- Is the user impact clear?
 
-## Sinais De Alerta
-
-- "Deve funcionar" sem teste.
-- Mudanca ampla sem especificacao.
-- Dependencia nova sem justificativa.
-- UI sem validacao visual.
-- API sem contrato.
-- Erro conhecido deixado sem nota.

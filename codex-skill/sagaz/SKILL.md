@@ -1,68 +1,68 @@
----
+﻿---
 name: sagaz
-description: Orquestracao local de squads autonomos de IA dentro do Codex. Use quando o usuario invocar "Sagaz", "$sagaz", "ative o Sagaz", "use o Sagaz", ou pedir criacao de produtos web/mobile com equipes de IA, especificacoes detalhadas, baixo consumo de tokens, design premium, stack advisory, producao critica, GitHub guiado, CI/CD, testes rigorosos e handoffs entre equipes.
+description: Local orchestration of autonomous AI squads inside Codex. Use when the user invokes "Sagaz", "$sagaz", "activate Sagaz", "use Sagaz", or asks to create web/mobile products with AI teams, detailed specifications, low token usage, premium design, stack advisory, production-critical delivery, guided GitHub operations, CI/CD, rigorous testing, and team handoffs.
 ---
 
 # Sagaz
 
-Ative o Sagaz como sistema operacional local de orquestracao de IA.
+Activate Sagaz as a local AI orchestration operating system.
 
-## Primeiro Passo
+## First Step
 
-Localize o repositorio Sagaz no workspace e leia primeiro:
+Locate the Sagaz repository in the workspace and read this first:
 
 `ai-orchestration-ecosystem/quickstart.md`
 
-Se precisar navegar, leia:
+If navigation is needed, read:
 
 `ai-orchestration-ecosystem/INDEX.md`
 
-## Regras Operacionais
+## Operating Rules
 
-1. Aplicar proatividade guiada globalmente: detectar acoes necessarias ou recomendaveis, explicar motivo/impacto/risco e pedir permissao antes de acoes relevantes.
-2. Usar o menor workflow, squad e conjunto de arquivos suficientes.
-3. Para trabalhos medios/grandes, usar workflow nomeado, tasks formais e run-state persistente.
-4. Para multiplas fases, usar handoff entre equipes e pedir permissao antes de avancar.
-5. Para software, aplicar engenharia senior: simplicidade, testabilidade, seguranca, observabilidade e manutencao.
-6. Para stack, recomendar tecnologias por custo, velocidade, escala, manutencao, maturidade, deploy e futuras alteracoes.
-7. Para UI, aplicar design-excellence: UX, UI, design system, responsividade, acessibilidade e validacao visual.
-8. Para producao, aplicar production-critical: testes, build, seguranca, env vars, deploy, rollback e riscos.
-9. Para GitHub, aplicar github-ops-guided proativo: sugerir commit, push, PR, issue, release e checks no momento certo.
-10. Nao declarar pronto sem evidencia de verificacao proporcional ao risco.
+1. Apply guided proactivity globally: detect required or recommended actions, explain reason/impact/risk, and ask permission before meaningful actions.
+2. Use the smallest sufficient workflow, squad, and file set.
+3. For medium/large work, use a named workflow, formal tasks, and persistent run state.
+4. For multi-phase work, use team handoffs and ask permission before moving forward.
+5. For software, apply senior engineering: simplicity, testability, security, observability, and maintainability.
+6. For stacks, recommend technologies by cost, speed, scale, maintainability, maturity, deployment, and future changes.
+7. For UI, apply design-excellence: UX, UI, design system, responsiveness, accessibility, and visual validation.
+8. For production, apply production-critical: tests, build, security, env vars, deployment, rollback, and risks.
+9. For GitHub, apply proactive github-ops-guided: suggest commits, pushes, PRs, issues, releases, and checks at the right time.
+10. Do not declare done without verification evidence proportional to risk.
 
-## Escolha Rapida
+## Quick Selection
 
-- Web app novo: `workflows/greenfield-web-app.md`
-- Web para producao: `workflows/web-production-release.md`
-- Mobile Android/iOS: `workflows/mobile-app-production.md` e `squads/mobile-app-studio.md`
-- Refatoracao segura: `workflows/brownfield-refactor-safe.md`
-- Bugfix ate release: `workflows/bugfix-to-release.md`
-- Design/UI: `squads/design-studio.md` e `protocols/design-quality.md`
-- GitHub: `squads/github-ops.md` e `protocols/github-operations.md`
+- New web app: `workflows/greenfield-web-app.md`
+- Web for production: `workflows/web-production-release.md`
+- Android/iOS mobile: `workflows/mobile-app-production.md` and `squads/mobile-app-studio.md`
+- Safe refactoring: `workflows/brownfield-refactor-safe.md`
+- Bugfix to release: `workflows/bugfix-to-release.md`
+- Design/UI: `squads/design-studio.md` and `protocols/design-quality.md`
+- GitHub: `squads/github-ops.md` and `protocols/github-operations.md`
 
-## Handoff Obrigatorio
+## Required Handoff
 
-Em tarefas medias/grandes, ao final de cada fase:
+For medium/large tasks, at the end of each phase:
 
 ```md
-Equipe atual:
-O que foi concluido:
-Evidencias/artefatos:
-Riscos ou pendencias:
-Proxima equipe:
-O que ela fara:
-Por que agora:
-Posso fazer o handoff?
+Current team:
+What was completed:
+Evidence/artifacts:
+Risks or pending items:
+Next team:
+What it will do:
+Why now:
+May I perform the handoff?
 ```
 
-## Estado Persistente
+## Persistent State
 
-Para trabalhos longos, criar ou atualizar um arquivo baseado em:
+For long-running work, create or update a file based on:
 
 `ai-orchestration-ecosystem/templates/run-state.md`
 
-## Fonte Da Verdade
+## Source Of Truth
 
-Os detalhes completos ficam em:
+The complete details are in:
 
 `ai-orchestration-ecosystem/`

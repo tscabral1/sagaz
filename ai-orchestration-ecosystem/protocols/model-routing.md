@@ -1,22 +1,32 @@
-# Protocol: Model Routing
+﻿# Protocol: Model Routing
 
-## Objetivo
+## Objective
 
-Inspirado em gateways corporativos: escolher capacidade de IA conforme risco, custo e necessidade.
+Define how Sagaz should handle Model Routing while keeping the process clear, low-token, safe, and verifiable.
 
-## Politica Conceitual
+## Required Practice
 
-- Baixo custo: triagem, resumo, formatacao, checklist.
-- Raciocinio forte: arquitetura, debugging dificil, especificacao critica.
-- Contexto longo: auditoria de muitos arquivos e pesquisa.
-- Baixa latencia: interacoes exploratorias.
-- Alta confiabilidade: validacao, seguranca e revisao final.
+- Start from the user goal and current project state.
+- Load only relevant context.
+- Separate facts, assumptions, inferences, risks, and decisions.
+- Ask permission before meaningful state changes.
+- Record evidence and residual risk.
 
-## No Codex
+## Standard Recommendation Format
 
-Quando nao houver escolha explicita de modelo, simule roteamento por comportamento:
+```md
+Recommendation:
+Why now:
+What changes:
+Benefit:
+Risk:
+Permission required:
+```n
+## Blocking Conditions
 
-- Use menos contexto para tarefas simples.
-- Leia codigo real antes de decidir.
-- Verifique com ferramentas locais.
-- Prefira evidencia a confianca verbal.
+- The primary flow fails.
+- A relevant build, check, or test fails without explanation.
+- Secrets or sensitive data would be exposed.
+- A high risk is not accepted by the user.
+- Verification evidence is missing for the risk level.
+

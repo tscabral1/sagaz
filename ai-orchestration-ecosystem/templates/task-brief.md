@@ -1,21 +1,20 @@
-# Task Brief
+﻿# Task Brief
 
-## Objetivo
+## Objective
 
-## Contexto
+## Context
 
-## Usuario-Alvo
+## Inputs
 
-## Restricoes
+## Decisions
 
-## Definicao De Pronto
+## Outputs
 
-## Fora De Escopo
+## Evidence
 
-## Riscos Conhecidos
+## Risks
 
-## Nivel De Autonomia
+## Next Step
 
-## Nivel De Teste Esperado
+## User Permission
 
-## Observacoes

@@ -1,43 +1,20 @@
-# Design System Specification
+﻿# Design System Spec
 
-## Brand And Product Personality
+## Objective
 
-## Audience
+## Context
 
-## Visual Direction
+## Inputs
 
-## Color Tokens
+## Decisions
 
-## Typography
+## Outputs
 
-## Spacing Scale
+## Evidence
 
-## Layout Grid
+## Risks
 
-## Breakpoints
+## Next Step
 
-## Radius And Borders
+## User Permission
 
-## Elevation And Shadows
-
-## Iconography
-
-## Motion
-
-## Components
-
-## Component States
-
-## Forms
-
-## Feedback Patterns
-
-## Empty And Error States
-
-## Accessibility
-
-## Responsive Rules
-
-## Do And Do Not
-
-## Visual QA Checklist

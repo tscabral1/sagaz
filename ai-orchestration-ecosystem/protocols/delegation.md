@@ -1,25 +1,32 @@
-# Protocol: Delegation
+﻿# Protocol: Delegation
 
-## Objetivo
+## Objective
 
-Delegar sem desperdiçar contexto e sem perder responsabilidade.
+Define how Sagaz should handle Delegation while keeping the process clear, low-token, safe, and verifiable.
 
-## Formato De Delegacao
+## Required Practice
+
+- Start from the user goal and current project state.
+- Load only relevant context.
+- Separate facts, assumptions, inferences, risks, and decisions.
+- Ask permission before meaningful state changes.
+- Record evidence and residual risk.
+
+## Standard Recommendation Format
 
 ```md
-## Delegation
-Agent:
-Objective:
-Inputs:
-Constraints:
-Expected output:
-Quality bar:
-Deadline/stop condition:
-```
+Recommendation:
+Why now:
+What changes:
+Benefit:
+Risk:
+Permission required:
+```n
+## Blocking Conditions
 
-## Regras
+- The primary flow fails.
+- A relevant build, check, or test fails without explanation.
+- Secrets or sensitive data would be exposed.
+- A high risk is not accepted by the user.
+- Verification evidence is missing for the risk level.
 
-- Uma delegacao deve caber em 12 linhas sempre que possivel.
-- O Orchestrator continua responsavel pela entrega final.
-- Agentes nao criam novos agentes sem necessidade explicita.
-- Toda delegacao deve ter saida verificavel.

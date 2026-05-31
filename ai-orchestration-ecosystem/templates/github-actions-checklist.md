@@ -1,29 +1,20 @@
-# GitHub Actions Checklist
+﻿# Github Actions Checklist
 
-## Workflow Name
+## Objective
 
-## Triggers
+## Context
 
-## Jobs
+## Inputs
 
-## Install Command
+## Decisions
 
-## Lint Command
+## Outputs
 
-## Typecheck Command
-
-## Test Command
-
-## Build Command
-
-## Artifacts
-
-## Secrets Needed
-
-## Permissions
-
-## Required Checks
-
-## Deployment Integration
+## Evidence
 
 ## Risks
+
+## Next Step
+
+## User Permission
+

@@ -1,22 +1,45 @@
-# Squad: Maintenance Ops
+﻿# Squad: Maintenance Ops
 
-## Uso
+## Use
 
-Atualizacoes, correcoes, manutencao continua, hardening e evolucao apos entrega.
+Use this squad when the task matches Maintenance Ops.
 
-## Agentes
+## Agents
 
 - Orchestrator
-- Implementation Engineer
-- QA Verifier
-- Refactor Steward quando houver mudanca estrutural
-- Security Governance quando houver dependencias ou configuracao sensivel
+- Product Strategist when product decisions are needed
+- Technology Strategist when stack or deployment decisions are needed
+- Software Architect when architecture matters
+- Design Studio roles when UI exists
+- Implementation Engineer when code changes are needed
+- QA Verifier for verification
+- Security Governance when data, auth, secrets, payments, or production are involved
+- GitHub Ops when versioning, PRs, releases, or checks are useful
 
-## Fluxo
+## Flow
 
-1. Identificar mudanca solicitada.
-2. Verificar estado atual.
-3. Planejar impacto.
-4. Implementar com escopo minimo.
-5. Testar regressao.
-6. Atualizar memoria e changelog.
+1. Confirm objective, constraints, definition of done, and risks.
+2. Select relevant tasks and protocols.
+3. Execute the phase in small verifiable steps.
+4. Produce evidence and residual risks.
+5. Ask permission before handing off to the next team.
+
+## Required Gates
+
+- Clear objective and definition of done.
+- Relevant specification or task contract.
+- Handoff approval between major phases.
+- Verification evidence proportional to risk.
+- Residual risks documented.
+
+## Standard Output
+
+```md
+Scope:
+Current phase:
+Evidence:
+Risks:
+Next team:
+Permission request:
+```
+

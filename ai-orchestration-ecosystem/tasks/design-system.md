@@ -1,30 +1,34 @@
-# Task: Design System
+﻿# Task: Design System
 
-Owner: UI Systems Designer
+## Owner
+
+Assigned by the active workflow or squad.
 
 ## Inputs
 
-- Requisitos de produto.
-- Direcao visual.
-- UX flow.
+- User goal.
+- Current run state.
+- Relevant specifications, files, and constraints.
 
 ## Outputs
 
-- Tokens.
-- Componentes.
-- Estados.
-- Regras responsivas.
-- Checklist visual.
+- Completed task artifact.
+- Evidence.
+- Risks and pending items.
+- Handoff recommendation.
 
 ## Acceptance Criteria
 
-- Cores, tipografia, espacamento, grid, estados e acessibilidade definidos.
-- Interface alinhada ao dominio.
+- Output is specific and testable.
+- Assumptions are recorded.
+- Verification method is stated.
+- Next step is clear.
 
 ## Verification
 
-- Conferir contra `protocols/design-quality.md`.
+Check against the active protocol and quality gates.
 
 ## Stop Condition
 
-Parar se nao houver direcao visual suficiente para uma decisao irreversivel.
+Stop and ask the user when scope, cost, architecture, production risk, or external state would change.
+

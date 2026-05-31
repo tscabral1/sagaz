@@ -1,48 +1,32 @@
-# Protocol: Communication
+﻿# Protocol: Communication
 
-## Objetivo
+## Objective
 
-Padronizar comunicacao entre agentes e reduzir ruido.
+Define how Sagaz should handle Communication while keeping the process clear, low-token, safe, and verifiable.
 
-## Mensagem Entre Agentes
+## Required Practice
+
+- Start from the user goal and current project state.
+- Load only relevant context.
+- Separate facts, assumptions, inferences, risks, and decisions.
+- Ask permission before meaningful state changes.
+- Record evidence and residual risk.
+
+## Standard Recommendation Format
 
 ```md
-From:
-To:
-Decision needed:
-Context:
-Evidence:
-Options:
 Recommendation:
-```
+Why now:
+What changes:
+Benefit:
+Risk:
+Permission required:
+```n
+## Blocking Conditions
 
-## Handoff
+- The primary flow fails.
+- A relevant build, check, or test fails without explanation.
+- Secrets or sensitive data would be exposed.
+- A high risk is not accepted by the user.
+- Verification evidence is missing for the risk level.
 
-```md
-Owner:
-Status:
-What changed:
-Evidence:
-Risks:
-Next:
-```
-
-## Handoff Entre Equipes
-
-```md
-Equipe atual:
-O que foi concluido:
-Evidencias/artefatos:
-Riscos ou pendencias:
-Proxima equipe:
-O que ela fara:
-Por que agora:
-Posso fazer o handoff?
-```
-
-## Regras
-
-- Sem narrativas longas em handoff.
-- Diferenciar fato, inferencia e suposicao.
-- Sempre indicar evidencia quando bloquear ou aprovar.
-- Em pipeline multi-equipe, pedir permissao antes de passar para a proxima equipe.

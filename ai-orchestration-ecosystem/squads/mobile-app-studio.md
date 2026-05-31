@@ -1,46 +1,45 @@
-# Squad: Mobile App Studio
+﻿# Squad: Mobile App Studio
 
-## Uso
+## Use
 
-Apps Android/iOS, PWA mobile-first, prototipos mobile, apps com camera, notificacoes, offline, mapas, pagamentos ou publicacao em lojas.
+Use this squad when the task matches Mobile App Studio.
 
-## Agentes
+## Agents
 
 - Orchestrator
-- Product Strategist
-- Technology Strategist
-- UX Architect
-- UI Systems Designer
-- Software Architect
-- Implementation Engineer
-- QA Verifier
-- Visual QA
-- Security Governance
-- GitHub Ops quando houver versionamento/release
+- Product Strategist when product decisions are needed
+- Technology Strategist when stack or deployment decisions are needed
+- Software Architect when architecture matters
+- Design Studio roles when UI exists
+- Implementation Engineer when code changes are needed
+- QA Verifier for verification
+- Security Governance when data, auth, secrets, payments, or production are involved
+- GitHub Ops when versioning, PRs, releases, or checks are useful
 
-## Fluxo
+## Flow
 
-1. Definir plataformas: Android, iOS, ambas ou PWA.
-2. Mapear recursos nativos: camera, storage, notificacoes, biometria, mapas, pagamentos.
-3. Recomendar stack: Expo/React Native, Flutter, nativo ou PWA.
-4. Definir UX mobile e design system.
-5. Implementar app.
-6. Testar em emulador/dispositivo quando possivel.
-7. Preparar build, signing, store metadata e release notes.
-8. Recomendar GitHub Ops e CI/CD.
+1. Confirm objective, constraints, definition of done, and risks.
+2. Select relevant tasks and protocols.
+3. Execute the phase in small verifiable steps.
+4. Produce evidence and residual risks.
+5. Ask permission before handing off to the next team.
 
-## Gates Obrigatorios
+## Required Gates
 
-- Stack mobile justificada.
-- Permissoes justificadas.
-- Navegacao mobile definida.
-- Estados offline/loading/error considerados.
-- Build/test documentado.
-- Plano de publicacao quando aplicavel.
+- Clear objective and definition of done.
+- Relevant specification or task contract.
+- Handoff approval between major phases.
+- Verification evidence proportional to risk.
+- Residual risks documented.
 
-## Bloqueadores
+## Standard Output
 
-- Permissao nativa sem justificativa.
-- Fluxo principal nao testado.
-- Store/release sem checklist.
-- Dados sensiveis sem seguranca.
+```md
+Scope:
+Current phase:
+Evidence:
+Risks:
+Next team:
+Permission request:
+```
+

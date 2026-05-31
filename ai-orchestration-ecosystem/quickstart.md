@@ -1,48 +1,25 @@
-# Quickstart
+﻿# Quickstart
 
-Use este arquivo como entrada minima para operar o ecossistema com baixo consumo de tokens.
+Use this file as the minimum entry point for operating Sagaz with low token usage.
 
-## Modos
+## Modes
 
-- `solo`: um agente principal executa, consulta protocolos apenas quando necessario.
-- `squad`: orquestrador delega para agentes especializados e valida a integracao.
-- `factory`: cria projeto novo com especificacao completa, arquitetura, testes e entrega.
-- `audit`: revisa projeto existente com foco em bugs, riscos, regressao e testes faltantes.
-- `refactor`: altera codigo existente preservando comportamento, contratos e cobertura.
+- `solo`: one primary agent executes with minimal gates.
+- `squad`: the orchestrator coordinates specialized agents.
+- `factory`: create a new product with specs, implementation, and verification.
+- `audit`: review an existing project for bugs, risks, regressions, and missing tests.
+- `refactor`: change internals while preserving behavior.
 
-## Fluxo Padrao
+## Standard Flow
 
-1. Clarificar objetivo, restricoes, definicao de pronto e riscos.
-2. Escolher squad e agentes minimos.
-3. Produzir especificacao antes da implementacao quando o escopo for medio ou alto.
-4. Implementar em passos pequenos.
-5. Testar ate nivel proporcional ao risco.
-6. Registrar decisoes, evidencias, pendencias e proximos passos.
+1. Clarify objective, constraints, definition of done, and risks.
+2. Select the smallest sufficient workflow and squad.
+3. Create specifications when scope or risk is meaningful.
+4. Execute in small verifiable steps.
+5. Test proportionally to risk.
+6. Record decisions, evidence, residual risks, and next steps.
 
-## Carregamento Economico
+## Permission Policy
 
-Carregue somente nesta ordem:
+Ask one question at a time only when the answer changes architecture, scope, cost, risk, or definition of done. When uncertainty is small, make a conservative assumption, record it, and continue.
 
-1. `quickstart.md`
-2. Um arquivo de `squads/`
-3. Agentes citados pelo squad, somente se a tarefa exigir
-4. Protocolos especificos, somente quando acionados
-5. Templates necessarios para gerar artefatos
-
-## Prompt Base
-
-```text
-Use o Sagaz AI Orchestration Ecosystem.
-Modo: [solo|squad|factory|audit|refactor]
-Squad: [nome do squad]
-Objetivo: [resultado final desejado]
-Restricoes: [tecnicas, negocio, prazo, estilo, ferramentas]
-Definicao de pronto: [criterios objetivos]
-Prioridade: consistencia, testes exaustivos e baixo consumo de tokens.
-```
-
-## Politica De Perguntas
-
-Faca uma pergunta por vez somente quando a resposta mudar significativamente arquitetura, escopo, risco, dados sensiveis ou definicao de pronto.
-
-Quando a incerteza for pequena, assuma conservadoramente, registre a suposicao e siga.

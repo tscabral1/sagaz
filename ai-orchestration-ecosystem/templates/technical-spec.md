@@ -1,33 +1,20 @@
-# Technical Specification
+﻿# Technical Spec
 
-## Contexto
+## Objective
 
-## Arquitetura Atual
+## Context
 
-## Arquitetura Proposta
+## Inputs
 
-## Stack Recomendada
+## Decisions
 
-## Justificativa Da Stack
+## Outputs
 
-## Alternativas Consideradas
+## Evidence
 
-## Modulos
+## Risks
 
-## Contratos
+## Next Step
 
-## Fluxo De Dados
+## User Permission
 
-## Dependencias
-
-## Configuracao
-
-## Seguranca
-
-## Plano De Implementacao
-
-## Plano De Testes
-
-## Plano De Rollback
-
-## Riscos E Mitigacoes

@@ -1,41 +1,32 @@
-# Protocol: Production Readiness
+﻿# Protocol: Production Readiness
 
-## Objetivo
+## Objective
 
-Impedir que o Sagaz entregue software para producao sem evidencias suficientes de confiabilidade, estabilidade, seguranca e operabilidade.
+Define how Sagaz should handle Production Readiness while keeping the process clear, low-token, safe, and verifiable.
 
-## Contrato
+## Required Practice
 
-O Sagaz nao garante ausencia absoluta de bugs. O Sagaz garante processo: especificacao, implementacao disciplinada, verificacao proporcional ao risco, bloqueio de falhas criticas e documentacao de riscos residuais.
+- Start from the user goal and current project state.
+- Load only relevant context.
+- Separate facts, assumptions, inferences, risks, and decisions.
+- Ask permission before meaningful state changes.
+- Record evidence and residual risk.
 
-## Checklist
+## Standard Recommendation Format
 
-- Objetivo de producao claro.
-- Usuarios e impacto conhecidos.
-- Requisitos funcionais definidos.
-- Requisitos nao funcionais definidos.
-- Dados sensiveis mapeados.
-- Segredos protegidos.
-- Dependencias justificadas.
-- Build reproduzivel.
-- Testes automatizados relevantes executados.
-- Smoke test executado.
-- Configuracao documentada.
-- Plano de deploy documentado.
-- Plano de rollback ou mitigacao.
-- Riscos residuais documentados.
+```md
+Recommendation:
+Why now:
+What changes:
+Benefit:
+Risk:
+Permission required:
+```n
+## Blocking Conditions
 
-## Evidencias Aceitas
+- The primary flow fails.
+- A relevant build, check, or test fails without explanation.
+- Secrets or sensitive data would be exposed.
+- A high risk is not accepted by the user.
+- Verification evidence is missing for the risk level.
 
-- Comandos executados e resultados.
-- Logs resumidos.
-- Screenshots ou validacao visual quando houver UI.
-- Relatorio de QA.
-- Arquivos de configuracao.
-- Checklist preenchido.
-
-## Vereditos
-
-- `approved`: pronto para deploy conforme evidencias.
-- `approved with risks`: pode seguir se usuario aceitar riscos listados.
-- `blocked`: nao deve seguir para producao.

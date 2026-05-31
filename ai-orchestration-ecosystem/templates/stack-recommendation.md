@@ -1,42 +1,20 @@
-# Stack Recommendation
+﻿# Stack Recommendation
 
-## Contexto
+## Objective
 
-## Objetivo Do Produto
+## Context
 
-## Requisitos Tecnicos
+## Inputs
 
-## Restricoes
+## Decisions
 
-## Stack Recomendada
+## Outputs
 
-## Por Que Esta Stack
+## Evidence
 
-## Custo
+## Risks
 
-## Velocidade De Implementacao
+## Next Step
 
-## Escalabilidade
+## User Permission
 
-## Manutencao
-
-## Futuras Alteracoes
-
-## Deploy
-
-## Segurança
-
-## Testabilidade
-
-## Observabilidade
-
-## Alternativas Consideradas
-
-| Opcao | Custo | Velocidade | Escala | Manutencao | Deploy | Risco | Veredito |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-
-## Riscos E Tradeoffs
-
-## Recomendacao Final
-
-## Confirmacao Necessaria

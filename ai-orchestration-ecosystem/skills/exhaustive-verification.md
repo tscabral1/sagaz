@@ -1,26 +1,14 @@
-# Skill: Exhaustive Verification
+﻿# Skill: Exhaustive Verification
 
-## Quando Usar
+## When To Use
 
-Use em entregas que precisam ser resistentes a atualizacoes, refatoracoes e regressao.
+Use this when the task benefits from Exhaustive Verification.
 
-## Procedimento
+## Procedure
 
-1. Mapear comportamento esperado.
-2. Listar invariantes.
-3. Identificar riscos de regressao.
-4. Executar testes existentes.
-5. Criar ou sugerir testes faltantes.
-6. Fazer smoke test manual.
-7. Repetir verificacao apos correcao.
+1. Define expected behavior.
+2. Identify risks and invariants.
+3. Execute in small steps.
+4. Verify results.
+5. Document evidence and residual risks.
 
-## Invariantes
-
-Registre invariantes assim:
-
-```md
-Invariant:
-Why:
-How verified:
-Failure signal:
-```

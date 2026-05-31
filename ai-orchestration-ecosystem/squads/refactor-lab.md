@@ -1,26 +1,45 @@
-# Squad: Refactor Lab
+﻿# Squad: Refactor Lab
 
-## Uso
+## Use
 
-Refatoracoes, modernizacao, reducao de divida tecnica e reorganizacao sem mudar comportamento.
+Use this squad when the task matches Refactor Lab.
 
-## Agentes
+## Agents
 
 - Orchestrator
-- Refactor Steward
-- Software Architect
-- Implementation Engineer
-- QA Verifier
+- Product Strategist when product decisions are needed
+- Technology Strategist when stack or deployment decisions are needed
+- Software Architect when architecture matters
+- Design Studio roles when UI exists
+- Implementation Engineer when code changes are needed
+- QA Verifier for verification
+- Security Governance when data, auth, secrets, payments, or production are involved
+- GitHub Ops when versioning, PRs, releases, or checks are useful
 
-## Fluxo
+## Flow
 
-1. Mapear comportamento atual.
-2. Definir invariantes.
-3. Criar testes ou smoke tests.
-4. Refatorar em pequenos passos.
-5. Rodar testes a cada etapa relevante.
-6. Documentar mudancas internas.
+1. Confirm objective, constraints, definition of done, and risks.
+2. Select relevant tasks and protocols.
+3. Execute the phase in small verifiable steps.
+4. Produce evidence and residual risks.
+5. Ask permission before handing off to the next team.
 
-## Gate Especial
+## Required Gates
 
-Se nao houver teste automatizado, criar pelo menos um smoke test reproduzivel ou registrar exatamente por que nao foi possivel.
+- Clear objective and definition of done.
+- Relevant specification or task contract.
+- Handoff approval between major phases.
+- Verification evidence proportional to risk.
+- Residual risks documented.
+
+## Standard Output
+
+```md
+Scope:
+Current phase:
+Evidence:
+Risks:
+Next team:
+Permission request:
+```
+

@@ -1,29 +1,34 @@
-# Task: Implementation Build
+﻿# Task: Implementation Build
 
-Owner: Implementation Engineer
+## Owner
+
+Assigned by the active workflow or squad.
 
 ## Inputs
 
-- Especificacao tecnica.
-- Design system.
-- Plano de implementacao.
+- User goal.
+- Current run state.
+- Relevant specifications, files, and constraints.
 
 ## Outputs
 
-- Codigo implementado.
-- Arquivos alterados.
-- Instrucoes de execucao.
+- Completed task artifact.
+- Evidence.
+- Risks and pending items.
+- Handoff recommendation.
 
 ## Acceptance Criteria
 
-- Funcionalidade principal implementada.
-- Padroes locais respeitados.
-- Sem segredos expostos.
+- Output is specific and testable.
+- Assumptions are recorded.
+- Verification method is stated.
+- Next step is clear.
 
 ## Verification
 
-- Build/test/smoke conforme risco.
+Check against the active protocol and quality gates.
 
 ## Stop Condition
 
-Parar se dependencia, permissao ou decisao tecnica relevante exigir aceite.
+Stop and ask the user when scope, cost, architecture, production risk, or external state would change.
+

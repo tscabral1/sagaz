@@ -1,69 +1,45 @@
-# Squad: Design Studio
+﻿# Squad: Design Studio
 
-## Uso
+## Use
 
-Websites, apps, dashboards, SaaS, ferramentas internas, landing pages, produtos visuais e design systems.
+Use this squad when the task matches Design Studio.
 
-## Agentes
+## Agents
 
 - Orchestrator
-- Product Strategist
-- Design Director
-- UX Architect
-- UI Systems Designer
-- Implementation Engineer
-- Visual QA
-- QA Verifier
-- Security Governance quando houver dados, auth, pagamentos ou integracoes
+- Product Strategist when product decisions are needed
+- Technology Strategist when stack or deployment decisions are needed
+- Software Architect when architecture matters
+- Design Studio roles when UI exists
+- Implementation Engineer when code changes are needed
+- QA Verifier for verification
+- Security Governance when data, auth, secrets, payments, or production are involved
+- GitHub Ops when versioning, PRs, releases, or checks are useful
 
-## Fluxo
+## Flow
 
-1. Entender usuario, dominio, objetivo e tarefa principal.
-2. Definir direcao visual.
-3. Criar UX: fluxos, navegacao, estados e criterios de usabilidade.
-4. Criar design system: tokens, componentes, grid, responsividade e estados.
-5. Implementar UI seguindo o sistema.
-6. Validar visualmente em viewports relevantes.
-7. Corrigir ate atingir padrao profissional.
-8. Entregar evidencias, riscos e proximos passos.
+1. Confirm objective, constraints, definition of done, and risks.
+2. Select relevant tasks and protocols.
+3. Execute the phase in small verifiable steps.
+4. Produce evidence and residual risks.
+5. Ask permission before handing off to the next team.
 
-Antes de passar de UX para UI system, de UI system para implementacao, e de implementacao para visual QA, comunicar handoff e pedir permissao.
+## Required Gates
 
-## Gates Obrigatorios
+- Clear objective and definition of done.
+- Relevant specification or task contract.
+- Handoff approval between major phases.
+- Verification evidence proportional to risk.
+- Residual risks documented.
 
-- Direcao visual definida.
-- Design system minimo.
-- Componentes com estados relevantes.
-- Responsividade mobile e desktop.
-- Acessibilidade basica.
-- Validacao visual.
-- Fluxo principal testado.
-
-## Bloqueadores
-
-Bloquear entrega se:
-
-- Layout quebra em viewport comum.
-- Texto sobrepoe ou escapa de controles.
-- Contraste impede leitura.
-- Hierarquia visual confunde a tarefa principal.
-- Interface parece template generico sem adequacao ao dominio.
-- Estados essenciais estao ausentes.
-- Nao ha validacao visual apos mudanca relevante.
-
-## Saida Obrigatoria
+## Standard Output
 
 ```md
-## Design Studio Report
-
-Direction:
-Primary user flow:
-Design system:
-Components:
-Responsive checks:
-Accessibility checks:
-Visual QA evidence:
-Issues fixed:
-Residual risks:
-Verdict:
+Scope:
+Current phase:
+Evidence:
+Risks:
+Next team:
+Permission request:
 ```
+

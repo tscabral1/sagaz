@@ -1,24 +1,13 @@
-# Security Policy
+﻿# Security Policy
 
-## Principios
+## Purpose
 
-- Nunca expor segredos.
-- Minimizar dados coletados.
-- Validar entradas externas.
-- Registrar riscos de dependencias.
-- Usar permissoes minimas.
+Maintain Sagaz as a reliable, safe, versionable, low-token orchestration ecosystem.
 
 ## Checklist
 
-- Ha chaves, tokens ou credenciais?
-- Ha dados pessoais?
-- Ha chamadas de rede?
-- Ha arquivos gerados com conteudo sensivel?
-- Ha dependencia nova?
-- Ha comando destrutivo?
+- Is this reusable?
+- Does it reduce future risk?
+- Does it preserve low token usage?
+- Is the user impact clear?
 
-## Resposta A Risco
-
-- Baixo: registrar.
-- Medio: mitigar antes da entrega.
-- Alto: bloquear ate confirmacao ou correcao.

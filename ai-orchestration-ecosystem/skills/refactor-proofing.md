@@ -1,18 +1,14 @@
-# Skill: Refactor Proofing
+﻿# Skill: Refactor Proofing
 
-## Quando Usar
+## When To Use
 
-Use antes, durante e depois de refatoracoes.
+Use this when the task benefits from Refactor Proofing.
 
-## Procedimento
+## Procedure
 
-1. Descrever comportamento atual.
-2. Identificar contratos publicos.
-3. Criar snapshot mental ou teste.
-4. Refatorar sem mudar saida observavel.
-5. Comparar antes e depois.
-6. Documentar qualquer mudanca deliberada.
+1. Define expected behavior.
+2. Identify risks and invariants.
+3. Execute in small steps.
+4. Verify results.
+5. Document evidence and residual risks.
 
-## Regra
-
-Se a refatoracao muda comportamento, ela deixa de ser refatoracao e vira feature ou breaking change.

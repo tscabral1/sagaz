@@ -1,27 +1,32 @@
-# Protocol: Memory
+﻿# Protocol: Memory
 
-## Objetivo
+## Objective
 
-Preservar aprendizado sem poluir contexto.
+Define how Sagaz should handle Memory while keeping the process clear, low-token, safe, and verifiable.
 
-## Tipos De Memoria
+## Required Practice
 
-- Projeto: decisoes, comandos, arquitetura, padroes.
-- Produto: personas, requisitos, tom, experiencia.
-- Qualidade: bugs recorrentes, testes obrigatorios, riscos.
-- Operacional: squads favoritos, preferencias do usuario.
+- Start from the user goal and current project state.
+- Load only relevant context.
+- Separate facts, assumptions, inferences, risks, and decisions.
+- Ask permission before meaningful state changes.
+- Record evidence and residual risk.
 
-## Regra De Escrita
-
-Registre apenas informacao reutilizavel.
-
-## Formato
+## Standard Recommendation Format
 
 ```md
-Date:
-Scope:
-Fact:
-Why it matters:
-When to reuse:
-Source/evidence:
-```
+Recommendation:
+Why now:
+What changes:
+Benefit:
+Risk:
+Permission required:
+```n
+## Blocking Conditions
+
+- The primary flow fails.
+- A relevant build, check, or test fails without explanation.
+- Secrets or sensitive data would be exposed.
+- A high risk is not accepted by the user.
+- Verification evidence is missing for the risk level.
+
