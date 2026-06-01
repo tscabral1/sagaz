@@ -127,6 +127,20 @@ Keep this repository available to Codex. Then, inside the project you want to wo
 Sagaz: use the appropriate workflow for this project. Maintain run state, handoffs, and verification evidence.
 ```
 
+For a hand-built static site, Sagaz should use clean URLs by default:
+
+```text
+/blog/post-slug/
+```
+
+with files laid out as:
+
+```text
+blog/post-slug/index.html
+```
+
+When GitHub Pages is the target, Sagaz should also prepare `CNAME`, `.nojekyll`, `404.html`, `robots.txt`, `sitemap.xml`, canonical URLs, social metadata, and Schema.org JSON-LD before recommending publication.
+
 ## GitHub Ops
 
 ### Windows PowerShell

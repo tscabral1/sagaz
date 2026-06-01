@@ -40,6 +40,7 @@ Sagaz also guides the user through the process. At the end of each phase, it exp
 - **Durable checkpoints:** long projects can resume across threads and refactors without losing context.
 - **Tool registry:** Sagaz verifies and recommends tools such as GitHub CLI, Playwright, Vercel, Expo/EAS, Supabase, Firebase, Stripe, CI/CD, and observability services.
 - **Stack presets:** common web, mobile, backend, database, and dashboard stacks are documented as starting points.
+- **Static site discipline:** hand-built static sites use clean directory URLs by default, GitHub Pages-ready files, and a practical SEO baseline.
 - **Sagaz evaluations:** scenario-based checks help prevent regressions in the orchestration system itself.
 - **Compatibility audits:** Sagaz can check whether Windows, macOS, npm, Node.js, Codex Desktop, AI model behavior, GitHub, package contents, or external platform changes require a Sagaz update.
 
@@ -207,7 +208,7 @@ For production-grade work, Sagaz can also apply SRE readiness, DORA metrics, sec
 
 For tool-heavy work, Sagaz uses a tool registry to verify local availability and recommend the right connector or platform before asking permission to install, authenticate, deploy, publish, or modify external resources.
 
-For common project types, Sagaz can start from documented stack presets such as Next.js on Vercel, React with Vite, Expo mobile, React Native, Supabase, Firebase, Node APIs, static sites, and admin dashboards.
+For common project types, Sagaz can start from documented stack presets such as Next.js on Vercel, React with Vite, Expo mobile, React Native, Supabase, Firebase, Node APIs, static sites, and admin dashboards. For hand-built static sites, Sagaz should default to clean URLs through directory `index.html` files and verify SEO essentials including canonical URLs, Open Graph/Twitter metadata, Schema.org JSON-LD, sitemap, robots, optimized images, and GitHub Pages files when applicable.
 
 When asked whether Sagaz needs updates, Sagaz should run a compatibility update audit across Windows, macOS, npm, Node.js, Codex Desktop, current model/tool behavior, GitHub, local installed skill, package contents, documentation, CI/CD, and relevant external platforms before recommending a new version.
 

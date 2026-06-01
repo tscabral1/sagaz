@@ -11,7 +11,7 @@ Use this named workflow when the task matches Web Production Release delivery.
 3. Technology: stack recommendation, architecture, deployment tradeoffs.
 4. Design: UX, UI, design system, accessibility, visual quality.
 5. Implementation: build in small verifiable increments.
-6. Verification: tests, QA, visual validation, security review.
+6. Verification: tests, QA, visual validation, SEO checks, accessibility checks, and security review.
 7. Production: readiness, environment variables, deployment, rollback.
 8. GitHub Ops: commit, push, PR, checks, release when approved.
 9. Delivery: final handoff with evidence and residual risks.
@@ -25,6 +25,7 @@ Use this named workflow when the task matches Web Production Release delivery.
 - API contracts.
 - Performance budgets.
 - Accessibility compliance.
+- SEO and share metadata for public websites.
 - Database migrations.
 - Release strategy.
 - DORA metrics.
