@@ -43,6 +43,7 @@ Sagaz also guides the user through the process. At the end of each phase, it exp
 - **Static site discipline:** hand-built static sites use clean directory URLs by default, GitHub Pages-ready files, and a practical SEO baseline.
 - **Sagaz evaluations:** scenario-based checks help prevent regressions in the orchestration system itself.
 - **Compatibility audits:** Sagaz can check whether Windows, macOS, npm, Node.js, Codex Desktop, AI model behavior, GitHub, package contents, or external platform changes require a Sagaz update.
+- **Future-change safety:** generated projects include detailed documentation for future refactors, improvements, feature additions, design consistency, UX preservation, invariants, and regression checks.
 
 ## How It Works
 
@@ -205,6 +206,8 @@ Sagaz: create an Android/iOS app for personal finance tracking, with premium des
 Sagaz should choose the appropriate workflow, create or update persistent run state, recommend a stack, plan requirements, create UX/UI and a design system, implement, test, prepare production and CI/CD, suggest GitHub operations, and deliver a final handoff with evidence and risks.
 
 For production-grade work, Sagaz can also apply SRE readiness, DORA metrics, secure SDLC, dependency governance, data privacy lifecycle, architecture fitness functions, API contracts, performance budgets, accessibility compliance, database migrations, release strategy, and AI application quality protocols.
+
+For medium, large, production, web, mobile, refactor, or feature-extension work, Sagaz should create or update a future-change guide covering product intent, architecture, design system, UX rules, components, invariants, testing, safe refactor procedure, safe feature-addition procedure, deployment, and known risks.
 
 For tool-heavy work, Sagaz uses a tool registry to verify local availability and recommend the right connector or platform before asking permission to install, authenticate, deploy, publish, or modify external resources.
 

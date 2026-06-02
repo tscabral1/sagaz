@@ -14,7 +14,8 @@ Use this named workflow when the task matches Mobile App Production delivery.
 6. Verification: tests, QA, visual validation, security review.
 7. Production: readiness, environment variables, deployment, rollback.
 8. GitHub Ops: commit, push, PR, checks, release when approved.
-9. Delivery: final handoff with evidence and residual risks.
+9. Future-change safety: create or update future-change documentation, invariants, and regression guidance.
+10. Delivery: final handoff with evidence and residual risks.
 
 ## Advanced Protocols To Consider
 

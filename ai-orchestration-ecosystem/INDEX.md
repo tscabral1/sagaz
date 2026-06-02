@@ -61,6 +61,7 @@ See `protocols/` for quality gates, testing matrix, stack selection, design qual
 - `protocols/agent-observability.md`
 - `protocols/durable-run-state.md`
 - `protocols/compatibility-update-audit.md`
+- `protocols/future-change-safety.md`
 
 ## Tools
 
@@ -88,7 +89,7 @@ See `protocols/` for quality gates, testing matrix, stack selection, design qual
 
 ## Templates
 
-See `templates/` for task briefs, product specs, technical specs, design systems, stack recommendations, run state, squad handoffs, QA reports, release checklists, changelogs, release notes, and final handoffs.
+See `templates/` for task briefs, product specs, technical specs, design systems, future-change guides, refactor safety contracts, stack recommendations, run state, squad handoffs, QA reports, release checklists, changelogs, release notes, and final handoffs.
 
 ## Governance
 
