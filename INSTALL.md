@@ -72,6 +72,7 @@ Sagaz: explain the available workflows.
 ```powershell
 npx sagaz-ai status
 npx sagaz-ai doctor
+npx sagaz-ai sync
 npx sagaz-ai install --force
 ```
 
@@ -80,8 +81,29 @@ npx sagaz-ai install --force
 ```bash
 npx sagaz-ai status
 npx sagaz-ai doctor
+npx sagaz-ai sync
 npx sagaz-ai install --force
 ```
+
+## Sync The Installed Skill
+
+When this repository changes, refresh the installed Codex Desktop skill before relying on new Sagaz behavior.
+
+Windows PowerShell:
+
+```powershell
+npx sagaz-ai sync
+npx sagaz-ai doctor
+```
+
+macOS Terminal:
+
+```bash
+npx sagaz-ai sync
+npx sagaz-ai doctor
+```
+
+Then open a new Codex Desktop thread so the updated skill is discovered.
 
 ## Manual Install
 

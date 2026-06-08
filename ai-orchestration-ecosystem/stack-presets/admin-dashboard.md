@@ -18,6 +18,24 @@ Operational dashboards, internal tools, CRM-like interfaces, analytics panels, a
 - Use another component library only when the project needs specialized enterprise components or already depends on that library.
 - Use a strict internal design system when brand, accessibility, or product consistency requirements are already defined.
 
+## Strengths
+
+- Good fit for dense operational interfaces.
+- Encourages consistent tables, forms, filters, permissions, and audit trails.
+- Keeps repeated workflows scannable and testable.
+
+## Tradeoffs
+
+- Requires careful information architecture to avoid clutter.
+- Data tables, filters, permissions, and empty states add implementation complexity.
+- Visual polish must stay practical rather than marketing-oriented.
+
+## Use When
+
+- The user needs an internal tool, CRM, analytics panel, or back-office workflow.
+- Operators need to scan, compare, filter, edit, approve, or audit records repeatedly.
+- Role permissions, destructive actions, or operational state need explicit UI handling.
+
 ## Design Rules
 
 - Prioritize dense, scannable layouts.

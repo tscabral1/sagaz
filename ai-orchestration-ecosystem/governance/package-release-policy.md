@@ -25,21 +25,47 @@ Change summary:
 Files updated:
 Skill updated:
 Installed local skill updated:
+Installed local skill sync verified:
 README updated:
+Manifest updated:
+Dependency graph validated:
+Evaluation scenarios run:
 Package version updated:
 Package verified:
+Version decision:
+Changelog or release notes updated:
+Migration notes reviewed:
+Compatibility notes reviewed:
+Rollback plan documented:
 Git commit:
 Git push:
+Git tag:
+GitHub release:
 npm publish:
 Post-publish install test:
 ```
+
+## Release Gate
+
+Apply `protocols/release-versioning-gate.md` before changing the package version, creating a Git tag, creating a GitHub release, or publishing to npm.
+
+A package release is blocked unless `npm test`, `node ./bin/sagaz.js doctor`, manifest validation, dependency graph validation, release notes or changelog review, and relevant evaluation scenarios have passed.
+
+Do not include unrelated local changes in a release commit unless the user explicitly approves that scope.
+
+Use `templates/changelog.md` for release history and `templates/release-notes.md` for GitHub release or npm publication notes. Release notes must include audience impact, compatibility, migration notes, verification, known limitations, rollback plan, and release decision.
+
+Apply `protocols/installed-skill-sync.md` after changing `codex-skill/sagaz/SKILL.md` or release/invocation rules. Local release evidence must state whether the installed skill was synchronized, stale, or intentionally not updated.
 
 ## GitHub Actions
 
 The repository should include:
 
 - package checks on push and pull request
-- manual npm publishing workflow
+- package checks on Linux, Windows, and macOS GitHub runners
+- `npm test`, `npm run doctor`, and `npm pack --dry-run` in package checks
+- manual npm publishing workflow with explicit version input
+- manual npm publishing workflow with a publish confirmation input
 - GitHub Actions configured with Node.js 24 unless a newer supported LTS baseline is intentionally adopted
 
 The npm publishing workflow requires either trusted publishing or an `NPM_TOKEN` repository secret. Do not assume either is configured. If missing, guide the user through the safest available option and explain why it is needed.
@@ -54,6 +80,7 @@ Before publishing:
 
 ```powershell
 npm test
+node ./bin/sagaz.js doctor
 npm pack --dry-run
 ```
 

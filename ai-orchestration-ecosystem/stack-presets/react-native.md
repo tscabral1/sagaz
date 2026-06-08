@@ -23,3 +23,9 @@ Mobile apps that need deeper native control than a fully managed Expo project.
 - Native build complexity is higher.
 - CI setup is more involved.
 - Requires stronger platform-specific verification.
+
+## Use When
+
+- The mobile app needs native modules or platform control beyond managed Expo defaults.
+- The team can support native Android and iOS build complexity.
+- Store readiness, device testing, and native CI are part of the delivery scope.

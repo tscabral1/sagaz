@@ -23,6 +23,12 @@ Backend APIs, integrations, webhooks, automation services, and full-stack apps n
 
 - Requires explicit architecture for auth, validation, errors, logging, rate limits, and deployment.
 
+## Use When
+
+- The product needs a dedicated backend API, webhook handler, integration service, or automation service.
+- Request validation, authentication, logging, and deployment controls must be explicit.
+- The frontend and backend need clear API contracts.
+
 ## Required Sagaz Checks
 
 - API contract

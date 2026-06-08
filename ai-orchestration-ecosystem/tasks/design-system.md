@@ -1,21 +1,49 @@
-﻿# Task: Design System
+# Task: Design System
 
 ## Owner
 
-Assigned by the active workflow or squad.
+Design Studio or active workflow owner squad when the UI work is minimal.
 
-## Inputs
+## Allowed Owner Squads
 
-- User goal.
-- Current run state.
-- Relevant specifications, files, and constraints.
+- design-studio
+- product-factory
+- mobile-app-studio
+- refactor-lab
+- code-audit
 
-## Outputs
+## Used By Workflows
 
-- Completed task artifact.
-- Evidence.
-- Risks and pending items.
-- Handoff recommendation.
+- greenfield-web-app
+- web-production-release
+- mobile-app-production
+- brownfield-refactor-safe
+- bugfix-to-release
+
+## Required Inputs
+
+- Product requirements or preserved behavior contract.
+- Brand, audience, domain, accessibility needs, and device targets.
+- Existing design system or component library when present.
+- Figma MCP availability when mockups or multi-screen flows are useful.
+
+## Produces
+
+- `template:design-system-spec`.
+- UX rules, visual direction, tokens, component inventory, states, and responsive rules.
+- Figma MCP mockup or alternative design evidence when useful and available.
+- Accessibility and visual QA criteria.
+
+## Evidence Required
+
+- Primary journeys and states are covered.
+- Components map to the chosen frontend stack or existing design system.
+- Empty, loading, error, disabled, focus, hover, and success states are considered when relevant.
+- Visual QA path is documented.
+
+## Handoff
+
+design-studio -> active workflow owner squad.
 
 ## Acceptance Criteria
 
@@ -26,9 +54,8 @@ Assigned by the active workflow or squad.
 
 ## Verification
 
-Check against the active protocol and quality gates.
+Check against `protocol:design-quality`, `protocol:accessibility-compliance`, and the active workflow contract.
 
 ## Stop Condition
 
-Stop and ask the user when scope, cost, architecture, production risk, or external state would change.
-
+Stop and ask the user when design direction, brand interpretation, Figma file creation, or external design tooling changes scope or external state.

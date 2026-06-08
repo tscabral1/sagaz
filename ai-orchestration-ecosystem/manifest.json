@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "name": "sagaz-ai-orchestration-ecosystem",
+  "description": "Internal component registry for the Sagaz Codex Desktop orchestration ecosystem.",
+  "entrypoints": [
+    "quickstart.md",
+    "INDEX.md",
+    "ACTIVATE.md"
+  ],
+  "component_groups": {
+    "core": [
+      "core/decision-records.md",
+      "core/operating-system.md",
+      "core/token-economy.md"
+    ],
+    "workflows": [
+      "workflows/brownfield-refactor-safe.md",
+      "workflows/bugfix-to-release.md",
+      "workflows/greenfield-web-app.md",
+      "workflows/mobile-app-production.md",
+      "workflows/web-production-release.md"
+    ],
+    "squads": [
+      "squads/code-audit.md",
+      "squads/design-studio.md",
+      "squads/github-ops.md",
+      "squads/maintenance-ops.md",
+      "squads/mobile-app-studio.md",
+      "squads/product-factory.md",
+      "squads/production-critical.md",
+      "squads/refactor-lab.md",
+      "squads/research-to-spec.md"
+    ],
+    "agents": [
+      "agents/design-director.md",
+      "agents/implementation-engineer.md",
+      "agents/orchestrator.md",
+      "agents/product-strategist.md",
+      "agents/qa-verifier.md",
+      "agents/refactor-steward.md",
+      "agents/security-governance.md",
+      "agents/software-architect.md",
+      "agents/specification-writer.md",
+      "agents/technology-strategist.md",
+      "agents/ui-systems-designer.md",
+      "agents/ux-architect.md",
+      "agents/visual-qa.md"
+    ],
+    "tasks": [
+      "tasks/design-system.md",
+      "tasks/github-release-ops.md",
+      "tasks/implementation-build.md",
+      "tasks/intake-brief.md",
+      "tasks/product-requirements.md",
+      "tasks/production-readiness.md",
+      "tasks/stack-recommendation.md",
+      "tasks/verification-qa.md"
+    ],
+    "protocols": [
+      "protocols/accessibility-compliance.md",
+      "protocols/agent-observability.md",
+      "protocols/ai-application-quality.md",
+      "protocols/api-contracts.md",
+      "protocols/architecture-fitness-functions.md",
+      "protocols/ci-cd-readiness.md",
+      "protocols/communication.md",
+      "protocols/component-governance.md",
+      "protocols/compatibility-update-audit.md",
+      "protocols/data-privacy-lifecycle.md",
+      "protocols/database-migrations.md",
+      "protocols/delegation.md",
+      "protocols/dependency-governance.md",
+      "protocols/dependency-graph-validation.md",
+      "protocols/design-quality.md",
+      "protocols/dora-metrics.md",
+      "protocols/durable-run-state.md",
+      "protocols/future-change-safety.md",
+      "protocols/github-operations.md",
+      "protocols/guided-proactivity.md",
+      "protocols/installed-skill-sync.md",
+      "protocols/memory.md",
+      "protocols/model-routing.md",
+      "protocols/performance-budgets.md",
+      "protocols/post-delivery-monitoring.md",
+      "protocols/production-readiness.md",
+      "protocols/quality-gates.md",
+      "protocols/release-versioning-gate.md",
+      "protocols/release-strategy.md",
+      "protocols/secure-sdlc.md",
+      "protocols/squad-pipeline-handoffs.md",
+      "protocols/sre-readiness.md",
+      "protocols/stack-selection.md",
+      "protocols/testing-matrix.md"
+    ],
+    "stack_presets": [
+      "stack-presets/admin-dashboard.md",
+      "stack-presets/expo-mobile.md",
+      "stack-presets/firebase.md",
+      "stack-presets/nextjs-vercel.md",
+      "stack-presets/node-api.md",
+      "stack-presets/react-native.md",
+      "stack-presets/react-vite.md",
+      "stack-presets/static-site.md",
+      "stack-presets/supabase.md"
+    ],
+    "templates": [
+      "templates/changelog.md",
+      "templates/design-system-spec.md",
+      "templates/final-handoff.md",
+      "templates/future-change-guide.md",
+      "templates/github-actions-checklist.md",
+      "templates/implementation-plan.md",
+      "templates/mobile-release-checklist.md",
+      "templates/product-spec.md",
+      "templates/qa-report.md",
+      "templates/refactor-safety-contract.md",
+      "templates/release-notes.md",
+      "templates/run-state.md",
+      "templates/squad-handoff.md",
+      "templates/squad-runbook.md",
+      "templates/stack-recommendation.md",
+      "templates/task-brief.md",
+      "templates/technical-spec.md"
+    ],
+    "tools": [
+      "tools/tool-registry.md"
+    ],
+    "skills": [
+      "skills/exhaustive-verification.md",
+      "skills/refactor-proofing.md",
+      "skills/spec-first-development.md"
+    ],
+    "engineering": [
+      "engineering/software-engineering-deep-guide.md"
+    ],
+    "governance": [
+      "governance/ecosystem-maintenance.md",
+      "governance/package-release-policy.md",
+      "governance/quality-policy.md",
+      "governance/security-policy.md",
+      "governance/versioning.md"
+    ],
+    "evals": [
+      "evals/sagaz-evaluation-suite.md"
+    ],
+    "examples": [
+      "examples/README.md"
+    ],
+    "docs": [
+      "ACTIVATE.md",
+      "INDEX.md",
+      "README.md",
+      "quickstart.md"
+    ]
+  },
+  "validation": {
+    "required_entrypoints": [
+      "quickstart.md",
+      "INDEX.md",
+      "manifest.json"
+    ],
+    "component_paths_must_exist": true,
+    "component_groups_must_match_filesystem": true,
+    "workflow_contracts_required": true,
+    "task_contracts_required": true,
+    "run_state_contract_required": true
+  }
+}

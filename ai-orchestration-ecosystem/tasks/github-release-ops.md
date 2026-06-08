@@ -1,21 +1,45 @@
-﻿# Task: Github Release Ops
+# Task: GitHub Release Ops
 
 ## Owner
 
-Assigned by the active workflow or squad.
+GitHub Ops.
 
-## Inputs
+## Allowed Owner Squads
 
-- User goal.
-- Current run state.
-- Relevant specifications, files, and constraints.
+- github-ops
 
-## Outputs
+## Used By Workflows
 
-- Completed task artifact.
-- Evidence.
-- Risks and pending items.
-- Handoff recommendation.
+- greenfield-web-app
+- web-production-release
+- mobile-app-production
+- brownfield-refactor-safe
+- bugfix-to-release
+
+## Required Inputs
+
+- Verified changes or approved release candidate.
+- Current Git status, branch, remote, and CI/check status.
+- Release notes, changelog, or final handoff when applicable.
+- User approval for commits, pushes, pull requests, releases, or external GitHub actions.
+
+## Produces
+
+- Commit, push, pull request, issue, release, or documented recommendation.
+- `template:release-notes` when a release is prepared.
+- `template:changelog` when user-facing changes need history.
+- GitHub evidence such as commit SHA, branch, PR URL, check status, or release tag.
+
+## Evidence Required
+
+- Repository status is checked before Git operations.
+- Commands and results are summarized.
+- Remote actions are approved.
+- CI/check results or residual risks are recorded.
+
+## Handoff
+
+github-ops -> active workflow owner squad or complete.
 
 ## Acceptance Criteria
 
@@ -26,9 +50,8 @@ Assigned by the active workflow or squad.
 
 ## Verification
 
-Check against the active protocol and quality gates.
+Check against `protocol:github-operations`, `protocol:ci-cd-readiness`, and the active workflow contract.
 
 ## Stop Condition
 
-Stop and ask the user when scope, cost, architecture, production risk, or external state would change.
-
+Stop and ask the user before committing, pushing, opening pull requests, publishing releases, changing repository settings, or accepting failed checks.

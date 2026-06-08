@@ -1,21 +1,48 @@
-﻿# Task: Stack Recommendation
+# Task: Stack Recommendation
 
 ## Owner
 
-Assigned by the active workflow or squad.
+Active workflow owner squad.
 
-## Inputs
+## Allowed Owner Squads
 
-- User goal.
-- Current run state.
-- Relevant specifications, files, and constraints.
+- product-factory
+- mobile-app-studio
+- refactor-lab
+- code-audit
 
-## Outputs
+## Used By Workflows
 
-- Completed task artifact.
-- Evidence.
-- Risks and pending items.
-- Handoff recommendation.
+- greenfield-web-app
+- web-production-release
+- mobile-app-production
+- brownfield-refactor-safe
+- bugfix-to-release
+
+## Required Inputs
+
+- Intake brief or product requirements.
+- Current project architecture and dependencies when available.
+- Deployment target, platform constraints, data needs, team constraints, and maintenance expectations.
+- Relevant stack presets.
+
+## Produces
+
+- `template:stack-recommendation`.
+- Architecture and deployment tradeoffs.
+- Recommended stack or confirmation of existing stack.
+- Cost, speed, scale, maintainability, maturity, security, deployment, and future-change rationale.
+
+## Evidence Required
+
+- Recommendation references project constraints.
+- Tradeoffs and lock-in risks are documented.
+- Existing project conventions are respected.
+- Any dependency, account, cloud, or external-tool change requires explicit permission.
+
+## Handoff
+
+Active owner squad -> design, implementation, audit, or production squad based on the active workflow.
 
 ## Acceptance Criteria
 
@@ -26,9 +53,8 @@ Assigned by the active workflow or squad.
 
 ## Verification
 
-Check against the active protocol and quality gates.
+Check against `protocol:stack-selection`, `tools:tool-registry`, and relevant stack presets.
 
 ## Stop Condition
 
-Stop and ask the user when scope, cost, architecture, production risk, or external state would change.
-
+Stop and ask the user before installing dependencies, adopting costly services, changing platform direction, or introducing vendor lock-in.

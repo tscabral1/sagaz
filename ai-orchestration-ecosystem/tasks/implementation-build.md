@@ -1,21 +1,48 @@
-﻿# Task: Implementation Build
+# Task: Implementation Build
 
 ## Owner
 
-Assigned by the active workflow or squad.
+Active workflow owner squad.
 
-## Inputs
+## Allowed Owner Squads
 
-- User goal.
-- Current run state.
-- Relevant specifications, files, and constraints.
+- product-factory
+- mobile-app-studio
+- refactor-lab
+- code-audit
 
-## Outputs
+## Used By Workflows
 
-- Completed task artifact.
-- Evidence.
-- Risks and pending items.
-- Handoff recommendation.
+- greenfield-web-app
+- web-production-release
+- mobile-app-production
+- brownfield-refactor-safe
+- bugfix-to-release
+
+## Required Inputs
+
+- Approved requirements or refactor safety contract.
+- Stack recommendation or existing architecture constraints.
+- Design system or UI preservation rules when UI exists.
+- Current run state and workflow phase ledger.
+
+## Produces
+
+- `template:implementation-plan`.
+- Code changes or implementation plan when execution is deferred.
+- Updated documentation when behavior, architecture, design, or deployment expectations change.
+- Verification notes for the QA phase.
+
+## Evidence Required
+
+- Changes are scoped to the active task.
+- Implementation maps to acceptance criteria.
+- Risky changes are isolated, reversible, or explicitly justified.
+- Tests, build checks, or manual verification steps are identified.
+
+## Handoff
+
+Active owner squad -> verification or audit squad based on the active workflow.
 
 ## Acceptance Criteria
 
@@ -26,9 +53,8 @@ Assigned by the active workflow or squad.
 
 ## Verification
 
-Check against the active protocol and quality gates.
+Check against the implementation plan, active workflow contract, and relevant engineering protocols.
 
 ## Stop Condition
 
-Stop and ask the user when scope, cost, architecture, production risk, or external state would change.
-
+Stop and ask the user when implementation requires new dependencies, external services, destructive data changes, architecture changes, or scope expansion.

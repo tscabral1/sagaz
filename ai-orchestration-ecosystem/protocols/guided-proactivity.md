@@ -21,7 +21,7 @@ What changes:
 Benefit:
 Risk:
 Permission required:
-```n
+```
 ## Blocking Conditions
 
 - The primary flow fails.

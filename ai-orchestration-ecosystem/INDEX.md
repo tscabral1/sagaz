@@ -5,6 +5,7 @@
 - `ACTIVATE.md`: ready-to-use activation prompts.
 - `quickstart.md`: minimum operating rules.
 - `README.md`: ecosystem overview.
+- `manifest.json`: internal component registry for validation and navigation.
 
 ## Core
 
@@ -50,18 +51,27 @@ See `protocols/` for quality gates, testing matrix, stack selection, design qual
 - `protocols/dora-metrics.md`
 - `protocols/secure-sdlc.md`
 - `protocols/dependency-governance.md`
+- `protocols/dependency-graph-validation.md`
 - `protocols/data-privacy-lifecycle.md`
 - `protocols/architecture-fitness-functions.md`
 - `protocols/api-contracts.md`
 - `protocols/performance-budgets.md`
 - `protocols/accessibility-compliance.md`
 - `protocols/database-migrations.md`
+- `protocols/release-versioning-gate.md`
 - `protocols/release-strategy.md`
 - `protocols/ai-application-quality.md`
 - `protocols/agent-observability.md`
+- `protocols/component-governance.md`
+- `protocols/communication.md`
+- `protocols/delegation.md`
 - `protocols/durable-run-state.md`
 - `protocols/compatibility-update-audit.md`
 - `protocols/future-change-safety.md`
+- `protocols/installed-skill-sync.md`
+- `protocols/memory.md`
+- `protocols/model-routing.md`
+- `protocols/post-delivery-monitoring.md`
 
 ## Tools
 

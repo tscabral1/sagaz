@@ -37,7 +37,10 @@ If navigation is needed, read:
 16. For static websites, maximize practical SEO before delivery: unique titles/descriptions, canonical URLs, Open Graph/Twitter metadata, Schema.org JSON-LD, root sitemap, robots sitemap discovery, performance-friendly images, accessibility basics, and deployment-specific files such as `CNAME`, `.nojekyll`, and `404.html` for GitHub Pages when applicable.
 17. For every medium, large, web, mobile, production, refactor, or feature-extension project, create or update future-change documentation so later refactors, improvements, and new features preserve behavior, design consistency, UX, accessibility, and test coverage.
 18. When product UI, app UX, dashboards, or multi-screen flows are involved, verify whether Figma MCP is available and recommend app-like Figma mockups with connected flows, realistic states, responsive intent, and implementation-ready components when they reduce risk.
-19. Do not declare done without verification evidence proportional to risk.
+19. When creating, updating, renaming, deprecating, or removing Sagaz ecosystem components, apply `protocols/component-governance.md`, keep `manifest.json` current, and preserve dependency graph validity with `protocols/dependency-graph-validation.md`.
+20. Before any Sagaz version bump, Git tag, GitHub release, or npm publish, apply `protocols/release-versioning-gate.md` and block release unless checks, doctor, manifest, dependency graph, relevant evaluations, and changelog or release notes based on `templates/changelog.md` or `templates/release-notes.md` are complete.
+21. After changing Sagaz activation, release rules, or `codex-skill/sagaz/SKILL.md`, apply `protocols/installed-skill-sync.md` and verify whether the installed Codex Desktop skill is synchronized.
+22. Do not declare done without verification evidence proportional to risk.
 
 ## Quick Selection
 
@@ -50,6 +53,10 @@ If navigation is needed, read:
 - GitHub: `squads/github-ops.md` and `protocols/github-operations.md`
 - Tools/connectors: `tools/tool-registry.md`
 - Stack presets: `stack-presets/`
+- Component governance: `protocols/component-governance.md`, `protocols/dependency-graph-validation.md`, and `manifest.json`
+- Release/versioning gate: `protocols/release-versioning-gate.md`, `governance/versioning.md`, and `governance/package-release-policy.md`
+- Release notes: `templates/changelog.md` and `templates/release-notes.md`
+- Installed skill sync: `protocols/installed-skill-sync.md`
 - Sagaz quality checks: `evals/sagaz-evaluation-suite.md`
 - Sagaz update checks: `protocols/compatibility-update-audit.md`
 - Future changes/refactors: `protocols/future-change-safety.md`, `templates/future-change-guide.md`, and `templates/refactor-safety-contract.md`

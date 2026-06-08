@@ -12,6 +12,7 @@ A local AI orchestration ecosystem for Codex, focused on autonomous teams, consi
 
 ## Structure
 
+- `manifest.json`: internal component registry used to validate and navigate the ecosystem.
 - `workflows/`: named end-to-end flows.
 - `squads/`: specialized teams.
 - `agents/`: role definitions.
@@ -24,6 +25,14 @@ A local AI orchestration ecosystem for Codex, focused on autonomous teams, consi
 ## Golden Rule
 
 No delivery is complete without verification evidence proportional to the risk.
+
+## Ecosystem Maintenance
+
+Use `manifest.json` as the component registry and `protocols/component-governance.md` when creating, updating, renaming, deprecating, or removing Sagaz ecosystem components.
+
+Use `protocols/release-versioning-gate.md` before version bumps, Git tags, GitHub releases, or npm publishes. A Sagaz release is not ready until package checks, doctor, manifest coverage, dependency graph validation, relevant evaluation scenarios, and changelog or release notes are complete.
+
+Use `protocols/installed-skill-sync.md` after changing the Sagaz skill or release rules so the installed Codex Desktop skill does not drift from the repository copy.
 
 ## Advanced Engineering Coverage
 

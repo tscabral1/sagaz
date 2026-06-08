@@ -1,21 +1,48 @@
-﻿# Task: Verification Qa
+# Task: Verification QA
 
 ## Owner
 
-Assigned by the active workflow or squad.
+Active workflow owner squad or code-audit squad when independent review is needed.
 
-## Inputs
+## Allowed Owner Squads
 
-- User goal.
-- Current run state.
-- Relevant specifications, files, and constraints.
+- product-factory
+- mobile-app-studio
+- refactor-lab
+- code-audit
 
-## Outputs
+## Used By Workflows
 
-- Completed task artifact.
-- Evidence.
-- Risks and pending items.
-- Handoff recommendation.
+- greenfield-web-app
+- web-production-release
+- mobile-app-production
+- brownfield-refactor-safe
+- bugfix-to-release
+
+## Required Inputs
+
+- Implementation changes or proposed changes.
+- Acceptance criteria.
+- Known risks and preserved behavior requirements.
+- Available test commands, build commands, visual checks, or manual QA paths.
+
+## Produces
+
+- `template:qa-report`.
+- Test, build, lint, typecheck, visual, accessibility, security, or manual verification evidence.
+- Defects found and recommended fixes.
+- Go/no-go verdict with residual risks.
+
+## Evidence Required
+
+- Verification commands or inspection methods are named.
+- Failures include observed output, likely cause, and recovery step.
+- Risk level determines verification depth.
+- Residual risk is explicit before handoff.
+
+## Handoff
+
+Active QA owner -> production-critical, github-ops, or implementation owner based on verdict.
 
 ## Acceptance Criteria
 
@@ -26,9 +53,8 @@ Assigned by the active workflow or squad.
 
 ## Verification
 
-Check against the active protocol and quality gates.
+Check against `protocol:testing-matrix`, `protocol:quality-gates`, and any applicable visual, accessibility, security, or performance protocols.
 
 ## Stop Condition
 
-Stop and ask the user when scope, cost, architecture, production risk, or external state would change.
-
+Stop and ask the user when a required check fails without explanation, evidence is insufficient, or a high-risk residual issue needs acceptance.

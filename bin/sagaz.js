@@ -19,6 +19,7 @@ This CLI installs Sagaz into Codex Desktop. It is not a standalone runtime for u
 
 Usage:
   npx sagaz-ai install
+  npx sagaz-ai sync
   npx sagaz-ai status
   npx sagaz-ai doctor
 
@@ -55,9 +56,23 @@ function copyDirectory(source, target) {
   fs.cpSync(source, target, { recursive: true, force: true });
 }
 
-function install() {
+function installedSkillPath() {
+  return path.join(codexHome(), "skills", "sagaz");
+}
+
+function syncState() {
+  const targetSkill = installedSkillPath();
+  const sourceSkillFile = path.join(skillSource, "SKILL.md");
+  const targetSkillFile = path.join(targetSkill, "SKILL.md");
+  const sourceExists = fs.existsSync(sourceSkillFile);
+  const installed = fs.existsSync(targetSkillFile);
+  const synchronized = sourceExists && installed && fs.readFileSync(sourceSkillFile, "utf8") === fs.readFileSync(targetSkillFile, "utf8");
+  return { targetSkill, sourceSkillFile, targetSkillFile, sourceExists, installed, synchronized };
+}
+
+function install({ force = hasFlag("--force") } = {}) {
   const targetSkill = path.join(codexHome(), "skills", "sagaz");
-  if (fs.existsSync(targetSkill) && !hasFlag("--force")) {
+  if (fs.existsSync(targetSkill) && !force) {
     console.log(`Sagaz is already installed at: ${targetSkill}`);
     console.log("Run with --force to overwrite it.");
   } else {
@@ -79,12 +94,18 @@ function install() {
   console.log("  Sagaz: explain the available workflows.");
 }
 
+function sync() {
+  install({ force: true });
+}
+
 function status() {
-  const targetSkill = path.join(codexHome(), "skills", "sagaz");
-  const skillFile = path.join(targetSkill, "SKILL.md");
+  const state = syncState();
   console.log(`Codex home: ${codexHome()}`);
-  console.log(`Sagaz skill: ${targetSkill}`);
-  console.log(`Installed: ${fs.existsSync(skillFile) ? "yes" : "no"}`);
+  console.log(`Sagaz skill: ${state.targetSkill}`);
+  console.log(`Installed: ${state.installed ? "yes" : "no"}`);
+  if (state.installed) {
+    console.log(`Synchronized with source: ${state.synchronized ? "yes" : "no"}`);
+  }
 }
 
 function doctor() {
@@ -92,7 +113,8 @@ function doctor() {
   const required = [
     path.join(skillSource, "SKILL.md"),
     path.join(ecosystemSource, "quickstart.md"),
-    path.join(ecosystemSource, "INDEX.md")
+    path.join(ecosystemSource, "INDEX.md"),
+    path.join(ecosystemSource, "manifest.json")
   ];
   for (const file of required) {
     const exists = fs.existsSync(file);
@@ -100,11 +122,17 @@ function doctor() {
     ok = ok && exists;
   }
   status();
+  const state = syncState();
+  if (state.installed && !state.synchronized) {
+    console.log("stale installed skill: run `npx sagaz-ai sync` or `npx sagaz-ai install --force`");
+    ok = false;
+  }
   if (!ok) process.exitCode = 1;
 }
 
 try {
   if (command === "install") install();
+  else if (command === "sync") sync();
   else if (command === "status") status();
   else if (command === "doctor") doctor();
   else usage();

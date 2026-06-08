@@ -68,6 +68,12 @@ When the user wants GitHub Pages:
 - Content workflows must be planned if nontechnical users edit content.
 - No CMS means blog updates require direct file edits, link updates, sitemap updates, and verification.
 
+## Use When
+
+- The site is mostly content, marketing, documentation, portfolio, or landing-page work.
+- Clean URLs, low hosting cost, performance, and SEO basics matter.
+- Dynamic application behavior is limited or can be handled by external services.
+
 ## Verification Checklist
 
 - Local route test for `/`, `/blog/`, and representative nested routes.

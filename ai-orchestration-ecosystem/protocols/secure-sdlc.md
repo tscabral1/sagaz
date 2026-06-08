@@ -29,6 +29,13 @@ Mitigations:
 Residual risk:
 ```
 
+## Output
+
+- Security requirements and threat assumptions.
+- Checks performed and evidence gathered.
+- Mitigations applied or recommended.
+- Residual risks requiring user acceptance or follow-up.
+
 ## Blocking Conditions
 
 - Secrets committed or exposed.

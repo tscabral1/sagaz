@@ -28,6 +28,13 @@ Define measurable performance limits for web, mobile, backend, and AI features.
 - Queue/job processing time.
 - Database query limits.
 
+## Required Practice
+
+- Define budgets before implementation when performance risk is meaningful.
+- Choose metrics that can be measured with available tools.
+- Record how each metric will be checked.
+- Treat budget failures as delivery risks that need fixes, explicit acceptance, or scope adjustment.
+
 ## Output
 
 ```md

@@ -1,21 +1,48 @@
-﻿# Task: Product Requirements
+# Task: Product Requirements
 
 ## Owner
 
-Assigned by the active workflow or squad.
+Active workflow owner squad.
 
-## Inputs
+## Allowed Owner Squads
 
-- User goal.
+- product-factory
+- mobile-app-studio
+- refactor-lab
+- code-audit
+
+## Used By Workflows
+
+- greenfield-web-app
+- web-production-release
+- mobile-app-production
+- brownfield-refactor-safe
+- bugfix-to-release
+
+## Required Inputs
+
+- Intake brief.
 - Current run state.
-- Relevant specifications, files, and constraints.
+- User goals, constraints, users, journeys, and risks.
+- Existing product behavior when working in a brownfield project.
 
-## Outputs
+## Produces
 
-- Completed task artifact.
-- Evidence.
-- Risks and pending items.
-- Handoff recommendation.
+- `template:product-spec` for product or release work.
+- `template:refactor-safety-contract` for behavior-preserving refactors.
+- `template:task-brief` for narrow bugfix work.
+- User journeys, acceptance criteria, non-goals, assumptions, and risks.
+
+## Evidence Required
+
+- Requirements are testable.
+- Acceptance criteria map to user-visible behavior or preserved behavior.
+- Non-goals and assumptions are explicit.
+- Risky requirements have a verification path.
+
+## Handoff
+
+Active owner squad -> stack, design, implementation, or audit squad based on the active workflow.
 
 ## Acceptance Criteria
 
@@ -26,9 +53,8 @@ Assigned by the active workflow or squad.
 
 ## Verification
 
-Check against the active protocol and quality gates.
+Check against the active workflow, `protocol:quality-gates`, and any relevant product, security, or production protocols.
 
 ## Stop Condition
 
-Stop and ask the user when scope, cost, architecture, production risk, or external state would change.
-
+Stop and ask the user when requirements conflict, acceptance criteria cannot be tested, or scope changes materially.

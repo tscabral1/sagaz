@@ -76,6 +76,37 @@ Key areas:
 - `brownfield-refactor-safe`: refactor an existing project safely.
 - `bugfix-to-release`: fix a bug through verification and release.
 
+## System Requirements
+
+Install these before using Sagaz:
+
+- **Codex Desktop:** required. Sagaz is designed to run as a Codex Desktop skill, not as a standalone terminal agent.
+- **Node.js and npm:** required for the recommended `npx sagaz-ai install` flow. Use Node.js `22.14+` at minimum; Node.js `24 LTS` is preferred for new installations.
+- **Git:** recommended for cloning this repository, inspecting changes, and using Sagaz GitHub workflows.
+- **Operating system:** Windows or macOS with access to the local Codex skills folder.
+
+Optional but recommended for common Sagaz workflows:
+
+- **GitHub CLI (`gh`):** needed for guided GitHub operations such as authentication, pull requests, checks, issues, releases, and repository automation.
+- **Project runtime tools:** install the tools required by the project Sagaz will work on, such as `pnpm`, `yarn`, `bun`, Python, Java, Android Studio, Xcode, Expo/EAS, or database CLIs when that project needs them.
+- **Browser or web testing tools:** useful for visual QA, Playwright flows, accessibility checks, and local web app verification.
+- **Design/tool connectors:** optional connectors such as Figma MCP can be used when available for app-like mockups, design systems, and visual QA.
+
+Verify the core local tools:
+
+```bash
+node --version
+npm --version
+git --version
+```
+
+Verify GitHub CLI only if you want GitHub Ops:
+
+```bash
+gh --version
+gh auth status
+```
+
 ## Installation In Codex Desktop
 
 ### Recommended: Install With npx
@@ -106,6 +137,7 @@ Check installation:
 ```powershell
 npx sagaz-ai status
 npx sagaz-ai doctor
+npx sagaz-ai sync
 ```
 
 #### macOS Terminal
@@ -125,7 +157,10 @@ Check installation:
 ```bash
 npx sagaz-ai status
 npx sagaz-ai doctor
+npx sagaz-ai sync
 ```
+
+Use `npx sagaz-ai sync` after updating this repository or package to refresh the installed Codex Desktop skill. Then open a new Codex Desktop thread so Sagaz is rediscovered.
 
 Then open a new Codex Desktop thread and run:
 

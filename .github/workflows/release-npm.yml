@@ -2,9 +2,20 @@ name: Release npm
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: Package version expected in package.json, for example 0.1.7
+        required: true
+        type: string
+      publish:
+        description: Publish to npm after all release gates pass
+        required: true
+        default: false
+        type: boolean
 
 jobs:
-  publish:
+  release-gate:
+    name: Release gate
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -19,13 +30,30 @@ jobs:
           node-version: 24
           registry-url: https://registry.npmjs.org
 
-      - name: Verify package
+      - name: Validate requested version
+        run: |
+          PACKAGE_VERSION="$(node -p "require('./package.json').version")"
+          if [ "$PACKAGE_VERSION" != "${{ inputs.version }}" ]; then
+            echo "package.json version $PACKAGE_VERSION does not match requested version ${{ inputs.version }}"
+            exit 1
+          fi
+
+      - name: Validate ecosystem
         run: npm test
+
+      - name: Run doctor
+        run: npm run doctor
 
       - name: Dry-run package
         run: npm pack --dry-run
 
+      - name: Require publish confirmation
+        if: ${{ !inputs.publish }}
+        run: |
+          echo "Release gate passed. Re-run this workflow with publish=true to publish to npm."
+
       - name: Publish
+        if: ${{ inputs.publish }}
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
