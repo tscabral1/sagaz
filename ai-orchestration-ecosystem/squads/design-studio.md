@@ -20,14 +20,30 @@ Use this squad when the task matches Design Studio.
 
 1. Confirm objective, constraints, definition of done, and risks.
 2. Select relevant tasks and protocols.
-3. Execute the phase in small verifiable steps.
-4. Produce evidence and residual risks.
-5. Ask permission before handing off to the next team.
+3. Verify whether design tools such as the Figma MCP are available when mockups, prototypes, or product UI are needed.
+4. Execute the phase in small verifiable steps.
+5. Produce evidence and residual risks.
+6. Ask permission before handing off to the next team.
+
+## Figma MCP Mockup Rule
+
+When the Figma MCP is available and the task includes product UI, app UX, dashboards, or multi-screen flows, Design Studio should recommend creating a Figma mockup that works like a real application before implementation when it reduces risk or improves alignment.
+
+The mockup should include:
+
+- navigable screens or frames for the primary user journeys
+- realistic interaction states such as loading, empty, error, disabled, hover, focus, and success
+- responsive layout intent for desktop and mobile when relevant
+- component structure that maps cleanly to the intended implementation stack
+- visual QA evidence from Figma screenshots or inspected frames
+
+Sagaz must still follow the tool registry: verify Figma MCP availability, explain value and tradeoffs, and ask permission before creating or modifying Figma files.
 
 ## Required Gates
 
 - Clear objective and definition of done.
 - Relevant specification or task contract.
+- Figma MCP availability and mockup scope decided when product UI risk is meaningful.
 - Handoff approval between major phases.
 - Verification evidence proportional to risk.
 - Residual risks documented.

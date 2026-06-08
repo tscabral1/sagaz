@@ -36,7 +36,8 @@ If navigation is needed, read:
 15. For hand-built static sites, apply clean URL architecture by default: public routes should be directories with `index.html`, so URLs render as `/page/` and `/blog/post-slug/` rather than exposing `.html`.
 16. For static websites, maximize practical SEO before delivery: unique titles/descriptions, canonical URLs, Open Graph/Twitter metadata, Schema.org JSON-LD, root sitemap, robots sitemap discovery, performance-friendly images, accessibility basics, and deployment-specific files such as `CNAME`, `.nojekyll`, and `404.html` for GitHub Pages when applicable.
 17. For every medium, large, web, mobile, production, refactor, or feature-extension project, create or update future-change documentation so later refactors, improvements, and new features preserve behavior, design consistency, UX, accessibility, and test coverage.
-18. Do not declare done without verification evidence proportional to risk.
+18. When product UI, app UX, dashboards, or multi-screen flows are involved, verify whether Figma MCP is available and recommend app-like Figma mockups with connected flows, realistic states, responsive intent, and implementation-ready components when they reduce risk.
+19. Do not declare done without verification evidence proportional to risk.
 
 ## Quick Selection
 
@@ -45,7 +46,7 @@ If navigation is needed, read:
 - Android/iOS mobile: `workflows/mobile-app-production.md` and `squads/mobile-app-studio.md`
 - Safe refactoring: `workflows/brownfield-refactor-safe.md`
 - Bugfix to release: `workflows/bugfix-to-release.md`
-- Design/UI: `squads/design-studio.md` and `protocols/design-quality.md`
+- Design/UI: `squads/design-studio.md` and `protocols/design-quality.md`, including Figma MCP mockups when useful and available
 - GitHub: `squads/github-ops.md` and `protocols/github-operations.md`
 - Tools/connectors: `tools/tool-registry.md`
 - Stack presets: `stack-presets/`

@@ -9,9 +9,16 @@ Production web apps, SaaS products, dashboards, marketing sites with dynamic fea
 - Next.js
 - TypeScript
 - Tailwind CSS or an existing design system
+- shadcn/ui when the project needs customizable React components and no established component system exists
 - Vercel
 - Playwright
 - GitHub Actions
+
+## Component Guidance
+
+- Prefer shadcn/ui for SaaS apps, dashboards, portals, forms, settings screens, and other component-heavy interfaces.
+- Use the project's existing design system instead when one is already established.
+- Avoid adding shadcn/ui for very small static pages when plain Tailwind CSS is enough.
 
 ## Strengths
 

@@ -10,8 +10,14 @@ Client-heavy apps, dashboards, internal tools, prototypes, and static sites that
 - TypeScript
 - Vite
 - Tailwind CSS or existing CSS architecture
+- shadcn/ui when using Tailwind CSS and the app needs reusable, accessible UI components
 - Vitest
 - Playwright when user workflows matter
+
+## Component Guidance
+
+- Prefer shadcn/ui for dashboards, internal tools, multi-step forms, settings pages, and reusable app surfaces.
+- Keep the stack lighter for simple static sites, prototypes with minimal UI, or projects that already have a component system.
 
 ## Strengths
 

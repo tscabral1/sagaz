@@ -15,6 +15,7 @@ Sagaz must not assume a tool is available. It should inspect the local project, 
 | Version control | Git, GitHub CLI | status, commits, branches, pull requests, releases |
 | Package managers | npm, pnpm, yarn, bun | install, scripts, audits, builds |
 | Web verification | Playwright, browser tools, Lighthouse | screenshots, interaction tests, accessibility checks |
+| Design and prototyping | Figma MCP, Figma | product mockups, app-like prototypes, design systems, component frames, visual QA evidence |
 | Mobile delivery | Expo, EAS, Xcode, Android Studio, Gradle | Android/iOS builds and store readiness |
 | Deployment | Vercel, Netlify, Cloudflare, Render, Fly.io | preview, production deploy, rollback guidance |
 | Databases | Supabase, Firebase, Postgres, Prisma | schema, migrations, backup, policies |
@@ -52,6 +53,7 @@ Before using a tool, verify:
 For typical Codex projects:
 
 - GitHub CLI for GitHub operations.
+- Figma MCP for app-like mockups, product UI prototypes, design systems, and design-to-implementation alignment when available.
 - Playwright for browser end-to-end tests.
 - GitHub Actions for CI.
 - Vercel for Next.js web deployment when the user wants simple production hosting.

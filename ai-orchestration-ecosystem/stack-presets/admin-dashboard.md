@@ -8,9 +8,15 @@ Operational dashboards, internal tools, CRM-like interfaces, analytics panels, a
 
 - React or Next.js
 - TypeScript
-- Component library or a strict internal design system
+- shadcn/ui, another component library, or a strict internal design system
 - Tables, filters, forms, role permissions, and audit logs
 - Playwright for critical workflows
+
+## Component Guidance
+
+- Prefer shadcn/ui when building a new React or Next.js dashboard with Tailwind CSS.
+- Use another component library only when the project needs specialized enterprise components or already depends on that library.
+- Use a strict internal design system when brand, accessibility, or product consistency requirements are already defined.
 
 ## Design Rules
 
