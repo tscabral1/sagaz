@@ -11,6 +11,10 @@ Activate Sagaz as a local AI orchestration operating system.
 
 Locate the Sagaz repository in the workspace and read this first:
 
+`ai-orchestration-ecosystem/governance/operations-runbook.md`
+
+Then read:
+
 `ai-orchestration-ecosystem/quickstart.md`
 
 If navigation is needed, read:
@@ -30,7 +34,7 @@ If navigation is needed, read:
 9. For GitHub, apply proactive github-ops-guided: suggest commits, pushes, PRs, issues, releases, and checks at the right time.
 10. For production-grade engineering, apply relevant advanced protocols: SRE readiness, DORA metrics, secure SDLC, dependency governance, data privacy lifecycle, architecture fitness functions, API contracts, performance budgets, accessibility compliance, database migrations, release strategy, and AI application quality.
 11. For multi-phase or production work, apply durable run state and compact agent observability.
-12. Use the tool registry before recommending or using external tools, connectors, deployments, publishing, or account-linked actions.
+12. Use the tool registry and `protocols/mcp-connector-policy.md` before recommending or using external tools, MCPs, connectors, deployments, publishing, or account-linked actions.
 13. Use stack presets as starting points when recommending technologies, then adapt to user constraints.
 14. When the user asks whether Sagaz needs updates, apply the compatibility update audit across Windows, macOS, npm, Node.js, Codex Desktop, AI model behavior, GitHub, package contents, installed skill, and relevant external platforms before recommending a new version.
 15. For hand-built static sites, apply clean URL architecture by default: public routes should be directories with `index.html`, so URLs render as `/page/` and `/blog/post-slug/` rather than exposing `.html`.
@@ -40,7 +44,8 @@ If navigation is needed, read:
 19. When creating, updating, renaming, deprecating, or removing Sagaz ecosystem components, apply `protocols/component-governance.md`, keep `manifest.json` current, and preserve dependency graph validity with `protocols/dependency-graph-validation.md`.
 20. Before any Sagaz version bump, Git tag, GitHub release, or npm publish, apply `protocols/release-versioning-gate.md` and block release unless checks, doctor, manifest, dependency graph, relevant evaluations, and changelog or release notes based on `templates/changelog.md` or `templates/release-notes.md` are complete.
 21. After changing Sagaz activation, release rules, or `codex-skill/sagaz/SKILL.md`, apply `protocols/installed-skill-sync.md` and verify whether the installed Codex Desktop skill is synchronized.
-22. Do not declare done without verification evidence proportional to risk.
+22. Classify actions with `protocols/permission-contract.md`; ask explicit approval before remote, account-linked, publishing, deployment, destructive, or high-risk actions.
+23. Do not declare done without verification evidence proportional to risk.
 
 ## Quick Selection
 
@@ -52,11 +57,18 @@ If navigation is needed, read:
 - Design/UI: `squads/design-studio.md` and `protocols/design-quality.md`, including Figma MCP mockups when useful and available
 - GitHub: `squads/github-ops.md` and `protocols/github-operations.md`
 - Tools/connectors: `tools/tool-registry.md`
+- MCP/connectors: `protocols/mcp-connector-policy.md`
 - Stack presets: `stack-presets/`
+- Stack playbooks: `stack-playbooks/`
 - Component governance: `protocols/component-governance.md`, `protocols/dependency-graph-validation.md`, and `manifest.json`
 - Release/versioning gate: `protocols/release-versioning-gate.md`, `governance/versioning.md`, and `governance/package-release-policy.md`
 - Release notes: `templates/changelog.md` and `templates/release-notes.md`
 - Installed skill sync: `protocols/installed-skill-sync.md`
+- Daily operation: `governance/operations-runbook.md`
+- Complete examples: `examples/README.md`
+- Capability comparison: `governance/capabilities-matrix.md`
+- Permission contract: `protocols/permission-contract.md`
+- Execution trace: `protocols/agent-observability.md` and `templates/execution-trace.md`
 - Sagaz quality checks: `evals/sagaz-evaluation-suite.md`
 - Sagaz update checks: `protocols/compatibility-update-audit.md`
 - Future changes/refactors: `protocols/future-change-safety.md`, `templates/future-change-guide.md`, and `templates/refactor-safety-contract.md`

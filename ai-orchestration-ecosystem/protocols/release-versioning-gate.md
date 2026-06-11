@@ -20,6 +20,7 @@ Treat release readiness as a gate, not a suggestion. A release candidate must ha
 - Passing evaluation suite evidence for the changed area, using `evals/sagaz-evaluation-suite.md`.
 - Windows and macOS considerations reviewed for commands, paths, install steps, and Codex Desktop behavior.
 - Git state reviewed so unrelated user changes are not accidentally included.
+- Permission level classified with `protocols/permission-contract.md`.
 - Explicit user approval before commit, tag, push, GitHub release, npm publish, or installed skill update.
 
 ## Version Decision
@@ -52,6 +53,7 @@ Migration notes:
 Compatibility notes:
 Rollback plan:
 Git status summary:
+Permission classification:
 Approval needed:
 ```
 

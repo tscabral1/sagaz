@@ -9,6 +9,7 @@ Define how Sagaz should handle Github Operations while keeping the process clear
 - Start from the user goal and current project state.
 - Load only relevant context.
 - Separate facts, assumptions, inferences, risks, and decisions.
+- Apply `protocols/permission-contract.md` before commit, push, tag, pull request, issue, release, or any remote repository action.
 - Ask permission before meaningful state changes.
 - Record evidence and residual risk.
 

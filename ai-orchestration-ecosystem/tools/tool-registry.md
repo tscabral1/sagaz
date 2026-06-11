@@ -8,6 +8,8 @@ Give Sagaz a consistent way to decide which external or local tools should be re
 
 Sagaz must not assume a tool is available. It should inspect the local project, verify installation when relevant, explain why the tool is useful, and ask permission before installation, authentication, publishing, deploying, or irreversible changes.
 
+Apply `protocols/mcp-connector-policy.md` before using MCPs, app connectors, browser tools, deployment tools, design tools, GitHub tools, database tools, package registries, or account-linked integrations.
+
 ## Core Tool Categories
 
 | Category | Examples | Sagaz Use |
@@ -63,3 +65,5 @@ For typical Codex projects:
 ## Safety Rule
 
 Sagaz must ask permission before installing tools, creating cloud resources, linking accounts, deploying, publishing packages, or modifying production data.
+
+Connector usage must produce evidence: target, read/write scope, result, risk, and follow-up.

@@ -4,11 +4,12 @@ A local AI orchestration ecosystem for Codex, focused on autonomous teams, consi
 
 ## How To Use
 
-1. Read `quickstart.md`.
-2. Choose the smallest sufficient workflow or squad.
-3. Use formal tasks, handoffs, and quality gates.
-4. Create or update run state for medium/large work.
-5. Verify before declaring done.
+1. Read `governance/operations-runbook.md` for the daily operating procedure.
+2. Read `quickstart.md`.
+3. Choose the smallest sufficient workflow or squad.
+4. Use formal tasks, handoffs, and quality gates.
+5. Create or update run state for medium/large work.
+6. Verify before declaring done.
 
 ## Structure
 
@@ -18,7 +19,9 @@ A local AI orchestration ecosystem for Codex, focused on autonomous teams, consi
 - `agents/`: role definitions.
 - `tasks/`: formal task contracts.
 - `protocols/`: operating rules and quality gates.
+- `stack-playbooks/`: operational guides for common stack implementation, verification, and deployment.
 - `templates/`: reusable Markdown artifacts.
+- `examples/`: complete web, mobile, bugfix, and refactor flow examples.
 - `engineering/`: software engineering standards.
 - `governance/`: quality, security, and maintenance policies.
 
@@ -33,6 +36,14 @@ Use `manifest.json` as the component registry and `protocols/component-governanc
 Use `protocols/release-versioning-gate.md` before version bumps, Git tags, GitHub releases, or npm publishes. A Sagaz release is not ready until package checks, doctor, manifest coverage, dependency graph validation, relevant evaluation scenarios, and changelog or release notes are complete.
 
 Use `protocols/installed-skill-sync.md` after changing the Sagaz skill or release rules so the installed Codex Desktop skill does not drift from the repository copy.
+
+Use `governance/capabilities-matrix.md` when comparing Sagaz with CrewAI, AutoGen, LangChain, LangGraph, AIOX, Synkra, or similar orchestration systems.
+
+Use `protocols/permission-contract.md` before actions that change local state, remote state, accounts, deployments, packages, credentials, or GitHub history.
+
+Use `protocols/agent-observability.md` and `templates/execution-trace.md` for multi-phase, production, release, deployment, package, or high-risk work.
+
+Use `protocols/mcp-connector-policy.md` before using MCPs or external connectors such as Figma, GitHub, Canva, Browser, Vercel, Supabase, Firebase, npm, or observability tools.
 
 ## Advanced Engineering Coverage
 

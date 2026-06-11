@@ -71,6 +71,8 @@ See `protocols/` for quality gates, testing matrix, stack selection, design qual
 - `protocols/installed-skill-sync.md`
 - `protocols/memory.md`
 - `protocols/model-routing.md`
+- `protocols/mcp-connector-policy.md`
+- `protocols/permission-contract.md`
 - `protocols/post-delivery-monitoring.md`
 
 ## Tools
@@ -89,6 +91,15 @@ See `protocols/` for quality gates, testing matrix, stack selection, design qual
 - `stack-presets/static-site.md`
 - `stack-presets/admin-dashboard.md`
 
+## Stack Playbooks
+
+- `stack-playbooks/README.md`
+- `stack-playbooks/nextjs-vercel-supabase.md`
+- `stack-playbooks/react-vite-static.md`
+- `stack-playbooks/expo-eas.md`
+- `stack-playbooks/node-api.md`
+- `stack-playbooks/firebase.md`
+
 ## Evaluations
 
 - `evals/sagaz-evaluation-suite.md`
@@ -96,13 +107,21 @@ See `protocols/` for quality gates, testing matrix, stack selection, design qual
 ## Examples
 
 - `examples/README.md`
+- `examples/web-saas-vercel.md`
+- `examples/mobile-habit-tracker.md`
+- `examples/bugfix-production-release.md`
+- `examples/brownfield-refactor.md`
 
 ## Templates
 
 See `templates/` for task briefs, product specs, technical specs, design systems, future-change guides, refactor safety contracts, stack recommendations, run state, squad handoffs, QA reports, release checklists, changelogs, release notes, and final handoffs.
 
+- `templates/execution-trace.md`
+
 ## Governance
 
+- `governance/capabilities-matrix.md`
+- `governance/operations-runbook.md`
 - `governance/quality-policy.md`
 - `governance/security-policy.md`
 - `governance/versioning.md`

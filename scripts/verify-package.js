@@ -53,6 +53,10 @@ const sectionRules = [
     sections: ["Best For", "Default Stack", "Strengths", "Tradeoffs", "Use When"]
   },
   {
+    directory: "ai-orchestration-ecosystem/stack-playbooks",
+    sections: ["Purpose", "Use When", "Setup", "Verification", "Deployment", "Handoff"]
+  },
+  {
     directory: "ai-orchestration-ecosystem/tools",
     sections: ["Purpose", "Operating Rule"]
   }
@@ -156,6 +160,7 @@ function validateManifest() {
     protocols: "protocols",
     skills: "skills",
     squads: "squads",
+    stack_playbooks: "stack-playbooks",
     stack_presets: "stack-presets",
     tasks: "tasks",
     templates: "templates",
@@ -628,6 +633,182 @@ function validateRunStateTemplate() {
   for (const term of ["next recommended action:", "required files to reload:", "checks to run before continuing:", "permission needed:"]) {
     if (!resume.includes(term)) {
       fail(file, `resume instructions section must include "${term}"`);
+    }
+  }
+
+  const executionTrace = sectionBody(text, "Execution Trace");
+  for (const term of ["trace level:", "trace artifact:", "latest event:", "latest verification:"]) {
+    if (!executionTrace.includes(term)) {
+      fail(file, `execution trace section must include "${term}"`);
+    }
+  }
+}
+
+function validateExecutionTraceTemplate() {
+  const file = path.join(ecosystemRoot, "templates", "execution-trace.md");
+  if (!fs.existsSync(file)) {
+    fail(file, "execution trace template is missing");
+    return;
+  }
+
+  const text = readText(file);
+  const present = headings(text);
+  for (const section of [
+    "Objective",
+    "Trace Metadata",
+    "Event Ledger",
+    "Files Read",
+    "Files Changed",
+    "Commands Run",
+    "Decisions",
+    "Permissions",
+    "Failures And Recoveries",
+    "Verification Evidence",
+    "Handoffs",
+    "Residual Risks",
+    "Resume Instructions"
+  ]) {
+    if (!present.has(section)) {
+      fail(file, `missing section "${section}"`);
+    }
+  }
+
+  for (const field of [
+    "trace_id:",
+    "workflow_id:",
+    "workflow_name:",
+    "trace_level:",
+    "status:",
+    "current_squad:",
+    "current_task:",
+    "current_permission_level:"
+  ]) {
+    if (!text.includes(field)) {
+      fail(file, `trace metadata must include "${field}"`);
+    }
+  }
+
+  const eventLedger = sectionBody(text, "Event Ledger");
+  const eventTable = parseMarkdownTable(eventLedger);
+  for (const header of ["Time", "Type", "Squad", "Action", "Evidence", "Next"]) {
+    if (!eventTable.headers.includes(header)) {
+      fail(file, `event ledger missing column "${header}"`);
+    }
+  }
+
+  for (const eventType of ["intake", "context_read", "decision", "permission", "file_change", "command", "verification", "handoff", "failure", "recovery", "release", "final"]) {
+    if (!eventLedger.includes(eventType)) {
+      fail(file, `event ledger must document event type "${eventType}"`);
+    }
+  }
+}
+
+function validateAgentObservabilityProtocol() {
+  const file = path.join(ecosystemRoot, "protocols", "agent-observability.md");
+  if (!fs.existsSync(file)) {
+    fail(file, "agent observability protocol is missing");
+    return;
+  }
+
+  const text = readText(file);
+  const present = headings(text);
+  for (const section of [
+    "Purpose",
+    "When To Use",
+    "Trace Levels",
+    "Required Practice",
+    "Event Types",
+    "Minimum Trace Fields",
+    "Token-Efficient Event Ledger",
+    "Command Event Format",
+    "Failure Event Format",
+    "Handoff Event Format",
+    "Metrics",
+    "Completion Rule",
+    "Output"
+  ]) {
+    if (!present.has(section)) {
+      fail(file, `missing section "${section}"`);
+    }
+  }
+
+  for (const term of [
+    "templates/execution-trace.md",
+    "protocols/permission-contract.md",
+    "files read",
+    "files changed",
+    "commands run",
+    "failures and recoveries",
+    "verification evidence",
+    "resume instructions",
+    "T0",
+    "T1",
+    "T2",
+    "T3"
+  ]) {
+    if (!text.includes(term)) {
+      fail(file, `agent observability protocol must mention "${term}"`);
+    }
+  }
+}
+
+function validateMcpConnectorPolicy() {
+  const file = path.join(ecosystemRoot, "protocols", "mcp-connector-policy.md");
+  if (!fs.existsSync(file)) {
+    fail(file, "MCP connector policy is missing");
+    return;
+  }
+
+  const text = readText(file);
+  const present = headings(text);
+  for (const section of [
+    "Objective",
+    "Required Practice",
+    "Connector Classes",
+    "Figma MCP Policy",
+    "GitHub Connector Policy",
+    "Browser Policy",
+    "Vercel And Deployment Policy",
+    "Supabase And Firebase Policy",
+    "Canva Policy",
+    "Blocking Conditions",
+    "Output"
+  ]) {
+    if (!present.has(section)) {
+      fail(file, `missing section "${section}"`);
+    }
+  }
+
+  for (const term of [
+    "protocols/permission-contract.md",
+    "tools/tool-registry.md",
+    "templates/execution-trace.md",
+    "Figma",
+    "GitHub",
+    "Canva",
+    "Browser",
+    "Vercel",
+    "Supabase",
+    "Firebase",
+    "npm",
+    "P2",
+    "P3",
+    "P4",
+    "Evidence",
+    "Approval needed:"
+  ]) {
+    if (!text.includes(term)) {
+      fail(file, `MCP connector policy must mention "${term}"`);
+    }
+  }
+
+  const toolRegistryFile = path.join(ecosystemRoot, "tools", "tool-registry.md");
+  if (fs.existsSync(toolRegistryFile)) {
+    const registryText = readText(toolRegistryFile);
+    for (const term of ["protocols/mcp-connector-policy.md", "Connector usage must produce evidence"]) {
+      if (!registryText.includes(term)) {
+        fail(toolRegistryFile, `tool registry must mention "${term}"`);
+      }
     }
   }
 }
@@ -1376,7 +1557,10 @@ validateFormalWorkflowContracts();
 validateTaskContracts();
 validateProtocols();
 validateRunStateTemplate();
+validateExecutionTraceTemplate();
 validateDurableRunStateProtocol();
+validateAgentObservabilityProtocol();
+validateMcpConnectorPolicy();
 validateComponentGovernanceProtocol();
 validateEvaluationSuite();
 validateReleaseVersioningGate();

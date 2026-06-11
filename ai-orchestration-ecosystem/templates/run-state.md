@@ -92,6 +92,13 @@ For each blocker, record:
 
 ## Evidence
 
+## Execution Trace
+
+- trace level:
+- trace artifact:
+- latest event:
+- latest verification:
+
 ## Risks
 
 ## Next Step

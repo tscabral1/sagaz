@@ -1,5 +1,68 @@
 # Changelog
 
+## [0.3.0] - 2026-06-11
+
+### Release Type
+
+Minor
+
+### Added
+
+- Operations runbook for daily starts, project starts, resumes, handoffs, verification, releases, GitHub operations, and stop conditions.
+- Complete examples library covering web SaaS on Vercel, mobile habit tracking, production bugfix releases, and brownfield refactors.
+- Capabilities matrix comparing Sagaz with common orchestration systems and identifying what Sagaz now covers or intentionally defers.
+- Formal permission contract with approval levels for local edits, installs, network access, GitHub operations, releases, secrets, and destructive actions.
+- Stack playbooks for Next.js/Vercel/Supabase, React/Vite/static hosting, Expo/EAS, Node APIs, and Firebase.
+- Execution trace template and stronger observability contract for commands, decisions, failures, handoffs, and release evidence.
+- MCP connector policy for Figma, GitHub, browser automation, deployment providers, databases, Canva, npm registries, observability, and AI providers.
+
+### Changed
+
+- `npm test` now validates stack playbooks, permission policy, execution trace requirements, observability rules, and MCP connector policy coverage.
+- README, INDEX, manifest, tool registry, run-state template, and Sagaz skill instructions now expose the new governance and connector contracts.
+- Release governance now requires stronger evidence around permissions, connector usage, workflow traceability, and stack-specific verification.
+
+### Fixed
+
+- Filled remaining non-CLI governance gaps identified after the 0.2.0 release.
+- Reduced ambiguity around cross-platform execution on Windows and macOS inside Codex Desktop.
+
+### Removed
+
+- None.
+
+### Security
+
+- Added explicit permission levels for secrets, destructive actions, external publishing, GitHub operations, package registries, and MCP connectors.
+
+### Compatibility
+
+- Windows: supported through Codex Desktop and locally verified on Windows.
+- macOS: supported through Codex Desktop and covered by GitHub Actions package checks.
+- Node.js: package baseline remains `>=22.14`; Node.js 24 is preferred for new installs and CI.
+- Codex Desktop: Sagaz remains a Codex Desktop orchestration skill, not a standalone terminal agent runtime.
+
+### Migration Notes
+
+- Existing users should run `npx sagaz-ai@0.3.0 sync` or `npx sagaz-ai sync` to refresh the installed Codex Desktop skill.
+- Open a new Codex Desktop thread after syncing so the updated skill can be discovered.
+
+### Verification
+
+- npm test: passed locally on Windows.
+- npm run doctor: passed locally on Windows with `Synchronized with source: yes`.
+- npm pack --dry-run: passed locally on Windows after allowing npm cache access outside the sandbox.
+- Windows: prepared and verified from a Windows Codex Desktop workspace.
+- macOS: package checks remain covered by GitHub Actions.
+- Codex Desktop: skill sync remains required after install or upgrade.
+
+### Release Evidence
+
+- Commit: pending.
+- Tag: pending.
+- GitHub release: pending.
+- npm package: pending.
+
 ## [0.2.0] - 2026-06-08
 
 ### Release Type
@@ -64,4 +127,3 @@ Minor
 - Tag: pending.
 - GitHub release: pending.
 - npm package: pending.
-
