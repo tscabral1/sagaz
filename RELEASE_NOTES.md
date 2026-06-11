@@ -2,36 +2,38 @@
 
 ## Release
 
-Version: 0.3.2
+Version: 0.4.0
 Date: 2026-06-11
-Release type: Patch
+Release type: Minor
 GitHub commit: pending
 Git tag: pending
 GitHub release: pending
-npm package: pending
+npm package: not published in this GitHub-only release step
 
 ## Summary
 
-Sagaz 0.3.2 adds operational memory: a safe, explicit, approval-based way to record recurring project and team preferences across Sagaz runs without storing secrets or bypassing current user instructions.
+Sagaz 0.4.0 consolidates team adoption: onboarding guides, copy-ready prompts, guided training, golden outputs, and golden output evaluations. The release turns Sagaz from a governed orchestration system into something a team can learn, practice, review, and evaluate consistently.
 
 ## Audience Impact
 
-- New users: can understand how Sagaz handles recurring preferences before using it across multiple projects.
-- Existing users: can sync the installed skill and use the new memory protocol/template in real projects.
-- Teams: get a safer shared preference artifact for stack, design, verification, GitHub, deployment, and handoff expectations.
-- Maintainers: package validation now protects the memory protocol and template from accidental drift.
+- New users: get role-specific onboarding and practical prompts.
+- Teams: can train PMs, designers, engineers, QA, and release reviewers with guided exercises.
+- Maintainers: can compare real Sagaz responses against golden outputs.
+- Evaluators: get a formal golden output evaluation path tied into the main evaluation suite.
 
 ## What Changed
 
-- Replaced the generic `protocols/memory.md` with a concrete operational memory contract.
-- Added `templates/operational-memory.md`.
-- Registered the memory template in `manifest.json`.
-- Linked operational memory from README, ecosystem README, and INDEX.
-- Added verifier checks for memory levels, approval language, storage path, sensitive-data exclusions, and required template fields.
+- Added `onboarding/` for product, design, engineering, QA/release, and handoff examples.
+- Added `prompts/` for project start, design/Figma, implementation, QA/release, and memory scenarios.
+- Added `training/` with five guided practice exercises.
+- Added `golden-outputs/` with reference Sagaz responses.
+- Added `evals/golden-output-evaluation.md`.
+- Registered all new groups in `manifest.json`, `INDEX.md`, README files, and `scripts/verify-package.js`.
+- Added `EVAL-GOLDEN-OUTPUTS` to `evals/sagaz-evaluation-suite.md`.
 
 ## Why It Matters
 
-Sagaz can now carry stable preferences between projects in an auditable way while still respecting the current repository, current user request, and explicit permission gates. The memory system is intentionally file-based, reviewable, and scoped.
+Sagaz now has a complete adoption ladder: read the guide, copy a prompt, practice with training, compare the response to a golden output, then score it with an eval. That makes team usage more repeatable and gives maintainers a clearer path to quality control.
 
 ## Compatibility
 
@@ -43,10 +45,10 @@ Sagaz can now carry stable preferences between projects in an auditable way whil
 
 ## Migration Notes
 
-Run:
+After npm publication, run:
 
 ```bash
-npx sagaz-ai@0.3.2 sync
+npx sagaz-ai@0.4.0 sync
 npx sagaz-ai doctor
 ```
 
@@ -57,22 +59,22 @@ Then open a new Codex Desktop thread so Sagaz is rediscovered.
 - `npm test`: passed locally on Windows.
 - `npm run doctor`: passed locally on Windows with installed skill synchronization confirmed.
 - `npm pack --dry-run`: passed locally on Windows after npm cache access was allowed outside the sandbox.
-- Manual checks: memory protocol and template are registered in the manifest and linked from docs.
+- Manual checks: onboarding, prompts, training, golden outputs, and golden output evals are registered in the manifest and linked from docs.
 
 ## Known Limitations
 
 - Sagaz still intentionally skips a standalone CLI runtime; Codex Desktop remains the execution surface.
-- Operational memory is advisory and must not override current user instructions or repository evidence.
+- Golden output evaluation is currently a structured human-review method, not a fully automated semantic evaluator.
 - Connector behavior depends on each external MCP/app authorization and platform availability.
 
 ## Rollback Plan
 
 - Revert the release commit if the GitHub repository update fails.
-- If published to npm, publish a patch version that restores the previous known-good package contents.
+- If later published to npm and a regression appears, publish a patch version that restores the previous known-good package contents.
 - Users can reinstall a previous npm version with `npx sagaz-ai@<version> install --force` if needed.
 
 ## Release Decision
 
 Approved by: Thiago Cabral
 Approval date: 2026-06-11
-Residual risk: GitHub Actions and npm publishing still need remote execution after push.
+Residual risk: npm publishing is intentionally deferred in this GitHub-only step.

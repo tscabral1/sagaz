@@ -24,6 +24,10 @@ A local AI orchestration ecosystem for Codex, focused on autonomous teams, consi
 - `stack-playbooks/`: operational guides for common stack implementation, verification, and deployment.
 - `templates/`: reusable Markdown artifacts.
 - `examples/`: complete web, mobile, bugfix, and refactor flow examples.
+- `onboarding/`: role-specific guides for product, design, engineering, QA, release, and handoff calibration.
+- `prompts/`: copy-ready prompts for common Sagaz scenarios.
+- `training/`: guided exercises for learning Sagaz as a team.
+- `golden-outputs/`: reference-quality outputs for human QA and future evaluations.
 - `engineering/`: software engineering standards.
 - `governance/`: quality, security, and maintenance policies.
 
@@ -48,6 +52,8 @@ Use `protocols/agent-observability.md` and `templates/execution-trace.md` for mu
 Use `protocols/mcp-connector-policy.md` before using MCPs or external connectors such as Figma, GitHub, Canva, Browser, Vercel, Supabase, Firebase, npm, or observability tools.
 
 Use `protocols/memory.md` and `templates/operational-memory.md` before creating durable project or team preferences for future Sagaz runs.
+
+Use `evals/golden-output-evaluation.md` when comparing real Sagaz responses against `golden-outputs/`.
 
 ## Advanced Engineering Coverage
 

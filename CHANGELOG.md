@@ -1,5 +1,65 @@
 # Changelog
 
+## [0.4.0] - 2026-06-11
+
+### Release Type
+
+Minor
+
+### Added
+
+- Team onboarding guides for product/PM, design, engineering, QA/release, and handoff calibration.
+- Prompt matrix with copy-ready Sagaz prompts for project start, design/Figma, implementation, QA/release, and operational memory.
+- Guided training track for first project audit, product-to-design, design-to-implementation, QA/release, and operational memory practice.
+- Golden outputs showing reference-quality Sagaz responses for audits, handoffs, implementation planning, QA/release, and memory proposals.
+- Golden output evaluation file that turns reference outputs into scored evaluation scenarios.
+
+### Changed
+
+- `manifest.json`, `INDEX.md`, README files, and package verification now register onboarding, prompts, training, golden outputs, and golden output evaluations.
+- Evaluation suite now includes `EVAL-GOLDEN-OUTPUTS`.
+- `npm test` now validates the new documentation groups and golden output evaluation structure.
+
+### Fixed
+
+- Closed the adoption gap between documentation and practical team usage by adding role-specific and scenario-specific operating material.
+
+### Removed
+
+- None.
+
+### Security
+
+- New onboarding, prompt, training, and golden output materials reinforce approval gates before file writes, dependency installs, GitHub operations, deployments, package publishing, external connector use, and memory writes.
+
+### Compatibility
+
+- Windows: supported through Codex Desktop.
+- macOS: supported through Codex Desktop.
+- Node.js: package baseline remains `>=22.14`; Node.js 24 is preferred for new installs and CI.
+- Codex Desktop: Sagaz remains a Codex Desktop orchestration skill, not a standalone terminal agent runtime.
+
+### Migration Notes
+
+- Existing users should run `npx sagaz-ai@0.4.0 sync` or `npx sagaz-ai sync` after the package is published to npm.
+- Open a new Codex Desktop thread after syncing so the updated skill can be discovered.
+
+### Verification
+
+- npm test: passed locally on Windows.
+- npm run doctor: passed locally on Windows with `Synchronized with source: yes`.
+- npm pack --dry-run: passed locally on Windows after allowing npm cache access outside the sandbox.
+- Windows: prepared from a Windows Codex Desktop workspace.
+- macOS: package checks remain covered by GitHub Actions.
+- Codex Desktop: skill sync remains required after install or upgrade.
+
+### Release Evidence
+
+- Commit: pending.
+- Tag: pending.
+- GitHub release: pending.
+- npm package: not published in this GitHub-only release step.
+
 ## [0.3.2] - 2026-06-11
 
 ### Release Type

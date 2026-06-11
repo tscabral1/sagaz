@@ -103,6 +103,7 @@ See `protocols/` for quality gates, testing matrix, stack selection, design qual
 
 ## Evaluations
 
+- `evals/golden-output-evaluation.md`
 - `evals/sagaz-evaluation-suite.md`
 
 ## Examples
@@ -112,6 +113,43 @@ See `protocols/` for quality gates, testing matrix, stack selection, design qual
 - `examples/mobile-habit-tracker.md`
 - `examples/bugfix-production-release.md`
 - `examples/brownfield-refactor.md`
+
+## Onboarding
+
+- `onboarding/README.md`
+- `onboarding/product-pm.md`
+- `onboarding/design.md`
+- `onboarding/engineering.md`
+- `onboarding/qa-release.md`
+- `onboarding/handoff-examples.md`
+
+## Prompts
+
+- `prompts/README.md`
+- `prompts/project-start.md`
+- `prompts/design-figma.md`
+- `prompts/implementation.md`
+- `prompts/qa-release.md`
+- `prompts/memory.md`
+
+## Training
+
+- `training/README.md`
+- `training/day-1-first-project-audit.md`
+- `training/day-2-product-to-design.md`
+- `training/day-3-design-to-implementation.md`
+- `training/day-4-qa-release.md`
+- `training/day-5-operational-memory.md`
+
+## Golden Outputs
+
+- `golden-outputs/README.md`
+- `golden-outputs/project-audit-output.md`
+- `golden-outputs/product-handoff-output.md`
+- `golden-outputs/design-handoff-output.md`
+- `golden-outputs/implementation-plan-output.md`
+- `golden-outputs/qa-release-output.md`
+- `golden-outputs/memory-proposal-output.md`
 
 ## Templates
 

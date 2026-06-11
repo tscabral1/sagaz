@@ -59,6 +59,22 @@ const sectionRules = [
   {
     directory: "ai-orchestration-ecosystem/tools",
     sections: ["Purpose", "Operating Rule"]
+  },
+  {
+    directory: "ai-orchestration-ecosystem/onboarding",
+    sections: ["Purpose", "Use When", "Invocation", "Handoff", "Verification"]
+  },
+  {
+    directory: "ai-orchestration-ecosystem/prompts",
+    sections: ["Purpose", "Use When", "Verification"]
+  },
+  {
+    directory: "ai-orchestration-ecosystem/training",
+    sections: ["Purpose", "Use When", "Invocation", "Handoff", "Verification"]
+  },
+  {
+    directory: "ai-orchestration-ecosystem/golden-outputs",
+    sections: ["Purpose", "Use When", "Quality Criteria", "Bad Output Signals", "Verification"]
   }
 ];
 
@@ -156,7 +172,10 @@ function validateManifest() {
     engineering: "engineering",
     evals: "evals",
     examples: "examples",
+    golden_outputs: "golden-outputs",
     governance: "governance",
+    onboarding: "onboarding",
+    prompts: "prompts",
     protocols: "protocols",
     skills: "skills",
     squads: "squads",
@@ -165,6 +184,7 @@ function validateManifest() {
     tasks: "tasks",
     templates: "templates",
     tools: "tools",
+    training: "training",
     workflows: "workflows"
   };
 
@@ -1022,7 +1042,8 @@ function validateEvaluationSuite() {
     "EVAL-RUN-STATE-RESUME",
     "EVAL-MANIFEST-DRIFT",
     "EVAL-DEPENDENCY-GRAPH-DRIFT",
-    "EVAL-BEGINNER-GUIDANCE"
+    "EVAL-BEGINNER-GUIDANCE",
+    "EVAL-GOLDEN-OUTPUTS"
   ];
 
   for (const scenario of requiredScenarios) {
@@ -1067,6 +1088,60 @@ function validateEvaluationSuite() {
   ]) {
     if (!evidenceTemplate.includes(field)) {
       fail(file, `evidence template must include "${field}"`);
+    }
+  }
+}
+
+function validateGoldenOutputEvaluation() {
+  const file = path.join(ecosystemRoot, "evals", "golden-output-evaluation.md");
+  if (!fs.existsSync(file)) {
+    fail(file, "golden output evaluation is missing");
+    return;
+  }
+
+  const text = readText(file);
+  const present = headings(text);
+  for (const section of [
+    "Purpose",
+    "Use When",
+    "Evaluation Inputs",
+    "Scenario Matrix",
+    "Scoring Rubric",
+    "Review Procedure",
+    "Evidence Template",
+    "Release Gate"
+  ]) {
+    if (!present.has(section)) {
+      fail(file, `missing section "${section}"`);
+    }
+  }
+
+  const matrix = sectionBody(text, "Scenario Matrix");
+  const table = parseMarkdownTable(matrix);
+  for (const header of ["Scenario ID", "Golden Output", "Prompt Source", "Required Criteria", "Forbidden Behavior", "Minimum Score"]) {
+    if (!table.headers.includes(header)) {
+      fail(file, `golden output scenario matrix missing column "${header}"`);
+    }
+  }
+
+  for (const required of [
+    "GOLDEN-PROJECT-AUDIT",
+    "GOLDEN-PRODUCT-HANDOFF",
+    "GOLDEN-DESIGN-HANDOFF",
+    "GOLDEN-IMPLEMENTATION-PLAN",
+    "GOLDEN-QA-RELEASE",
+    "GOLDEN-MEMORY-PROPOSAL",
+    "golden-outputs/project-audit-output.md",
+    "golden-outputs/product-handoff-output.md",
+    "golden-outputs/design-handoff-output.md",
+    "golden-outputs/implementation-plan-output.md",
+    "golden-outputs/qa-release-output.md",
+    "golden-outputs/memory-proposal-output.md",
+    "Forbidden behavior",
+    "automatic score of 0"
+  ]) {
+    if (!text.includes(required)) {
+      fail(file, `golden output evaluation must mention "${required}"`);
     }
   }
 }
@@ -1644,6 +1719,7 @@ validateOperationalMemoryProtocol();
 validateOperationalMemoryTemplate();
 validateComponentGovernanceProtocol();
 validateEvaluationSuite();
+validateGoldenOutputEvaluation();
 validateReleaseVersioningGate();
 validateReleaseArtifacts();
 validateInstalledSkillSyncProtocol();

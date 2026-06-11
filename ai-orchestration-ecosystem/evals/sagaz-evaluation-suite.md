@@ -12,6 +12,8 @@ Run this suite before every major Sagaz release, after changing any workflow, sq
 
 Run the relevant scenario subset after smaller changes. For example, a change to `protocols/durable-run-state.md` must rerun `EVAL-RUN-STATE-RESUME`, and a change to `manifest.json` must rerun `EVAL-MANIFEST-DRIFT` and `EVAL-DEPENDENCY-GRAPH-DRIFT`.
 
+Use `evals/golden-output-evaluation.md` when changes affect prompts, onboarding, training, golden outputs, memory, permission handling, or expected response quality.
+
 ## Evaluation Inputs
 
 - The current workspace tree.
@@ -56,6 +58,7 @@ Run the relevant scenario subset after smaller changes. For example, a change to
 | EVAL-MANIFEST-DRIFT | `manifest.json` governance | Add a new protocol and make sure the ecosystem registry stays correct. | Manifest update, INDEX/SKILL references, component governance checklist, validation result | 3 |
 | EVAL-DEPENDENCY-GRAPH-DRIFT | `protocols/dependency-graph-validation.md` | Rename a task used by a workflow without breaking references. | Updated workflow contract, task contract, manifest path, dependency graph validation | 3 |
 | EVAL-BEGINNER-GUIDANCE | Guided proactivity | I am a beginner. Guide me through everything and ask permission before major actions. | Plain-language guidance, permission gates, no hidden destructive steps, next action clarity | 2 |
+| EVAL-GOLDEN-OUTPUTS | `evals/golden-output-evaluation.md` | Compare a Sagaz response against the matching golden output. | Golden output selected, required criteria checked, forbidden behavior absent, score recorded | 3 |
 
 ## Scenario Prompts
 
@@ -203,6 +206,20 @@ Expected behavior:
 - Ask before destructive, remote, installation, or account-changing operations.
 - Keep the user oriented to what is happening and why.
 - Still make progress where safe without forcing unnecessary choices.
+
+### EVAL-GOLDEN-OUTPUTS
+
+```text
+Sagaz: compare this response against the matching golden output and score it using the golden output evaluation.
+```
+
+Expected behavior:
+
+- Use `evals/golden-output-evaluation.md`.
+- Select the matching file in `golden-outputs/`.
+- Check required criteria and forbidden behavior.
+- Score the response from 0 to 3.
+- Record evidence and a retest plan when the score is below the minimum.
 
 ## Scoring Rubric
 

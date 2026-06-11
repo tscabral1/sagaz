@@ -1,6 +1,6 @@
 {
   "name": "sagaz-ai",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Sagaz AI orchestration ecosystem installer for Codex Desktop.",
   "type": "module",
   "bin": {

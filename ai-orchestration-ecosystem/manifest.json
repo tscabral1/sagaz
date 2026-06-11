@@ -155,6 +155,7 @@
       "governance/versioning.md"
     ],
     "evals": [
+      "evals/golden-output-evaluation.md",
       "evals/sagaz-evaluation-suite.md"
     ],
     "examples": [
@@ -163,6 +164,39 @@
       "examples/bugfix-production-release.md",
       "examples/mobile-habit-tracker.md",
       "examples/web-saas-vercel.md"
+    ],
+    "onboarding": [
+      "onboarding/README.md",
+      "onboarding/design.md",
+      "onboarding/engineering.md",
+      "onboarding/handoff-examples.md",
+      "onboarding/product-pm.md",
+      "onboarding/qa-release.md"
+    ],
+    "prompts": [
+      "prompts/README.md",
+      "prompts/design-figma.md",
+      "prompts/implementation.md",
+      "prompts/memory.md",
+      "prompts/project-start.md",
+      "prompts/qa-release.md"
+    ],
+    "training": [
+      "training/README.md",
+      "training/day-1-first-project-audit.md",
+      "training/day-2-product-to-design.md",
+      "training/day-3-design-to-implementation.md",
+      "training/day-4-qa-release.md",
+      "training/day-5-operational-memory.md"
+    ],
+    "golden_outputs": [
+      "golden-outputs/README.md",
+      "golden-outputs/design-handoff-output.md",
+      "golden-outputs/implementation-plan-output.md",
+      "golden-outputs/memory-proposal-output.md",
+      "golden-outputs/product-handoff-output.md",
+      "golden-outputs/project-audit-output.md",
+      "golden-outputs/qa-release-output.md"
     ],
     "docs": [
       "ACTIVATE.md",

@@ -37,6 +37,10 @@ Sagaz also guides the user through the process. At the end of each phase, it exp
 - **Web and mobile:** workflows for browser apps, websites, dashboards, Android, and iOS.
 - **Persistent state:** Markdown run state records decisions, approvals, handoffs, risks, and test evidence.
 - **Operational memory:** optional project or team memory records recurring preferences without storing secrets or bypassing approvals.
+- **Team onboarding:** role-specific guides help PMs, designers, engineers, QA, and release reviewers invoke Sagaz consistently.
+- **Prompt matrix:** copy-ready prompts help teams invoke Sagaz consistently for common scenarios.
+- **Training track:** guided exercises help teams practice Sagaz safely before production use.
+- **Golden outputs:** reference responses show what high-quality Sagaz answers should look like.
 - **Agent observability:** compact traces record decisions, tools, evidence, failures, and recoveries.
 - **Durable checkpoints:** long projects can resume across threads and refactors without losing context.
 - **Tool registry:** Sagaz verifies and recommends tools such as GitHub CLI, Playwright, Vercel, Expo/EAS, Supabase, Firebase, Stripe, CI/CD, and observability services.
