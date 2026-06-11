@@ -5,15 +5,17 @@ A local AI orchestration ecosystem for Codex, focused on autonomous teams, consi
 ## How To Use
 
 1. Read `governance/operations-runbook.md` for the daily operating procedure.
-2. Read `quickstart.md`.
-3. Choose the smallest sufficient workflow or squad.
-4. Use formal tasks, handoffs, and quality gates.
-5. Create or update run state for medium/large work.
-6. Verify before declaring done.
+2. Read `ADOPTION.md` when starting Sagaz in another project or onboarding a team.
+3. Read `quickstart.md`.
+4. Choose the smallest sufficient workflow or squad.
+5. Use formal tasks, handoffs, and quality gates.
+6. Create or update run state for medium/large work.
+7. Verify before declaring done.
 
 ## Structure
 
 - `manifest.json`: internal component registry used to validate and navigate the ecosystem.
+- `ADOPTION.md`: first-use guide for adopting Sagaz in another project or team.
 - `workflows/`: named end-to-end flows.
 - `squads/`: specialized teams.
 - `agents/`: role definitions.

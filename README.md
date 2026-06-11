@@ -168,6 +168,14 @@ Then open a new Codex Desktop thread and run:
 Sagaz: explain the available workflows.
 ```
 
+For the first real use in another project, start with:
+
+```text
+Sagaz: audit this project and tell me what workflow, stack playbook, risks, tests, and next implementation step you recommend. Do not change files yet.
+```
+
+The detailed adoption guide lives at `ai-orchestration-ecosystem/ADOPTION.md`.
+
 ### Manual Installation
 
 #### 1. Clone Or Download The Repository

@@ -3,6 +3,7 @@
 ## Quick Entry
 
 - `ACTIVATE.md`: ready-to-use activation prompts.
+- `ADOPTION.md`: first-use guide for adopting Sagaz in another project or team.
 - `quickstart.md`: minimum operating rules.
 - `README.md`: ecosystem overview.
 - `manifest.json`: internal component registry for validation and navigation.
@@ -127,4 +128,8 @@ See `templates/` for task briefs, product specs, technical specs, design systems
 - `governance/versioning.md`
 - `governance/ecosystem-maintenance.md`
 - `governance/package-release-policy.md`
+
+## Adoption
+
+- `ADOPTION.md`
 

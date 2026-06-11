@@ -1,5 +1,59 @@
 # Changelog
 
+## [0.3.1] - 2026-06-11
+
+### Release Type
+
+Patch
+
+### Added
+
+- Sagaz adoption guide for first use in another project, team onboarding, invocation prompts, cross-platform notes, permission model, and evidence expectations.
+
+### Changed
+
+- README, ecosystem README, INDEX, manifest, and package verifier now register the adoption guide as an official ecosystem document.
+
+### Fixed
+
+- None.
+
+### Removed
+
+- None.
+
+### Security
+
+- No security changes.
+
+### Compatibility
+
+- Windows: supported through Codex Desktop.
+- macOS: supported through Codex Desktop.
+- Node.js: package baseline remains `>=22.14`; Node.js 24 is preferred for new installs and CI.
+- Codex Desktop: Sagaz remains a Codex Desktop orchestration skill, not a standalone terminal agent runtime.
+
+### Migration Notes
+
+- Existing users should run `npx sagaz-ai@0.3.1 sync` or `npx sagaz-ai sync` to refresh the installed Codex Desktop skill.
+- Open a new Codex Desktop thread after syncing so the updated skill can be discovered.
+
+### Verification
+
+- npm test: passed locally on Windows.
+- npm run doctor: passed locally on Windows with `Synchronized with source: yes`.
+- npm pack --dry-run: passed locally on Windows after allowing npm cache access outside the sandbox.
+- Windows: prepared from a Windows Codex Desktop workspace.
+- macOS: package checks remain covered by GitHub Actions.
+- Codex Desktop: skill sync remains required after install or upgrade.
+
+### Release Evidence
+
+- Commit: pending.
+- Tag: pending.
+- GitHub release: pending.
+- npm package: pending.
+
 ## [0.3.0] - 2026-06-11
 
 ### Release Type

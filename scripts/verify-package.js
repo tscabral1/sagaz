@@ -203,7 +203,7 @@ function validateManifest() {
 
     const baseDirectory = path.join(ecosystemRoot, directory);
     const actual = directory === "."
-      ? ["ACTIVATE.md", "INDEX.md", "README.md", "quickstart.md"]
+      ? ["ACTIVATE.md", "ADOPTION.md", "INDEX.md", "README.md", "quickstart.md"]
       : walkMarkdown(baseDirectory).map((markdownFile) => path.relative(ecosystemRoot, markdownFile).split(path.sep).join("/"));
     const expected = new Set(actual);
     const declared = new Set(entries);

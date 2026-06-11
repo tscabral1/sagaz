@@ -2,9 +2,9 @@
 
 ## Release
 
-Version: 0.3.0
+Version: 0.3.1
 Date: 2026-06-11
-Release type: Minor
+Release type: Patch
 GitHub commit: pending
 Git tag: pending
 GitHub release: pending
@@ -12,38 +12,32 @@ npm package: pending
 
 ## Summary
 
-Sagaz 0.3.0 completes the main non-CLI governance layer for Codex Desktop orchestration. It adds operational runbooks, complete scenario examples, a capabilities matrix, formal permission policy, stack playbooks, execution trace evidence, and MCP connector governance.
+Sagaz 0.3.1 adds the official adoption guide for using Sagaz in another project after installation. It documents the first-use flow, team operating model, invocation prompts, Windows/macOS notes, permission expectations, and evidence artifacts.
 
 ## Audience Impact
 
-- New users: clearer operating model, examples, stack guidance, and permission expectations before using Sagaz.
-- Existing users: should refresh the installed skill with `npx sagaz-ai sync`.
-- Maintainers: stronger package checks now catch stack playbook, observability, permission, and connector-policy drift.
-- Design team: Figma MCP usage is governed as a formal connector workflow for app-like mockups and design artifacts.
-- Engineering team: workflow evidence now includes traceable commands, decisions, failures, permissions, and handoffs.
+- New users: clearer first real step after installing Sagaz.
+- Existing users: can sync the installed skill and follow the adoption guide from a fresh Codex Desktop thread.
+- Teams: get a practical onboarding path before applying Sagaz to production work.
+- Maintainers: package validation now tracks the adoption guide in the ecosystem manifest.
 
 ## What Changed
 
-- Added an operations runbook for everyday Sagaz use.
-- Added complete examples for common delivery scenarios.
-- Added a capabilities matrix against other orchestration ecosystems.
-- Added a formal permission contract for Windows and macOS Codex Desktop usage.
-- Added stack-specific playbooks.
-- Added an execution trace template and stronger observability protocol.
-- Added MCP connector policy across design, deploy, package, data, browser, and AI providers.
-- Expanded package verification to enforce the new governance files.
+- Added `ai-orchestration-ecosystem/ADOPTION.md`.
+- Linked the adoption guide from the root README, ecosystem README, and ecosystem INDEX.
+- Registered the adoption guide in `manifest.json`.
+- Updated package verification so the docs group validates the new guide.
 
 ## Why It Matters
 
-Sagaz now has clearer rules for how agents should choose tools, request permission, preserve workflow state, hand off work, verify stack-specific outcomes, and operate MCP connectors without drifting into ad hoc behavior.
+After `0.3.0`, Sagaz had strong governance but needed a direct bridge between installation and first use in a real project. This patch gives teams a safe starting prompt, explains what Sagaz should inspect first, and reinforces permission gates before risky actions.
 
 ## Compatibility
 
-- Windows: supported and locally verified from a Codex Desktop workspace.
-- macOS: supported through Codex Desktop and GitHub Actions runner validation.
+- Windows: supported through Codex Desktop.
+- macOS: supported through Codex Desktop.
 - Node.js: `>=22.14` remains the package minimum; Node.js 24 is preferred for new installs and CI.
 - Codex Desktop: required.
-- GitHub Actions: package checks run on Ubuntu, Windows, and macOS.
 - npm package: still an installer/distribution package, not a standalone Sagaz runtime.
 
 ## Migration Notes
@@ -51,7 +45,7 @@ Sagaz now has clearer rules for how agents should choose tools, request permissi
 Run:
 
 ```bash
-npx sagaz-ai@0.3.0 sync
+npx sagaz-ai@0.3.1 sync
 npx sagaz-ai doctor
 ```
 
@@ -62,12 +56,11 @@ Then open a new Codex Desktop thread so Sagaz is rediscovered.
 - `npm test`: passed locally on Windows.
 - `npm run doctor`: passed locally on Windows with installed skill synchronization confirmed.
 - `npm pack --dry-run`: passed locally on Windows after npm cache access was allowed outside the sandbox.
-- Manual checks: Git status reviewed before release preparation.
+- Manual checks: adoption guide linked from README, INDEX, and manifest.
 
 ## Known Limitations
 
 - Sagaz still intentionally skips a standalone CLI runtime; Codex Desktop remains the execution surface.
-- GitHub release and npm publishing remain explicit approval steps.
 - Connector behavior depends on each external MCP/app authorization and platform availability.
 
 ## Rollback Plan
