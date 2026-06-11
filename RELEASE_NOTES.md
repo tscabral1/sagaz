@@ -2,7 +2,7 @@
 
 ## Release
 
-Version: 0.3.1
+Version: 0.3.2
 Date: 2026-06-11
 Release type: Patch
 GitHub commit: pending
@@ -12,25 +12,26 @@ npm package: pending
 
 ## Summary
 
-Sagaz 0.3.1 adds the official adoption guide for using Sagaz in another project after installation. It documents the first-use flow, team operating model, invocation prompts, Windows/macOS notes, permission expectations, and evidence artifacts.
+Sagaz 0.3.2 adds operational memory: a safe, explicit, approval-based way to record recurring project and team preferences across Sagaz runs without storing secrets or bypassing current user instructions.
 
 ## Audience Impact
 
-- New users: clearer first real step after installing Sagaz.
-- Existing users: can sync the installed skill and follow the adoption guide from a fresh Codex Desktop thread.
-- Teams: get a practical onboarding path before applying Sagaz to production work.
-- Maintainers: package validation now tracks the adoption guide in the ecosystem manifest.
+- New users: can understand how Sagaz handles recurring preferences before using it across multiple projects.
+- Existing users: can sync the installed skill and use the new memory protocol/template in real projects.
+- Teams: get a safer shared preference artifact for stack, design, verification, GitHub, deployment, and handoff expectations.
+- Maintainers: package validation now protects the memory protocol and template from accidental drift.
 
 ## What Changed
 
-- Added `ai-orchestration-ecosystem/ADOPTION.md`.
-- Linked the adoption guide from the root README, ecosystem README, and ecosystem INDEX.
-- Registered the adoption guide in `manifest.json`.
-- Updated package verification so the docs group validates the new guide.
+- Replaced the generic `protocols/memory.md` with a concrete operational memory contract.
+- Added `templates/operational-memory.md`.
+- Registered the memory template in `manifest.json`.
+- Linked operational memory from README, ecosystem README, and INDEX.
+- Added verifier checks for memory levels, approval language, storage path, sensitive-data exclusions, and required template fields.
 
 ## Why It Matters
 
-After `0.3.0`, Sagaz had strong governance but needed a direct bridge between installation and first use in a real project. This patch gives teams a safe starting prompt, explains what Sagaz should inspect first, and reinforces permission gates before risky actions.
+Sagaz can now carry stable preferences between projects in an auditable way while still respecting the current repository, current user request, and explicit permission gates. The memory system is intentionally file-based, reviewable, and scoped.
 
 ## Compatibility
 
@@ -45,7 +46,7 @@ After `0.3.0`, Sagaz had strong governance but needed a direct bridge between in
 Run:
 
 ```bash
-npx sagaz-ai@0.3.1 sync
+npx sagaz-ai@0.3.2 sync
 npx sagaz-ai doctor
 ```
 
@@ -56,11 +57,12 @@ Then open a new Codex Desktop thread so Sagaz is rediscovered.
 - `npm test`: passed locally on Windows.
 - `npm run doctor`: passed locally on Windows with installed skill synchronization confirmed.
 - `npm pack --dry-run`: passed locally on Windows after npm cache access was allowed outside the sandbox.
-- Manual checks: adoption guide linked from README, INDEX, and manifest.
+- Manual checks: memory protocol and template are registered in the manifest and linked from docs.
 
 ## Known Limitations
 
 - Sagaz still intentionally skips a standalone CLI runtime; Codex Desktop remains the execution surface.
+- Operational memory is advisory and must not override current user instructions or repository evidence.
 - Connector behavior depends on each external MCP/app authorization and platform availability.
 
 ## Rollback Plan

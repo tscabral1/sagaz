@@ -36,6 +36,7 @@ Sagaz also guides the user through the process. At the end of each phase, it exp
 - **GitHub without guesswork:** Sagaz recommends commits, pushes, pull requests, issues, and releases at the right time.
 - **Web and mobile:** workflows for browser apps, websites, dashboards, Android, and iOS.
 - **Persistent state:** Markdown run state records decisions, approvals, handoffs, risks, and test evidence.
+- **Operational memory:** optional project or team memory records recurring preferences without storing secrets or bypassing approvals.
 - **Agent observability:** compact traces record decisions, tools, evidence, failures, and recoveries.
 - **Durable checkpoints:** long projects can resume across threads and refactors without losing context.
 - **Tool registry:** Sagaz verifies and recommends tools such as GitHub CLI, Playwright, Vercel, Expo/EAS, Supabase, Firebase, Stripe, CI/CD, and observability services.

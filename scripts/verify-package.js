@@ -813,6 +813,85 @@ function validateMcpConnectorPolicy() {
   }
 }
 
+function validateOperationalMemoryProtocol() {
+  const file = path.join(ecosystemRoot, "protocols", "memory.md");
+  if (!fs.existsSync(file)) {
+    fail(file, "operational memory protocol is missing");
+    return;
+  }
+
+  const text = readText(file);
+  const present = headings(text);
+  for (const section of [
+    "Objective",
+    "Scope",
+    "Memory Levels",
+    "Required Practice",
+    "Approval Rules",
+    "Storage Convention",
+    "Entry Format",
+    "Conflict Handling",
+    "Review And Expiry",
+    "Blocking Conditions",
+    "Output"
+  ]) {
+    if (!present.has(section)) {
+      fail(file, `missing section "${section}"`);
+    }
+  }
+
+  for (const term of [
+    "templates/operational-memory.md",
+    "protocols/permission-contract.md",
+    "protocols/agent-observability.md",
+    ".sagaz/operational-memory.md",
+    "M0 ephemeral",
+    "M1 thread",
+    "M2 project",
+    "M3 team",
+    "secrets",
+    "sensitive data",
+    "explicit user approval",
+    "Approval needed:",
+    "Review by:",
+    "Permission impact:"
+  ]) {
+    if (!text.includes(term)) {
+      fail(file, `operational memory protocol must mention "${term}"`);
+    }
+  }
+}
+
+function validateOperationalMemoryTemplate() {
+  const file = path.join(ecosystemRoot, "templates", "operational-memory.md");
+  if (!fs.existsSync(file)) {
+    fail(file, "operational memory template is missing");
+    return;
+  }
+
+  const text = readText(file);
+  const present = headings(text);
+  for (const section of ["Metadata", "Operating Rules", "Preferences", "Preference Details", "Deprecated Preferences"]) {
+    if (!present.has(section)) {
+      fail(file, `missing section "${section}"`);
+    }
+  }
+
+  for (const term of [
+    "protocols/memory.md",
+    "Do not store secrets",
+    "Current user instructions",
+    "Preference ID",
+    "Permission impact",
+    "Evidence",
+    "Review by"
+  ]) {
+    if (!text.includes(term)) {
+      fail(file, `operational memory template must mention "${term}"`);
+    }
+  }
+}
+
 function validateDurableRunStateProtocol() {
   const file = path.join(ecosystemRoot, "protocols", "durable-run-state.md");
   if (!fs.existsSync(file)) {
@@ -1561,6 +1640,8 @@ validateExecutionTraceTemplate();
 validateDurableRunStateProtocol();
 validateAgentObservabilityProtocol();
 validateMcpConnectorPolicy();
+validateOperationalMemoryProtocol();
+validateOperationalMemoryTemplate();
 validateComponentGovernanceProtocol();
 validateEvaluationSuite();
 validateReleaseVersioningGate();

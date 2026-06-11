@@ -1,5 +1,62 @@
 # Changelog
 
+## [0.3.2] - 2026-06-11
+
+### Release Type
+
+Patch
+
+### Added
+
+- Operational memory protocol for recurring project and team preferences across Sagaz runs.
+- Operational memory template for `.sagaz/operational-memory.md` style project memory.
+- Package validation for operational memory sections, safety terms, permission references, and template structure.
+
+### Changed
+
+- README, ecosystem README, INDEX, and manifest now expose operational memory as an official Sagaz capability.
+
+### Fixed
+
+- Replaced the previous generic memory protocol with a concrete approval-based operational memory contract.
+
+### Removed
+
+- None.
+
+### Security
+
+- Operational memory explicitly forbids secrets, credentials, session data, production data, and sensitive personal data.
+- Durable project or team memory requires explicit user approval.
+
+### Compatibility
+
+- Windows: supported through Codex Desktop.
+- macOS: supported through Codex Desktop.
+- Node.js: package baseline remains `>=22.14`; Node.js 24 is preferred for new installs and CI.
+- Codex Desktop: Sagaz remains a Codex Desktop orchestration skill, not a standalone terminal agent runtime.
+
+### Migration Notes
+
+- Existing users should run `npx sagaz-ai@0.3.2 sync` or `npx sagaz-ai sync` to refresh the installed Codex Desktop skill.
+- Open a new Codex Desktop thread after syncing so the updated skill can be discovered.
+
+### Verification
+
+- npm test: passed locally on Windows.
+- npm run doctor: passed locally on Windows with `Synchronized with source: yes`.
+- npm pack --dry-run: passed locally on Windows after allowing npm cache access outside the sandbox.
+- Windows: prepared from a Windows Codex Desktop workspace.
+- macOS: package checks remain covered by GitHub Actions.
+- Codex Desktop: skill sync remains required after install or upgrade.
+
+### Release Evidence
+
+- Commit: pending.
+- Tag: pending.
+- GitHub release: pending.
+- npm package: pending.
+
 ## [0.3.1] - 2026-06-11
 
 ### Release Type

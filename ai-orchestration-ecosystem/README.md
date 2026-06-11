@@ -47,6 +47,8 @@ Use `protocols/agent-observability.md` and `templates/execution-trace.md` for mu
 
 Use `protocols/mcp-connector-policy.md` before using MCPs or external connectors such as Figma, GitHub, Canva, Browser, Vercel, Supabase, Firebase, npm, or observability tools.
 
+Use `protocols/memory.md` and `templates/operational-memory.md` before creating durable project or team preferences for future Sagaz runs.
+
 ## Advanced Engineering Coverage
 
 Sagaz includes protocols for SRE readiness, DORA metrics, secure SDLC, dependency governance, data privacy lifecycle, architecture fitness functions, API contracts, performance budgets, accessibility compliance, database migrations, release strategy, and AI application quality.

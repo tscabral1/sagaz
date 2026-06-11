@@ -122,6 +122,7 @@
       "templates/implementation-plan.md",
       "templates/execution-trace.md",
       "templates/mobile-release-checklist.md",
+      "templates/operational-memory.md",
       "templates/product-spec.md",
       "templates/qa-report.md",
       "templates/refactor-safety-contract.md",

@@ -118,6 +118,7 @@ See `protocols/` for quality gates, testing matrix, stack selection, design qual
 See `templates/` for task briefs, product specs, technical specs, design systems, future-change guides, refactor safety contracts, stack recommendations, run state, squad handoffs, QA reports, release checklists, changelogs, release notes, and final handoffs.
 
 - `templates/execution-trace.md`
+- `templates/operational-memory.md`
 
 ## Governance
 
