@@ -7,10 +7,11 @@ Production web apps, SaaS products, dashboards, marketing sites with dynamic fea
 ## Default Stack
 
 - Next.js
-- TypeScript
+- TypeScript with `strict: true` for new projects
 - Tailwind CSS or an existing design system
 - shadcn/ui when the project needs customizable React components and no established component system exists
 - Vercel
+- Supabase when auth, relational data, storage, or realtime features are needed
 - Playwright
 - GitHub Actions
 
@@ -27,6 +28,7 @@ Production web apps, SaaS products, dashboards, marketing sites with dynamic fea
 - Good performance defaults.
 - Works well for full-stack web applications.
 - Easy to evolve from prototype to production.
+- Strong fit with Supabase when managed auth, Postgres, storage, realtime, RLS, and generated TypeScript types are useful.
 
 ## Tradeoffs
 
@@ -39,6 +41,7 @@ Production web apps, SaaS products, dashboards, marketing sites with dynamic fea
 - The user wants a serious browser-based app.
 - SEO or performance matters.
 - Deployment simplicity matters.
+- The app needs TypeScript strict, managed backend services, or Supabase-friendly auth/data flows.
 
 ## Avoid When
 

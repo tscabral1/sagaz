@@ -7,7 +7,7 @@ Operational dashboards, internal tools, CRM-like interfaces, analytics panels, a
 ## Default Stack
 
 - React or Next.js
-- TypeScript
+- TypeScript with `strict: true` for new projects
 - shadcn/ui, another component library, or a strict internal design system
 - Tables, filters, forms, role permissions, and audit logs
 - Playwright for critical workflows
@@ -52,4 +52,5 @@ Operational dashboards, internal tools, CRM-like interfaces, analytics panels, a
 - error states
 - destructive-action confirmations
 - audit trail needs
+- TypeScript strict compatibility
 - responsive behavior

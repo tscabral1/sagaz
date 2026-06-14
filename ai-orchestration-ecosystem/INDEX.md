@@ -69,6 +69,7 @@ See `protocols/` for quality gates, testing matrix, stack selection, design qual
 - `protocols/durable-run-state.md`
 - `protocols/compatibility-update-audit.md`
 - `protocols/future-change-safety.md`
+- `protocols/generated-code-linting.md`
 - `protocols/installed-skill-sync.md`
 - `protocols/memory.md`
 - `protocols/model-routing.md`

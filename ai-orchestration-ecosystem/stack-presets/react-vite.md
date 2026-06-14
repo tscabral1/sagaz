@@ -7,7 +7,7 @@ Client-heavy apps, dashboards, internal tools, prototypes, and static sites that
 ## Default Stack
 
 - React
-- TypeScript
+- TypeScript with `strict: true` for new projects
 - Vite
 - Tailwind CSS or existing CSS architecture
 - shadcn/ui when using Tailwind CSS and the app needs reusable, accessible UI components
@@ -36,3 +36,4 @@ Client-heavy apps, dashboards, internal tools, prototypes, and static sites that
 - The app is mostly client-side.
 - The project needs simplicity and speed.
 - The backend already exists.
+- TypeScript strict and lint/typecheck feedback are useful for maintainability.

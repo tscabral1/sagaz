@@ -27,6 +27,8 @@ What I will inspect:
 - repository structure
 - package/runtime files
 - test/build scripts
+- TypeScript strict status when TypeScript is present
+- Supabase configuration when backend data, auth, storage, or realtime is present
 - existing documentation
 - recent Git status
 

@@ -833,6 +833,137 @@ function validateMcpConnectorPolicy() {
   }
 }
 
+function validateGeneratedCodeLintingProtocol() {
+  const file = path.join(ecosystemRoot, "protocols", "generated-code-linting.md");
+  if (!fs.existsSync(file)) {
+    fail(file, "generated code linting protocol is missing");
+    return;
+  }
+
+  const text = readText(file);
+  const present = headings(text);
+  for (const section of [
+    "Objective",
+    "Required Practice",
+    "Tool Discovery",
+    "Required Commands",
+    "Permission Rules",
+    "Handoff Evidence",
+    "Blocking Conditions",
+    "Output"
+  ]) {
+    if (!present.has(section)) {
+      fail(file, `missing section "${section}"`);
+    }
+  }
+
+  for (const term of [
+    "protocols/permission-contract.md",
+    "npm run lint",
+    "npm run typecheck",
+    "npm run build",
+    "ESLint",
+    "Biome",
+    "Prettier",
+    "Ruff",
+    "Stylelint",
+    "explicit user approval",
+    "Lint discovery:",
+    "Lint command:",
+    "Typecheck command:",
+    "Lint not run:",
+    "residual risk",
+    "blocker"
+  ]) {
+    if (!text.includes(term)) {
+      fail(file, `generated code linting protocol must mention "${term}"`);
+    }
+  }
+
+  const implementationTask = path.join(ecosystemRoot, "tasks", "implementation-build.md");
+  if (fs.existsSync(implementationTask)) {
+    const taskText = readText(implementationTask);
+    if (!taskText.includes("protocols/generated-code-linting.md")) {
+      fail(implementationTask, "implementation task must reference generated code linting protocol");
+    }
+  }
+
+  const qaTask = path.join(ecosystemRoot, "tasks", "verification-qa.md");
+  if (fs.existsSync(qaTask)) {
+    const qaText = readText(qaTask);
+    if (!qaText.includes("protocols/generated-code-linting.md")) {
+      fail(qaTask, "verification task must reference generated code linting protocol");
+    }
+  }
+}
+
+function validateStackSelectionProtocol() {
+  const file = path.join(ecosystemRoot, "protocols", "stack-selection.md");
+  if (!fs.existsSync(file)) {
+    fail(file, "stack selection protocol is missing");
+    return;
+  }
+
+  const text = readText(file);
+  const present = headings(text);
+  for (const section of [
+    "Objective",
+    "Required Practice",
+    "TypeScript Strict Policy",
+    "Supabase Policy",
+    "Recommendation Format",
+    "Blocking Conditions",
+    "Output"
+  ]) {
+    if (!present.has(section)) {
+      fail(file, `missing section "${section}"`);
+    }
+  }
+
+  for (const term of [
+    "TypeScript strict",
+    "strict: true",
+    "tsconfig.json",
+    "staged strict migration",
+    "Supabase",
+    "relational data",
+    "row-level security",
+    "generated types",
+    "RLS policy plan",
+    "migration plan",
+    "backup and restore plan",
+    "protocols/mcp-connector-policy.md",
+    "TypeScript strict decision:",
+    "Supabase decision:"
+  ]) {
+    if (!text.includes(term)) {
+      fail(file, `stack selection protocol must mention "${term}"`);
+    }
+  }
+
+  const presetChecks = [
+    ["stack-presets/nextjs-vercel.md", ["TypeScript with `strict: true`", "Supabase"]],
+    ["stack-presets/react-vite.md", ["TypeScript with `strict: true`"]],
+    ["stack-presets/node-api.md", ["TypeScript with `strict: true`", "typecheck and lint"]],
+    ["stack-presets/admin-dashboard.md", ["TypeScript with `strict: true`", "TypeScript strict compatibility"]],
+    ["stack-presets/supabase.md", ["Generated TypeScript types", "TypeScript strict compatibility", "row-level security"]]
+  ];
+
+  for (const [relativePath, terms] of presetChecks) {
+    const target = path.join(ecosystemRoot, ...relativePath.split("/"));
+    if (!fs.existsSync(target)) {
+      fail(file, `stack selection referenced missing preset: ${relativePath}`);
+      continue;
+    }
+    const targetText = readText(target);
+    for (const term of terms) {
+      if (!targetText.includes(term)) {
+        fail(target, `stack preset must mention "${term}"`);
+      }
+    }
+  }
+}
+
 function validateOperationalMemoryProtocol() {
   const file = path.join(ecosystemRoot, "protocols", "memory.md");
   if (!fs.existsSync(file)) {
@@ -1043,7 +1174,8 @@ function validateEvaluationSuite() {
     "EVAL-MANIFEST-DRIFT",
     "EVAL-DEPENDENCY-GRAPH-DRIFT",
     "EVAL-BEGINNER-GUIDANCE",
-    "EVAL-GOLDEN-OUTPUTS"
+    "EVAL-GOLDEN-OUTPUTS",
+    "EVAL-GENERATED-CODE-LINTING"
   ];
 
   for (const scenario of requiredScenarios) {
@@ -1715,6 +1847,8 @@ validateExecutionTraceTemplate();
 validateDurableRunStateProtocol();
 validateAgentObservabilityProtocol();
 validateMcpConnectorPolicy();
+validateGeneratedCodeLintingProtocol();
+validateStackSelectionProtocol();
 validateOperationalMemoryProtocol();
 validateOperationalMemoryTemplate();
 validateComponentGovernanceProtocol();

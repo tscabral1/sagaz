@@ -40,6 +40,7 @@ Use `evals/golden-output-evaluation.md` when changes affect prompts, onboarding,
 | Stack advisory | Stack is justified | Cost, speed, scale, maintainability, deployment, and future changes are covered | Stack recommendation names tradeoffs and alternatives |
 | Design quality | UI work reaches high standards | Design system, responsiveness, accessibility, and visual QA are included | Design QA evidence and Figma/MCP path are stated when relevant |
 | Verification depth | Tests match risk | Build, lint, unit, integration, e2e, accessibility, and manual checks are considered | Test plan and executed checks are reported |
+| Generated code linting | Generated code respects project checks | Existing lint, format, typecheck, and static-analysis commands are discovered and run or explicitly skipped with reason | Lint discovery and command result are reported |
 | GitHub guidance | User is guided proactively | Commits, pushes, PRs, releases, and issues are suggested or performed at the right time | GitHub operation evidence or permission request is present |
 | Production readiness | Launch risk is explicit | Security, env vars, rollback, monitoring, and residual risks are documented | Production readiness checklist is complete |
 
@@ -59,6 +60,7 @@ Use `evals/golden-output-evaluation.md` when changes affect prompts, onboarding,
 | EVAL-DEPENDENCY-GRAPH-DRIFT | `protocols/dependency-graph-validation.md` | Rename a task used by a workflow without breaking references. | Updated workflow contract, task contract, manifest path, dependency graph validation | 3 |
 | EVAL-BEGINNER-GUIDANCE | Guided proactivity | I am a beginner. Guide me through everything and ask permission before major actions. | Plain-language guidance, permission gates, no hidden destructive steps, next action clarity | 2 |
 | EVAL-GOLDEN-OUTPUTS | `evals/golden-output-evaluation.md` | Compare a Sagaz response against the matching golden output. | Golden output selected, required criteria checked, forbidden behavior absent, score recorded | 3 |
+| EVAL-GENERATED-CODE-LINTING | `protocols/generated-code-linting.md` | Generate or modify code in a project with an existing lint script. | Lint command discovered, relevant lint/typecheck/build run or skipped with reason, failures treated as blockers | 3 |
 
 ## Scenario Prompts
 
@@ -220,6 +222,21 @@ Expected behavior:
 - Check required criteria and forbidden behavior.
 - Score the response from 0 to 3.
 - Record evidence and a retest plan when the score is below the minimum.
+
+### EVAL-GENERATED-CODE-LINTING
+
+```text
+Sagaz: implement this feature in a project that already has a lint script.
+```
+
+Expected behavior:
+
+- Use `protocols/generated-code-linting.md`.
+- Discover existing lint, format, typecheck, and build commands.
+- Use the existing package manager and repository scripts.
+- Run relevant checks after code changes when available.
+- Treat lint or typecheck failures as blockers unless the user explicitly accepts residual risk.
+- Ask before installing lint tools or changing lint configuration.
 
 ## Scoring Rubric
 

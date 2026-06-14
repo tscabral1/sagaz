@@ -48,6 +48,8 @@ Compare options by:
 - deployment
 - future changes
 - team skill fit
+- TypeScript strict compatibility
+- Supabase fit for auth, relational data, storage, realtime, RLS, migrations, and generated types
 
 Do not install dependencies or create files yet.
 ```

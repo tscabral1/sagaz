@@ -31,8 +31,10 @@ Sagaz also guides the user through the process. At the end of each phase, it exp
 - **Low token usage:** load only the workflow, squad, task, or protocol needed for the current phase.
 - **Guided process:** team handoffs require user approval.
 - **Production quality:** gates for tests, security, builds, deployment, rollback, and residual risk.
+- **Generated code linting:** Sagaz checks existing lint, format, typecheck, and static-analysis commands when it generates or changes code.
 - **Premium design:** UX/UI, design systems, responsiveness, accessibility, and visual QA.
 - **Stack advisory:** technology choices explained by cost, speed, scale, maintainability, deployment, and future changes.
+- **TypeScript strict and Supabase planning:** TypeScript stacks default toward strict mode, and Supabase is evaluated for auth, relational data, storage, realtime, RLS, migrations, backups, and generated types.
 - **GitHub without guesswork:** Sagaz recommends commits, pushes, pull requests, issues, and releases at the right time.
 - **Web and mobile:** workflows for browser apps, websites, dashboards, Android, and iOS.
 - **Persistent state:** Markdown run state records decisions, approvals, handoffs, risks, and test evidence.

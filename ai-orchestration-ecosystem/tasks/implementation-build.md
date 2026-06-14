@@ -38,7 +38,8 @@ Active workflow owner squad.
 - Changes are scoped to the active task.
 - Implementation maps to acceptance criteria.
 - Risky changes are isolated, reversible, or explicitly justified.
-- Tests, build checks, or manual verification steps are identified.
+- Existing lint, format, typecheck, tests, build checks, or manual verification steps are identified.
+- Generated or modified code follows `protocols/generated-code-linting.md`.
 
 ## Handoff
 
@@ -53,7 +54,7 @@ Active owner squad -> verification or audit squad based on the active workflow.
 
 ## Verification
 
-Check against the implementation plan, active workflow contract, and relevant engineering protocols.
+Check against the implementation plan, active workflow contract, `protocols/generated-code-linting.md`, and relevant engineering protocols.
 
 ## Stop Condition
 

@@ -55,6 +55,10 @@ Use `protocols/memory.md` and `templates/operational-memory.md` before creating 
 
 Use `evals/golden-output-evaluation.md` when comparing real Sagaz responses against `golden-outputs/`.
 
+Use `protocols/generated-code-linting.md` whenever Sagaz generates or changes code so lint, format, typecheck, and static-analysis expectations are discovered and reported.
+
+Use `protocols/stack-selection.md` before choosing a stack; it requires explicit TypeScript strict and Supabase decisions when relevant.
+
 ## Advanced Engineering Coverage
 
 Sagaz includes protocols for SRE readiness, DORA metrics, secure SDLC, dependency governance, data privacy lifecycle, architecture fitness functions, API contracts, performance budgets, accessibility compliance, database migrations, release strategy, and AI application quality.

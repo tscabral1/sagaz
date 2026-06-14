@@ -30,6 +30,7 @@ Active workflow owner squad or code-audit squad when independent review is neede
 
 - `template:qa-report`.
 - Test, build, lint, typecheck, visual, accessibility, security, or manual verification evidence.
+- Generated code linting evidence from `protocols/generated-code-linting.md` when code changed.
 - Defects found and recommended fixes.
 - Go/no-go verdict with residual risks.
 

@@ -7,7 +7,7 @@ Backend APIs, integrations, webhooks, automation services, and full-stack apps n
 ## Default Stack
 
 - Node.js
-- TypeScript
+- TypeScript with `strict: true` for new projects
 - Fastify or Express based on project needs
 - Zod or similar runtime validation
 - Postgres or managed database
@@ -37,4 +37,5 @@ Backend APIs, integrations, webhooks, automation services, and full-stack apps n
 - logging and observability
 - rate limiting
 - integration tests
+- typecheck and lint
 - deployment and rollback

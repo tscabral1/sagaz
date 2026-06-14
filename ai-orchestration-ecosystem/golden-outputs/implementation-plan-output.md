@@ -24,6 +24,7 @@ Primary agent: Implementation Engineer
 
 Project inspection needed:
 - package/runtime files
+- TypeScript config and strict-mode status when relevant
 - existing components
 - routing or feature modules
 - test scripts
@@ -41,6 +42,8 @@ Likely files:
 - To be confirmed after inspection.
 
 Test plan:
+- Discover existing lint, format, typecheck, and build commands.
+- Run lint after generated code changes when available.
 - Run focused unit/component tests if available.
 - Run build or lint when relevant.
 - Manually verify user-facing flow if UI changes.
@@ -58,6 +61,7 @@ Permission needed:
 - It inspects before deciding exact files.
 - It keeps scope focused.
 - It includes tests and manual verification.
+- It includes lint discovery for generated code.
 - It asks for permission before edits.
 - It identifies risks.
 

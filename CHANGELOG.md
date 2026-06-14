@@ -1,5 +1,66 @@
 # Changelog
 
+## [0.4.1] - 2026-06-14
+
+### Release Type
+
+Patch
+
+### Added
+
+- Generated code linting protocol requiring Sagaz to discover and run existing lint, format, typecheck, and static-analysis commands when code is generated or changed.
+- Stack selection policy for TypeScript strict mode and Supabase planning.
+- Evaluation scenario for generated code linting.
+
+### Changed
+
+- Stack presets and Next.js/Vercel/Supabase playbook now require explicit TypeScript strict and Supabase decisions when relevant.
+- Implementation and QA tasks now require generated-code linting evidence.
+- Prompt and golden output references now include TypeScript strict and Supabase checks.
+- Package verification now validates generated-code linting and stack-selection contracts.
+
+### Fixed
+
+- Closed the gap where linting was only mentioned as a possible QA activity instead of a formal generated-code gate.
+- Closed the gap where Supabase existed as a preset but TypeScript strict and Supabase planning were not enforced by stack-selection validation.
+
+### Removed
+
+- None.
+
+### Security
+
+- Supabase recommendations now require RLS, migrations, backup/restore, env var planning, and permission before resource changes.
+- Lint/tooling changes require explicit approval before installing tools or changing configs.
+
+### Compatibility
+
+- Windows: supported through Codex Desktop.
+- macOS: supported through Codex Desktop.
+- Node.js: package baseline remains `>=22.14`; Node.js 24 is preferred for new installs and CI.
+- Codex Desktop: Sagaz remains a Codex Desktop orchestration skill, not a standalone terminal agent runtime.
+
+### Migration Notes
+
+- Existing users should run `npx sagaz-ai@0.4.1 sync` or `npx sagaz-ai sync` after publication.
+- Open a new Codex Desktop thread after syncing so the updated skill can be discovered.
+
+### Verification
+
+- npm test: passed locally on Windows.
+- npm run doctor: passed locally on Windows with `Synchronized with source: yes`.
+- npm pack --dry-run: passed locally on Windows after allowing npm cache access outside the sandbox.
+- Windows: prepared from a Windows Codex Desktop workspace.
+- macOS: package checks remain covered by GitHub Actions.
+- Codex Desktop: skill sync remains required after install or upgrade.
+
+### Release Evidence
+
+- Commit: pending.
+- Tag: pending.
+- GitHub release: pending.
+- npm package: pending.
+
 ## [0.4.0] - 2026-06-11
 
 ### Release Type

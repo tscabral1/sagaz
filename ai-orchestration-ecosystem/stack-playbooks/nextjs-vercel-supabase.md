@@ -14,9 +14,10 @@ Operate a Next.js application deployed on Vercel with Supabase for auth, databas
 
 1. Inspect `package.json` scripts and package manager.
 2. Confirm Node.js version and lockfile.
-3. Confirm whether Supabase is already configured.
-4. Identify required env vars for local, preview, and production.
-5. Apply `protocols/permission-contract.md` before touching Vercel or Supabase accounts.
+3. Inspect `tsconfig.json` and confirm TypeScript strict status.
+4. Confirm whether Supabase is already configured.
+5. Identify required env vars for local, preview, and production.
+6. Apply `protocols/permission-contract.md` before touching Vercel or Supabase accounts.
 
 Common commands:
 
@@ -33,10 +34,12 @@ Use the project's actual package manager if it is not npm.
 
 - Typecheck or build.
 - Lint if configured.
+- TypeScript strict compatibility or migration notes.
 - Unit/integration tests for business logic.
 - Playwright smoke test for critical flows.
 - Accessibility and responsive checks for core pages.
 - Supabase RLS review when user data exists.
+- Generated Supabase TypeScript types when schema is available.
 - Env var audit for secrets and public variables.
 
 ## Deployment
@@ -61,4 +64,3 @@ Preview URL:
 Risks:
 Permission needed:
 ```
-
